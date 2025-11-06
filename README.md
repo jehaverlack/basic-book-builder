@@ -112,7 +112,7 @@ sudo apt install texlive texlive-xetex texlive-latex-extra texlive-fonts-recomme
 #### lmodern
 
 ```
-apt install lmodern
+sudo apt install lmodern
 ```
 #### epubcheck
 

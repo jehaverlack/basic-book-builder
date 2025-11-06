@@ -1,6 +1,6 @@
 from: markdown
 to: epub
-output-file: build/Paths-to-Perception.epub
+output-file: build/b3.epub
 
 metadata:
   title: "Big Beautiful Book"

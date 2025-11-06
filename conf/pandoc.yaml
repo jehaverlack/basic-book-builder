@@ -11,8 +11,8 @@ standalone: true
 
 
 metadata:
-  mainfont: "Libertinus Serif"
-  sansfont: "Libertinus Sans"
+  mainfont: "Linux Libertine O"
+  sansfont: "Linux Biolinum O"
   monofont: "DejaVu Sans Mono"
   date: ""            # <-- forces maketitle to exist, but blank
   link-citations: true

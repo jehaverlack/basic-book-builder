@@ -3,7 +3,7 @@
 
 > “*If I have seen further it is by standing on the shoulders of Giants.*”
 > 
-> -- Isaac Newton [@IsaacNewtonLetter]
+> -- Isaac Newton
 
 ## Conventions
 

@@ -6,26 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>00_Introduction</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
+    ul.task-list{list-style: none;}
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -89,26 +75,8 @@
     code span.va { color: #19177c; } /* Variable */
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
   <link rel="stylesheet" href="conf/style.css" />
 </head>
 <body>
@@ -184,50 +152,39 @@ window.MathJax = {
 <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Contents</h2>
 <ul>
-<li><a href="#introduction" id="toc-introduction">Introduction</a>
+<li><a href="#introduction">Introduction</a>
 <ul>
-<li><a href="#conventions" id="toc-conventions">Conventions</a>
+<li><a href="#conventions">Conventions</a>
 <ul>
-<li><a href="#new-concepts" id="toc-new-concepts">New Concepts</a></li>
+<li><a href="#new-concepts">New Concepts</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#chapter-1" id="toc-chapter-1">Chapter 1</a></li>
-<li><a href="#example-content" id="toc-example-content">Example
-Content</a>
+<li><a href="#best-words-ever">Best Words Ever</a></li>
+<li><a href="#example-content">Example Content</a>
 <ul>
-<li><a href="#si-conversion-factors" id="toc-si-conversion-factors">SI
-Conversion Factors</a></li>
-<li><a href="#physical-constants" id="toc-physical-constants">Physical
-Constants</a></li>
-<li><a href="#fine-structure-constant"
-id="toc-fine-structure-constant">Fine Structure Constant</a></li>
-<li><a href="#newtons-law-of-gravity"
-id="toc-newtons-law-of-gravity">Newton’s Law of Gravity</a>
+<li><a href="#si-conversion-factors">SI Conversion Factors</a></li>
+<li><a href="#physical-constants">Physical Constants</a></li>
+<li><a href="#fine-structure-constant">Fine Structure Constant</a></li>
+<li><a href="#newtons-law-of-gravity">Newton’s Law of Gravity</a>
 <ul>
-<li><a href="#relativistic-energy-momentum-relation"
-id="toc-relativistic-energy-momentum-relation">Relativistic Energy
+<li><a href="#relativistic-energy-momentum-relation">Relativistic Energy
 Momentum Relation</a></li>
 </ul></li>
-<li><a href="#plancks-constant" id="toc-plancks-constant">Planck’s
+<li><a href="#plancks-constant">Planck’s Constant</a></li>
+<li><a href="#planck-length">Planck Length</a></li>
+<li><a href="#fine-structure-constant-1">Fine Structure
 Constant</a></li>
-<li><a href="#planck-length" id="toc-planck-length">Planck
-Length</a></li>
-<li><a href="#fine-structure-constant-1"
-id="toc-fine-structure-constant-1">Fine Structure Constant</a></li>
-<li><a href="#sage-code" id="toc-sage-code">Sage Code</a></li>
+<li><a href="#sage-code">Sage Code</a></li>
 </ul></li>
-<li><a href="#terminology" id="toc-terminology">Terminology</a></li>
-<li><a href="#citations" id="toc-citations">Citations</a></li>
+<li><a href="#terminology">Terminology</a></li>
+<li><a href="#citations">Citations</a></li>
 </ul>
 </nav>
 <h1 id="introduction">Introduction</h1>
 <blockquote>
 <p>“<em>If I have seen further it is by standing on the shoulders of
 Giants.</em>”</p>
-<p>– Isaac Newton <span class="citation"
-data-cites="IsaacNewtonLetter">(<a href="#ref-IsaacNewtonLetter"
-role="doc-biblioref"><span>“Isaac <span>Newton</span> Letter to
-<span>Robert Hooke</span>, 1675,”</span> n.d.</a>)</span></p>
+<p>– Isaac Newton</p>
 </blockquote>
 <h2 id="conventions">Conventions</h2>
 <p>In this book we’ll use a few conventions.</p>
@@ -244,7 +201,7 @@ represent mainstream physics or math concepts.</p>
 <div class="callout-established">
 <p><strong>Established Concept</strong></p>
 <p> Einsteins Relativistic Dynamics Equations <span
-class="math display"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub> ⋅ <em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em> ⋅ <em>c</em>)<sup>2</sup></span></p>
+class="math display"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub>⋅<em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em>⋅<em>c</em>)<sup>2</sup></span></p>
 </div>
 <p>New ideas proposed by the author which have not been peer reviewed,
 verified or tested, and should be looked at with scrutiny.</p>
@@ -263,7 +220,7 @@ disprove.</p>
 class="math inline"><em>c</em> = 1</span>: <span
 class="math display"><em>E</em><sup>2</sup> = <em>m</em><sub>0</sub><sup>2</sup> + <em>p</em><sup>2</sup></span></p>
 </div>
-<h1 id="chapter-1">Chapter 1</h1>
+<h1 id="best-words-ever">Best Words Ever</h1>
 <p>Blah blah blah</p>
 <h1 id="example-content">Example Content</h1>
 <p>In <span class="math inline"><em>R</em><em>ν</em></span> the <a
@@ -285,56 +242,56 @@ digits.</p>
 <col style="width: 58%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Conversion Factor</th>
 <th>Symbol</th>
 <th>Value</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>meters to Planck Length</td>
 <td><span
 class="math inline"><em>χ</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$1.74542\times10^{34}
 \frac{L}{m}$</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>seconds to Planck Length</td>
 <td><span
 class="math inline"><em>τ</em><sub><em>p</em></sub></span></td>
 <td><span class="math inline">$5.23264\times10^{42}
 \frac{L}{s}$</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>mass to Planck Length</td>
 <td><span
 class="math inline"><em>G</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$1.62871\times10^8
 \frac{L}{kg}$</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>energy to Planck Length</td>
 <td><span
 class="math inline"><em>E</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$1.81219\times10^9
 \frac{L}{J}$</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>momentum to Planck Length</td>
 <td><span
 class="math inline"><em>P</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$5.43280\times10^{-1} \frac{L\cdot s}{kg
 \cdot m}$</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>temperature to Planck Length</td>
 <td><span
 class="math inline"><em>k</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$2.501998\times10^{-14}
 \frac{L}{K}$</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>charge to Planck Length</td>
 <td><span
 class="math inline"><em>C</em><sub><em>P</em></sub></span></td>
@@ -359,7 +316,7 @@ on the the speed of light yields a unit-less number with a value of
 <col style="width: 22%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Quantity</th>
 <th>Symbol</th>
 <th>SI</th>
@@ -367,27 +324,27 @@ on the the speed of light yields a unit-less number with a value of
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Speed of Light</td>
 <td><span class="math inline"><em>c</em></span></td>
 <td><span class="math inline">$299792458 \frac{m}{s}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Reduced Gravitational Constant</td>
 <td><span class="math inline"><em>G</em><sub>0</sub></span></td>
 <td><span class="math inline">$8.38659\times10^{-10} \frac{m^3}{kg \cdot
 s^2}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Boltzmann’s Constant</td>
 <td><span class="math inline"><em>k</em></span></td>
 <td><span class="math inline">$k=1.380649\times10^-23
 \frac{J}{K}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Permittivity of Free Space</td>
 <td><span
 class="math inline"><em>ϵ</em><sub><em>o</em></sub></span></td>
@@ -395,7 +352,7 @@ class="math inline"><em>ϵ</em><sub><em>o</em></sub></span></td>
 \frac{C^{2}s^2}{kg \cdot m^3}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Permeability of Free Space</td>
 <td><span
 class="math inline"><em>μ</em><sub><em>o</em></sub></span></td>
@@ -403,14 +360,14 @@ class="math inline"><em>μ</em><sub><em>o</em></sub></span></td>
 c^{2}}}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Reduced Planck’s Constant</td>
 <td><span class="math inline">ℏ</span></td>
 <td><span class="math inline">$1.054571726\times10^-34 \frac{kg \cdot
 m^2}{s}$</span></td>
 <td><span class="math inline">1<em>L</em><sup>2</sup></span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Mass of the Electron</td>
 <td><span
 class="math inline"><em>m</em><sub><em>e</em></sub></span></td>
@@ -419,15 +376,15 @@ class="math inline">9.10938 × 10<sup>−31</sup><em>k</em><em>g</em></span>
 <td><span
 class="math inline">1.48366 × 10<sup>−22</sup><em>L</em></span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>Charge of the Electron</td>
 <td><span class="math inline"><em>e</em><sup>−</sup></span></td>
 <td><span
-class="math inline">−1.60218 × 10<sup>−19</sup><em>C</em></span></td>
+class="math inline"> − 1.60218 × 10<sup>−19</sup><em>C</em></span></td>
 <td><span
-class="math inline">−3.02822 × 10<sup>−1</sup><em>L</em></span></td>
+class="math inline"> − 3.02822 × 10<sup>−1</sup><em>L</em></span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Unit Cycle</td>
 <td><span class="math inline"><em>Θ</em></span></td>
 <td><span
@@ -455,7 +412,7 @@ class="math inline">1 <em>m</em><em>e</em><em>t</em><em>e</em><em>r</em> (<em>
 <li><span
 class="math inline">1 <em>k</em><em>i</em><em>l</em><em>o</em><em>m</em><em>e</em><em>t</em><em>e</em><em>r</em> (<em>k</em><em>m</em>) = 1000 <em>m</em><em>e</em><em>t</em><em>e</em><em>r</em><em>s</em> (<em>m</em>)</span></li>
 <li><span
-class="math inline">1 <em>m</em><em>i</em><em>l</em><em>e</em> = 5280 <em>f</em><em>e</em><em>e</em><em>t</em> (<em>f</em><em>t</em> <em>o</em><em>r</em> <sup>′</sup>)</span></li>
+class="math inline">1 <em>m</em><em>i</em><em>l</em><em>e</em> = 5280 <em>f</em><em>e</em><em>e</em><em>t</em> (<em>f</em><em>t</em> <em>o</em><em>r</em> ′)</span></li>
 <li><span class="math inline">$1\ foot\ (ft\ or\ ') = 12\ inches\ (in\
 or\ ")$</span></li>
 <li><span class="math inline">$1\ inch\ (") = 2.54\ centimeters\
@@ -537,7 +494,7 @@ the total energy (<span class="math inline"><em>E</em></span>), rest
 mass (<span class="math inline"><em>m</em><sub>0</sub></span>) and
 momentum (<span class="math inline"><em>p</em></span>) of a system.</p>
 <p><span
-class="math inline"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub> ⋅ <em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em> ⋅ <em>c</em>)<sup>2</sup></span></p>
+class="math inline"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub>⋅<em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em>⋅<em>c</em>)<sup>2</sup></span></p>
 <p>Where space and time are both measure in units of meters, c=1.</p>
 <p><span
 class="math inline"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub>)<sup>2</sup> + (<em>p</em>)<sup>2</sup></span></p>
@@ -702,56 +659,56 @@ class="math inline"><em>M</em><sub><em>P</em></sub></span>:</p>
 <col style="width: 40%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Conversion Factor</th>
 <th>Symbol</th>
 <th>Value</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>meters to Planck Length</td>
 <td><span
 class="math inline"><em>χ</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$1.74542\times10^{34}
 \frac{L}{m}$</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>seconds to Planck Length</td>
 <td><span
 class="math inline"><em>τ</em><sub><em>p</em></sub></span></td>
 <td><span class="math inline">$5.23264\times10^{42}
 \frac{L}{s}$</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>mass to Planck Length</td>
 <td><span
 class="math inline"><em>G</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$1.62871\times10^8
 \frac{L}{kg}$</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>energy to Planck Length</td>
 <td><span
 class="math inline"><em>E</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$1.81219\times10^9
 \frac{L}{J}$</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>momentum to Planck Length</td>
 <td><span
 class="math inline"><em>P</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$5.43280\times10^{-1} \frac{L\cdot s}{kg
 \cdot m}$</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>temperature to Planck Length</td>
 <td><span
 class="math inline"><em>k</em><sub><em>P</em></sub></span></td>
 <td><span class="math inline">$2.501998\times10^{-14}
 \frac{L}{K}$</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>charge to Planck Length</td>
 <td><span
 class="math inline"><em>C</em><sub><em>P</em></sub></span></td>
@@ -771,7 +728,7 @@ class="math inline">$c=\frac{1}{\sqrt{\epsilon_o \mu_o}}$</span></p>
 <col style="width: 30%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Quantity</th>
 <th>Symbol</th>
 <th>SI</th>
@@ -779,27 +736,27 @@ class="math inline">$c=\frac{1}{\sqrt{\epsilon_o \mu_o}}$</span></p>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Speed of Light</td>
 <td><span class="math inline"><em>c</em></span></td>
 <td><span class="math inline">$299792458 \frac{m}{s}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Gravitational Constant</td>
 <td><span class="math inline"><em>G</em><sub>0</sub></span></td>
 <td><span class="math inline">$8.38659\times10^{-10} \frac{m^3}{kg \cdot
 s^2}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Boltzmann’s Constant</td>
 <td><span class="math inline"><em>k</em></span></td>
 <td><span class="math inline">$k=1.380649\times10^-23
 \frac{J}{K}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Permittivity of Free Space</td>
 <td><span
 class="math inline"><em>ϵ</em><sub><em>o</em></sub></span></td>
@@ -807,7 +764,7 @@ class="math inline"><em>ϵ</em><sub><em>o</em></sub></span></td>
 \frac{C^{2}s^2}{kg \cdot m^3}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Permeability of Free Space</td>
 <td><span
 class="math inline"><em>μ</em><sub><em>o</em></sub></span></td>
@@ -815,14 +772,14 @@ class="math inline"><em>μ</em><sub><em>o</em></sub></span></td>
 c^{2}}}$</span></td>
 <td>1</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Planck’s Constant</td>
 <td><span class="math inline">ℏ</span></td>
 <td><span class="math inline">$1.054571726\times10^-34 \frac{kg \cdot
 m^2}{s}$</span></td>
 <td><span class="math inline">1<em>L</em><sup>2</sup></span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Mass of the Electron</td>
 <td><span
 class="math inline"><em>m</em><sub><em>e</em></sub></span></td>
@@ -831,13 +788,13 @@ class="math inline">9.10938 × 10<sup>−31</sup><em>k</em><em>g</em></span>
 <td><span
 class="math inline">1.48366 × 10<sup>−22</sup><em>L</em></span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>Charge of the Electron</td>
 <td><span class="math inline"><em>e</em><sup>−</sup></span></td>
 <td><span
-class="math inline">−1.60218 × 10<sup>−19</sup><em>C</em></span></td>
+class="math inline"> − 1.60218 × 10<sup>−19</sup><em>C</em></span></td>
 <td><span
-class="math inline">−3.02822 × 10<sup>−1</sup><em>L</em></span></td>
+class="math inline"> − 3.02822 × 10<sup>−1</sup><em>L</em></span></td>
 </tr>
 </tbody>
 </table>
@@ -935,13 +892,6 @@ Rν √ℏ = (5.72928e-35)*m
 si lP = (1.61620e-35)*sqrt(m^2)
 Rν lP = (2.77455e-47)*sqrt(m^3/kg)</code></pre>
 <h1 id="terminology">Terminology</h1>
-<h1 class="unnumbered" id="citations">Citations</h1>
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="list">
-<div id="ref-IsaacNewtonLetter" class="csl-entry" role="listitem">
-<span>“Isaac <span>Newton</span> Letter to <span>Robert Hooke</span>,
-1675.”</span> n.d.
-</div>
-</div>
+<h1 id="citations">Citations</h1>
 </body>
 </html>
