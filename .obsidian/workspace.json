@@ -1,0 +1,305 @@
+{
+  "main": {
+    "id": "13449f33e64774f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "5235c353398dcc73",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aea7b6310a1ff6ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "849ec88cd31ecf9d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "chapters/02_Chapter2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02_Chapter2"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "67922355969bb056",
+    "type": "split",
+    "children": [
+      {
+        "id": "598afa877fe1bb39",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6852f526864219b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7d301da3d1a9d5c6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d48d2341f0531a13",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 314.5
+  },
+  "right": {
+    "id": "90580ebd1e9dc8ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "d26d04f5808162e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc1666f8a3e96276",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Overview.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Overview"
+            }
+          },
+          {
+            "id": "13d6b9a0edc96e4e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Overview.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Overview"
+            }
+          },
+          {
+            "id": "4a16b6dfac736602",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "532aba63080bec4a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Overview.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Overview"
+            }
+          },
+          {
+            "id": "c8db6b72741a9d4b",
+            "type": "leaf",
+            "state": {
+              "type": "mathpad-view",
+              "state": {},
+              "icon": "sigma",
+              "title": "Mathpad"
+            }
+          },
+          {
+            "id": "64e24401056a4d61",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "Overview.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
+          },
+          {
+            "id": "98920b42f0f96962",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "c82b96de747e4f49",
+            "type": "leaf",
+            "state": {
+              "type": "mathpad-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "mathpad-view"
+            }
+          },
+          {
+            "id": "d7755e6f1840f0db",
+            "type": "leaf",
+            "state": {
+              "type": "mathpad-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "mathpad-view"
+            }
+          },
+          {
+            "id": "3a8c745a515b4510",
+            "type": "leaf",
+            "state": {
+              "type": "mathpad-view",
+              "state": {},
+              "icon": "sigma",
+              "title": "Mathpad"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mathpad:Open Mathpad": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "849ec88cd31ecf9d",
+  "lastOpenFiles": [
+    "build/b3.html",
+    "build/b3.tex",
+    "build/Paths-to-Perception.tex",
+    "build/Paths-to-Perception.html",
+    "build/conf/style.css",
+    "build/lib/mathjax/ui/safe.js",
+    "build/lib/mathjax/ui/menu.js",
+    "build/lib/mathjax/ui/lazy.js",
+    "build/lib/mathjax/ui",
+    "build/lib/mathjax/sre/mathmaps/sv.json",
+    "build/lib/mathjax/sre/mathmaps/nn.json",
+    "build/lib/img/unit-circle-with-tau.png",
+    "build/lib/img/unit-circle-with-pi.png.png",
+    "build/lib/img/unit-circle-with-pi.png",
+    "build/lib/img/udir-proximity.png",
+    "build/lib/img/directed-proximity.png",
+    "build/lib/img/Unit_circle_angles_color.png",
+    "build/lib/img/Revolving_circles.svg",
+    "build/lib/img/Revolving_circles.480x480_white.png",
+    "build/lib/img/Revolving_circles.480x480.png",
+    "build/lib/img/Poo.png",
+    "README.md",
+    "chapters/02_Chapter2.md",
+    "chapters/00_Introduction.md",
+    "chapters/01_Chapter1.md",
+    "pm/Book Action Items.md",
+    "chapters/Citations.md",
+    "chapters/Terminology.md",
+    "chapters/Unitfication.md",
+    "chapters/03_Cylindrical_Spacetime.md",
+    "chapters/07_Consciousness_Continued.md",
+    "chapters/04_State_Space_Locality.md",
+    "conf/frontmatter_epub.md",
+    "lib/mathjax/package/README.md",
+    "pm/Outline.md",
+    "Chapters/01_Conciousness.md",
+    "chapters/06_Acausal_Computation.md",
+    "chapters/05_Causality.md",
+    "Chapters/00_Introduction.md",
+    "Chapters/04_State_Space_Locality.md",
+    "Chapters/02_Unitfication.md",
+    "Chapters/Unitfication.md",
+    "Chapters/07_Consciousness_Continued.md",
+    "lib/citations/wolframWhatConsciousnessNew2021.md",
+    "Chapters/06_Acausal_Computation.md",
+    "Chapters/05_Causality.md"
+  ]
+}

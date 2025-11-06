@@ -1,0 +1,24 @@
+from: markdown
+to: epub
+output-file: build/Paths-to-Perception.epub
+
+metadata:
+  title: "Big Beautiful Book"
+  author: "John Haverlack"
+  date: "2025-11-05"
+  rights: "© 2025 — CC BY-ND 4.0"
+
+epub-cover-image: lib/img/Revolving_circles.480x480_white.png
+
+include-before-body:
+  - conf/frontmatter_epub.xhtml
+
+resource-path:
+  - .
+  - lib/img
+
+css:
+  - conf/style_epub.css
+
+filters:
+  - filters/callouts-html.lua

@@ -1,0 +1,75 @@
+/* Safer defaults for varied EPUB engines (Kindle, iBooks, KOReader, etc.) */
+
+html, body {
+  margin: 0;
+  padding: 0.8em;
+  line-height: 1.55;
+  widows: 2;
+  orphans: 2;
+}
+
+/* Avoid fonts that may not exist on the device */
+body {
+  font-family: serif;
+  color: #111;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: serif;
+  font-weight: 700;
+  margin: 1.2em 0 0.5em 0;
+}
+
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.1em; }
+
+/* Lists and paragraphs */
+p { margin: 0.7em 0; }
+ul, ol { margin: 0.7em 0 0.7em 1.2em; }
+
+/* Images */
+img { max-width: 100%; height: auto; }
+
+/* Page breaks for supported readers */
+section[epub|type="titlepage"] {
+  break-after: page;
+  page-break-after: always; /* fallback */
+}
+section#pubmeta {
+  break-after: page;
+  page-break-after: always;
+}
+
+/* Callouts (match HTML look, keep it minimal for EPUB) */
+.callout-established,
+.callout-proposed,
+.callout-speculative {
+  padding: 0.6em;
+  margin: 0.7em 0;
+  border-left: 0.35em solid;
+  background: #fefefe;
+}
+
+.callout-established { border-color: #3a8d3a; background: #e8f7e8; }
+.callout-proposed    { border-color: #3b6dd8; background: #e8f0ff; }
+.callout-speculative { border-color: #8b2be2; background: #f7e8ff; }
+
+/* First bold line inside a callout = title */
+.callout-established p:first-child strong,
+.callout-proposed p:first-child strong,
+.callout-speculative p:first-child strong {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+/* Math (MathML) spacing */
+.math.display { margin: 0.8em 0; }
+
+/* Blockquotes */
+blockquote {
+  border-left: 0.25em solid #bbb;
+  padding-left: 0.8em;
+  color: #444;
+}

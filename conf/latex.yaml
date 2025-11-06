@@ -1,0 +1,20 @@
+# latex.yaml
+from: markdown
+to: latex
+standalone: true
+output-file: build/b3.tex
+
+include-in-header:
+  - conf/header.tex   # fonts, tcolorbox, etc.
+
+# no include-before-body for LaTeX .tex export
+# front matter will be produced only in PDF mode
+
+resource-path:
+  - .
+  - lib/img
+
+filters:
+  - filters/callouts.lua   # same filter as PDF, since it emits LaTeX environments
+
+pdf-engine: xelatex

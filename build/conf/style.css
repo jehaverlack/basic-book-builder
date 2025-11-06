@@ -1,0 +1,185 @@
+/* ------------------------------
+   Base book typography
+   ------------------------------ */
+
+body {
+  font-family: "Libertinus Serif", Georgia, serif;
+  max-width: 42em;
+  margin: auto;
+  padding: 3rem 1.25rem;
+  line-height: 1.65;
+  background: #fff;
+  color: #111;
+}
+
+/* ------------------------------
+   Headings
+   ------------------------------ */
+
+h1, h2, h3, h4 {
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+
+h1 {
+  font-size: 2.1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* ------------------------------
+   Front matter page
+   ------------------------------ */
+
+.frontmatter {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.frontmatter img {
+  max-width: 30%;
+  margin: 2rem auto;
+  display: block;
+}
+
+/* ------------------------------
+   Lists / paragraphs
+   ------------------------------ */
+
+p {
+  margin: 1em 0;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+/* ------------------------------
+   Math block spacing
+   ------------------------------ */
+
+.math.display {
+  margin: 1.2em 0;
+}
+
+/* ------------------------------
+   Callouts (final tuned spacing)
+   ------------------------------ */
+
+.callout-established,
+.callout-proposed,
+.callout-speculative {
+  border-radius: 6px;
+  padding: 5px;  /* internal padding */
+  margin-top: 5px;     /* external spacing tightened */
+  margin-bottom: 5px;
+  border-left: 6px solid;
+  background: #fefefe;
+}
+
+/* Title line */
+.callout-established p:first-child strong,
+.callout-proposed p:first-child strong,
+.callout-speculative p:first-child strong {
+  display: block;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 5px;
+}
+
+/* Paragraphs inside callouts */
+.callout-established p,
+.callout-proposed p,
+.callout-speculative p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.45;  /* slightly condensed text spacing */
+}
+
+/* Remove top margin on first paragraph, bottom on last */
+.callout-established p:first-child,
+.callout-proposed p:first-child,
+.callout-speculative p:first-child {
+  margin-top: 0;
+}
+.callout-established p:last-child,
+.callout-proposed p:last-child,
+.callout-speculative p:last-child {
+  margin-bottom: 0;
+}
+
+/* Math inside callouts */
+.callout-established .math.display,
+.callout-proposed .math.display,
+.callout-speculative .math.display {
+  margin: 0.4em 0;
+}
+
+/* Colors */
+.callout-established {
+  background: #e8f7e8;
+  border-left-color: #3a8d3a;
+}
+.callout-proposed {
+  background: #e8f0ff;
+  border-left-color: #3b6dd8;
+}
+.callout-speculative {
+  background: #f7e8ff;
+  border-left-color: #8b2be2;
+}
+
+
+/* ------------------------------
+   Images (in body content)
+   ------------------------------ */
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 1.2em auto;
+}
+
+/* ------------------------------
+   Blockquotes (normal ones)
+   ------------------------------ */
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1em;
+  font-style: italic;
+  color: #444;
+}
+
+/* ------------------------------
+   Horizontal rule
+   ------------------------------ */
+
+hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* ------------------------------
+   Code (rare in your book)
+   ------------------------------ */
+
+code {
+  background: #f3f3f3;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-size: 0.95em;
+}

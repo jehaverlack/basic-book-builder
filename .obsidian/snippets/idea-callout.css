@@ -1,0 +1,23 @@
+/* Established: green */
+.callout[data-callout="established"] {
+  --callout-color: 0, 150, 0;
+  --callout-icon: check-circle;   /* ✅ valid Lucide icon */
+  background-color: rgba(0, 150, 0, 0.05);
+  border-left: 4px solid rgb(0, 150, 0);
+}
+
+/* Proposed: blue */
+.callout[data-callout="proposed"] {
+  --callout-color: 0, 120, 255;
+  --callout-icon: lightbulb;      /* ✅ Lucide name is “lightbulb” (no dash) */
+  background-color: rgba(0, 120, 255, 0.05);
+  border-left: 4px solid rgb(0, 120, 255);
+}
+
+/* Speculative: purple */
+.callout[data-callout="speculative"] {
+  --callout-color: 128, 0, 128;
+  --callout-icon: help-circle;    /* ✅ Lucide equivalent of “question-circle” */
+  background-color: rgba(128, 0, 128, 0.05);
+  border-left: 4px solid rgb(128, 0, 128);
+}

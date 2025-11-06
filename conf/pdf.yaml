@@ -1,0 +1,13 @@
+# pdf.yaml
+to: pdf
+pdf-engine: xelatex
+output-file: build/b3.pdf
+
+include-before-body:
+  - conf/frontmatter.tex
+
+include-in-header:
+  - conf/header.tex
+
+filters:
+  - filters/callouts.lua 

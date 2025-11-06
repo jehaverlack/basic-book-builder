@@ -1,0 +1,822 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  12pt,
+]{book}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Libertinus Serif}
+  \setsansfont[]{Libertinus Sans}
+  \setmonofont[]{DejaVu Sans Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{breakable}
+
+% =========================================================
+% Concept Boxes
+% =========================================================
+\newtcolorbox{proposedbox}{
+  title=Proposed Concept,
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  colbacktitle=blue!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced,
+  sharp corners,
+  breakable,
+  after = \par\vspace{6pt}
+}
+
+\newtcolorbox{establishedbox}{
+  title=Established Concept,
+  colback=green!5!white,
+  colframe=green!75!black,
+  colbacktitle=green!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced,
+  sharp corners,
+  breakable,
+  after = \par\vspace{6pt}
+}
+
+\newtcolorbox{speculativebox}{
+  title=Speculative Concept,
+  colback=purple!5!white,
+  colframe=purple!75!black,
+  colbacktitle=purple!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced,
+  sharp corners,
+  breakable,
+  after = \par\vspace{6pt}
+}
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+\frontmatter
+
+\renewcommand*\contentsname{Contents}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\mainmatter
+\chapter{Introduction}\label{introduction}
+
+\begin{quote}
+``\emph{If I have seen further it is by standing on the shoulders of
+Giants.}''
+
+-- Isaac Newton (\citeproc{ref-IsaacNewtonLetter}{{``Isaac {Newton}
+Letter to {Robert Hooke}, 1675,''} n.d.})
+\end{quote}
+
+\section{Conventions}\label{conventions}
+
+In this book we'll use a few conventions.
+
+\subsection{New Concepts}\label{new-concepts}
+
+As many of the topics discussed in this book are a mix of
+\textbf{established} math and physics, \textbf{proposed} dualistic
+interpretations of established ideas, and also \textbf{speculative}
+ideas that I don't yet know how to address, I wanted a way to clearly
+distinguish these concepts. I've come up with the following convention
+to highlight these classes of concepts to indicate their level of
+mainstream acceptance.
+
+In this book, established concept may be highlighted in green, and
+represent mainstream physics or math concepts.
+
+\begin{establishedbox}
+Established Concept Einsteins Relativistic Dynamics Equations
+\[E^2 = (m_{0} \cdot c^2)^2 + (p \cdot c)^2 \]
+\end{establishedbox}
+
+New ideas proposed by the author which have not been peer reviewed,
+verified or tested, and should be looked at with scrutiny.
+
+\begin{proposedbox}
+Proposed Concept With the speed of light, \(c = 1\):
+\[E^2 = m_{0}^2 + p^2 \]
+\end{proposedbox}
+
+Speculative Idea, that the author wonders about, but does not know how
+to demonstrate, or ideas that need further treatment to prove or
+disprove.
+
+\begin{speculativebox}
+Speculative Concept With the speed of light, \(c = 1\):
+\[E^2 = m_{0}^2 + p^2 \]
+\end{speculativebox}
+
+\chapter{Chapter 1}\label{chapter-1}
+
+Blah blah blah
+
+\chapter{Example Content}\label{example-content}
+
+In \(R\nu\) the
+\href{https://en.wikipedia.org/wiki/Planck_units\#Planck_length}{Planck
+Length} is the universal unit for measurement of distance, and is
+defined approximately to be:
+\[\boxed{L_P=\sqrt{\hbar}=5.72928\times10^{-35}m=1 L}\] Where \(1\ L\),
+is 1 Planck Length of distance.
+
+\subsection{SI Conversion Factors}\label{si-conversion-factors}
+
+The following conversion factors can be used to convert observable
+quantities of measure from the \emph{SI} system of units to \(R\nu\) to
+\textasciitilde6 significant digits.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3256}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0930}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5814}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Conversion Factor
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Symbol
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+meters to Planck Length & \(\chi_P\) &
+\(1.74542\times10^{34} \frac{L}{m}\) \\
+seconds to Planck Length & \(\tau_p\) &
+\(5.23264\times10^{42} \frac{L}{s}\) \\
+mass to Planck Length & \(G_P\) & \(1.62871\times10^8 \frac{L}{kg}\) \\
+energy to Planck Length & \(E_P\) & \(1.81219\times10^9 \frac{L}{J}\) \\
+momentum to Planck Length & \(P_P\) &
+\(5.43280\times10^{-1} \frac{L\cdot s}{kg \cdot m}\) \\
+temperature to Planck Length & \(k_P\) &
+\(2.501998\times10^{-14} \frac{L}{K}\) \\
+charge to Planck Length & \(C_P\) &
+\(1.89007\times10^{18} \frac{L}{C}\) \\
+\end{longtable}
+
+\subsection{Physical Constants}\label{physical-constants}
+
+Applying conversion factors from the table above, we can convert SI
+values to Reduced Natural Units. For example, performing this analysis
+on the the speed of light yields a unit-less number with a value of 1:
+
+\(c = 299792458 \frac{m}{s} = 299792458 \frac{m}{s} \cdot 1.74542\times10^{34} \frac{L}{m} \cdot \frac{1}{5.23264\times10^{42} \frac{L}{s}} = 1.00000\)
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2273}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4545}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2273}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Quantity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Symbol
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+SI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(\nu\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Speed of Light & \(c\) & \(299792458 \frac{m}{s}\) & 1 \\
+Reduced Gravitational Constant & \(G_0\) &
+\(8.38659\times10^{-10} \frac{m^3}{kg \cdot s^2}\) & 1 \\
+Boltzmann's Constant & \(k\) & \(k=1.380649\times10^-23 \frac{J}{K}\) &
+1 \\
+Permittivity of Free Space & \(\epsilon_o\) &
+\(8.854187817620\times10^{-12} \frac{C^{2}s^2}{kg \cdot m^3}\) & 1 \\
+Permeability of Free Space & \(\mu_o\) &
+\(\huge{\frac{1}{\epsilon_{o} \cdot c^{2}}}\) & 1 \\
+Reduced Planck's Constant & \(\hbar\) &
+\(1.054571726\times10^-34 \frac{kg \cdot m^2}{s}\) & \(1 L^2\) \\
+Mass of the Electron & \(m_e\) & \(9.10938\times10^{-31} kg\) &
+\(1.48366\times10^{-22} L\) \\
+Charge of the Electron & \(e^-\) & \(-1.60218\times10^{-19} C\) &
+\(-3.02822\times10^{-1} L\) \\
+Unit Cycle & \(\Theta\) & \(2\pi = 6.28318...\ Radians\) &
+\(1 \tau = 6.28318...\ Radians\) \\
+\end{longtable}
+
+\section{Fine Structure Constant}\label{fine-structure-constant}
+
+As a consistency check, we compute the
+\emph{\href{https://en.wikipedia.org/wiki/Fine-structure_constant}{Fine
+Structure Constant}} using Reduced Natural Units which is a unit less
+ratio that should be independent of our system of units.
+
+\(\huge{\alpha=\frac{e^2}{4\pi\epsilon_o\hbar c}=\frac{e^2}{2\tau}=0.00729735≈\frac{1}{137}}\)
+
+\subsubsection{Dimensional Analysis}\label{dimensional-analysis}
+
+The reader should be familiar with high school physics and chemistry
+\href{https://en.wikipedia.org/wiki/Dimensional_analysis}{dimensional
+analysis}.
+
+\begin{itemize}
+\tightlist
+\item
+  \(1\ meter\ (m) = 100\ centimeters\ (cm)\)
+\item
+  \(1\ kilometer\ (km) = 1000\ meters\ (m)\)
+\item
+  \(1\ mile = 5280\ feet\ (ft\ or\ ')\)
+\item
+  \(1\ foot\ (ft\ or\ ') = 12\ inches\ (in\ or\ ")\)
+\item
+  \(1\ inch\ (") = 2.54\ centimeters\ (cm)\)
+\end{itemize}
+
+How many kilometers are in 1 mile?
+\(1\ mile = 1\ mile \times \frac{5280\ ft}{mile} \times \frac{12\ in}{ft} \times \frac{2.54\ cm}{in}\times \frac{1\ m}{100 cm} \times \frac{1\ km}{1000 m} = \frac{5280 \times 12 \times 2.54}{100 \times 1000}\ km = \frac{160934.40}{100000}\ km = 1.6\ km\)
+Note that each unit in the denominator cancels with one if the numerator
+until we are left with only km.
+
+\section{Newton's Law of Gravity}\label{newtons-law-of-gravity}
+
+The force of gravity (\(F_g\)) between 2 masses, \(m1\) and \(m2\)
+separated by distance \(r\) is given by
+\href{https://en.wikipedia.org/wiki/Newton\%27s_law_of_universal_gravitation}{Newton's
+Law of Gravity}:
+
+\(F_{g} = G \frac{m_{1} m_{2}}{r^{2}}\)
+
+Where \(G\), is the
+\href{http://en.wikipedia.org/wiki/Gravitational_Constant}{Gravitational
+Constant}.
+
+\(G = 6.67430 \times 10^{-11}\ N\frac{m^2}{kg^2}\)
+
+The strength of gravitational force follow the inverse square law
+distributing gravitational flux over the surface area of a sphere
+(\(4\pi r^2\)).
+
+\subsubsection{Inverse Square Law}\label{inverse-square-law}
+
+Any source of a signal strength (\(S_0\)) that radiates isotropically in
+3-dimensional space will distribute that signal strength (\(S_0\)) over
+the surface area of a sphere (\(SA = 4 \pi r\)) of radius (\(r\)). Such
+that the intensity (\(I\)) at distance (\(r\)) is:
+
+\[I(r) = \frac{S_0}{4 \pi r^{2}}=\frac{S_0}{2 \tau r^{2}}\]
+\pandocbounded{\includegraphics[keepaspectratio,alt={inverse square law}]{lib/img/Inverse_square_law.svg.png}}
+\#\#\#\# \(R\nu\) Reduced Gravitational Constant In this version of
+Newton's Law of Gravity we introduce a new constant \(G_0\), the reduced
+gravitational constant to accommodate for the factor of \(4\pi = 2\tau\)
+which is has been integrated in the SI version of the gravitational
+constant.
+
+\(F_g =G \frac{m_{1} m_{2}}{r^{2}}= G_0 \frac{m_{1} m_{2}}{4 \pi r^{2}}=G_0 \frac{m_{1} m_{2}}{2 \tau r^{2}}\)
+
+Where:
+
+\(G = \frac{G_{0}}{2\tau} = 6.67384 \times 10^{-11} \frac{N \cdot m^2}{kg^2}\)
+
+Analyzing the units:
+\[\frac{N \cdot m^2}{kg^2} = \left( \frac{\left( kg \cdot \frac{m}{s^2} \right) \cdot m^2}{kg^2} \right)=\frac{m^3}{s^2 kg}\]
+Converting seconds to meters with the SI speed of light as a conversion
+factor:
+\[\frac{m^3}{s^2 kg}\cdot\frac{1}{c^2}=\frac{m^3}{s^2 kg}\cdot\frac{s^2}{m^2}=\frac{m}{kg}\]
+
+Thus where space and time are measured in units of meters, the reduced
+gravitational constant, is:
+
+\[\boxed{G_0=\frac{2\tau G}{c^2}=\frac{2\tau \cdot 6.67384 \times 10^{-11}}{299792458^2} \frac{m}{kg} = 9.33135 \times 10^-27 \frac{m}{kg}}\]
+
+\begin{quote}
+Observation This implies that not only can space an time be measure in
+units of meters, but so can mass.
+\end{quote}
+
+\subsection{Relativistic Energy Momentum
+Relation}\label{relativistic-energy-momentum-relation}
+
+Einsteins
+\href{https://en.wikipedia.org/wiki/Energy\%E2\%80\%93momentum_relation}{Relativistic
+Energy Momentum} relationship shows a Pythagorean relation between the
+total energy (\(E\)), rest mass (\(m_0\)) and momentum (\(p\)) of a
+system.
+
+\(E^{2} = (m_0 \cdot c^2)^2 + (p \cdot c)^2\)
+
+Where space and time are both measure in units of meters, c=1.
+
+\(E^2=(m_0)^2+(p)^2\)
+
+From this we can see that Energy, Momentum and Mass have equivalent
+units.
+
+\begin{quote}
+\emph{While we do not really know what energy, mass and momentum are we
+know that they are fundamentally ``made'' out of the same stuff because
+they have the same units.}
+\end{quote}
+
+\paragraph{Objects of mass at rest}\label{objects-of-mass-at-rest}
+
+For an object at rest with no momentum (\(p = 0\)) we see Einstein's
+famous equations:
+
+\(E = m_{0} \cdot c^2\)
+
+Or, with \(c=1\), this is much simpler to understand. Energy = Mass
+
+\(E = m_0\) \#\#\#\#\# Zero mass objects moving at the speed of light
+And for objects with no mass, like photos, (\(m_{0}= 0\)):
+
+\(E=pc\)
+
+Or, with \(c=1\), this is much simpler to understand. Energy = Momentum
+
+\(E=p\)
+
+\section{Planck's Constant}\label{plancks-constant}
+
+The \href{https://en.wikipedia.org/wiki/Planck_constant}{Reduced Planck
+constant} , ħ, represents a conversion factor for relating the
+frequency, \(\omega\) (in \(2\pi\) radians per second), of a photon to
+the energy of that photon. This can easily be seen from the simple but
+profound relationship:
+
+\(E=\hbar\omega\)
+
+Where:
+
+\(\hbar=1.054571726 \times 10^{−34} J \cdot s\)
+
+and
+
+\(J \cdot s = {kg}\cdot\frac{m^2}{s}\)
+
+\begin{quote}
+Reduced Planck's Constant \(\hbar = \frac{h}{2\pi} = \frac{h}{\tau}\)
+\end{quote}
+
+Simplifying our units by converting time and mass to units of meters:
+\[\boxed{\hbar=1.054571726 \times 10^{−34} {kg}\cdot\frac{m^2}{s}\cdot\frac{G_0}{c}=3.282462\times10^{-69}m^2}\]
+
+Which suggest that the Plank constant can be interpreted as an areas for
+which the square root of is suspiciously close to the Plank length:
+
+\[\boxed{\sqrt{\hbar}=\sqrt{3.282462\times10^{-69}m^2}=5.72928\times10^{-35}m}\]
+
+\subsubsection{Planck Area}\label{planck-area}
+
+The
+\href{https://en.wikipedia.org/wiki/Planck_units\#Derived_units}{Planck
+Area} is the square of the
+\href{https://en.wikipedia.org/wiki/Planck_units\#Planck_length}{Planck
+Length}.
+
+\(l_{P}= \sqrt{\frac{\hbar G}{c^3}}\)
+
+and \(l_{P}^{2}= \frac{\hbar G}{c^3}\)
+
+In \(R\nu\) units both \(c\) and \(G_o\) are 1.
+
+\(l_{P} = \sqrt{\hbar}\)
+
+and \(l_P^{2}=\hbar\) \#\# Bekenstein's Bound After having recently read
+\emph{Three Roads to Quantum Gravity} by Lee Smolin, I now suspect the
+meaning of this areas is related to the
+\href{https://en.wikipedia.org/wiki/Bekenstein_bound}{Bekensteins Law}
+as applied to a surface areas surrounding a mass. Where the
+\href{https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)}{thermodynamic
+entropy}, \emph{S}, is proportional to the the enclosed surface area,
+\(A\).
+
+\(S=\frac{1}{4}\cdot\frac{A}{G\hbar}\)
+
+\(S=\frac{k c^{3} A}{4 G \hbar}\)
+
+\(S \le \frac{2\pi k R E}{\hbar c} = \frac{\tau R k E}{\hbar c}\)
+
+From our new values for \(G_0\)and \(\hbar\) we can likely rewrite this:
+
+\(S=\frac{\pi\cdot A}{\hbar G_0}\)
+
+With the limiting case being at the Plank scale.
+
+\(S=\frac{\pi\cdot \sqrt{\hbar}}{\hbar G_0}\)
+
+\section{Planck Length}\label{planck-length}
+
+https://en.wikipedia.org/wiki/Planck\_length
+
+The concept of the Planck Length comes from exploring the limits of
+Quantum Mechanics and General Relativity. The limits of General
+Relativity can be seen a the event horizon of a black hole, described by
+the Schwarzschild Radius. And the limits of Quantum Mechanics can be
+found in the Compton Wavelength for a given quanta.
+
+The
+\href{https://simple.wikipedia.org/wiki/Schwarzschild_radius}{Schwarzschild
+Radius} is defined as the distance at which light cannot escape from the
+gravitational field of a mass (m):
+
+Classic Derivation.
+
+\(r_S=\frac{2G m}{c^2}\)
+
+The reduced
+\href{https://en.wikipedia.org/wiki/Compton_wavelength}{Compton
+Wavelength} represents a lower limit on the wavelength for quanta that
+can interact with a quantum particle with mass (m):
+
+\(\lambda_C=\frac{h}{m c}\)
+
+\(\bar{\lambda_C}=\frac{2\pi\hbar}{m c}=\frac{\tau\hbar}{m c}\)
+
+And set the Schwarzschild Radius equal to the Compton Wavelength:
+\(r_S=\lambda_C\)
+
+\(\frac{2Gm}{c^{2}}=\frac{h}{m c}\)
+
+\(m^{2}= \frac{hc}{2G}\)
+
+\(m = \sqrt{\frac{hc}{2G}}\)
+
+\(l_P=\frac{2G\sqrt{\frac{hc}{2G}}}{c^2}\)
+\(l_P=\frac{2G\sqrt{\frac{hc}{2G}}}{c^{2}}= \sqrt{\frac{2Gh}{c^2}}\)
+
+With reduced Compton Wavelength \(r_S=\bar{\lambda_C}\)
+
+\(\frac{2Gm}{c^{2}}=\frac{\tau\hbar}{m c}\)
+
+\(m^2=\frac{\tau\ \hbar\ c}{2G}\)
+
+\(m = \sqrt{\frac{\tau\ \hbar\ c}{2G}}\)
+
+\(l_P=\frac{2G\sqrt{\frac{\tau\ \hbar\ c}{2G}}}{c^2}\)
+
+\(l_P=\frac{2G\sqrt{\frac{\tau\ \hbar\ c}{2G}}}{c^{2}}=\sqrt{\frac{4\ \tau\ G\ \hbar}{c^3}}\)
+
+If we reduce the units in these equation to those of mass and time
+measured in meters.
+
+\(l_P=\sqrt{4\tau\hbar G_{o}}\)
+
+and
+
+\(\lambda_C=\frac{\hbar}{m}\)
+
+\(m=R_s=\lambda_C=\frac{\hbar}{m}\)
+
+This is known as the Planck Mass, \(M_P\). \(M_P=m=\sqrt{\hbar}\)
+
+Solving the Compton Wavelength for distance we find the classic Plank
+Length:
+
+\(\lambda_C=\frac{\hbar}{\sqrt{\hbar}}=\frac{\sqrt{\hbar}}{\sqrt{\hbar}}\cdot\frac{\hbar}{\sqrt{\hbar}}=\sqrt{\hbar}=L_P\)
+
+Which is in precise agreement with the value we found in above. Thus the
+Plank Length is:
+
+\(L_P=\sqrt{\hbar}=5.72928\times10^{-35}m\)
+
+When we measure distance, time, and mass in units of distance, c=1, and
+the Plank Time, \(T_P\), is equal to Plank Length, \(L_P\), which is
+equal to the Plank Mass, \(M_P\):
+
+\[\boxed{L_P=T_P=M_P}\]
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Conversion Factor
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Symbol
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+meters to Planck Length & \(\chi_P\) &
+\(1.74542\times10^{34} \frac{L}{m}\) \\
+seconds to Planck Length & \(\tau_p\) &
+\(5.23264\times10^{42} \frac{L}{s}\) \\
+mass to Planck Length & \(G_P\) & \(1.62871\times10^8 \frac{L}{kg}\) \\
+energy to Planck Length & \(E_P\) & \(1.81219\times10^9 \frac{L}{J}\) \\
+momentum to Planck Length & \(P_P\) &
+\(5.43280\times10^{-1} \frac{L\cdot s}{kg \cdot m}\) \\
+temperature to Planck Length & \(k_P\) &
+\(2.501998\times10^{-14} \frac{L}{K}\) \\
+charge to Planck Length & \(C_P\) &
+\(1.89007\times10^{18} \frac{L}{C}\) \\
+\end{longtable}
+
+Applying conversion factors from the table above, we can convert SI
+values to Reduced Natural Units. \(c=\frac{1}{\sqrt{\epsilon_o \mu_o}}\)
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3077}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Quantity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Symbol
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+SI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(\nu\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Speed of Light & \(c\) & \(299792458 \frac{m}{s}\) & 1 \\
+Gravitational Constant & \(G_0\) &
+\(8.38659\times10^{-10} \frac{m^3}{kg \cdot s^2}\) & 1 \\
+Boltzmann's Constant & \(k\) & \(k=1.380649\times10^-23 \frac{J}{K}\) &
+1 \\
+Permittivity of Free Space & \(\epsilon_o\) &
+\(8.854187817620\times10^{-12} \frac{C^{2}s^2}{kg \cdot m^3}\) & 1 \\
+Permeability of Free Space & \(\mu_o\) &
+\(\huge{\frac{1}{\epsilon_{o} \cdot c^{2}}}\) & 1 \\
+Planck's Constant & \(\hbar\) &
+\(1.054571726\times10^-34 \frac{kg \cdot m^2}{s}\) & \(1 L^2\) \\
+Mass of the Electron & \(m_e\) & \(9.10938\times10^{-31} kg\) &
+\(1.48366\times10^{-22} L\) \\
+Charge of the Electron & \(e^-\) & \(-1.60218\times10^{-19} C\) &
+\(-3.02822\times10^{-1} L\) \\
+\end{longtable}
+
+\section{Fine Structure Constant}\label{fine-structure-constant-1}
+
+https://en.wikipedia.org/wiki/Fine-structure\_constant As a consistency
+check, we compute the \emph{Fine Structure Constant} using Reduced
+Natural Units which is a unit less ratio that should be independent of
+our system of units.
+
+\(\huge{\alpha=\frac{e^2}{4\pi\epsilon_o\hbar c}=\frac{e^2}{4\pi}=0.00729735≈\frac{1}{137}}\)
+
+This check confirms that our system of Reduced Natural Units has
+internally consistent values for \(c\), \(\epsilon_o\), \(\hbar\) and
+\(e-\). And also \(G_o\) which was used to computer prior values is also
+consistent.
+
+\section{Sage Code}\label{sage-code}
+
+Unit Analysis computations have been performed with
+\href{https://www.sagemath.org/}{Sage Math}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Define constance}
+\ExtensionTok{one}\NormalTok{ = 1.n}\ErrorTok{(}\VariableTok{digits}\OperatorTok{=}\NormalTok{6}\KeywordTok{)}
+\ExtensionTok{pi}\NormalTok{ = pi.n}\ErrorTok{(}\VariableTok{digits}\OperatorTok{=}\NormalTok{6}\KeywordTok{)}
+\ExtensionTok{tau}\NormalTok{ = 2 }\PreprocessorTok{*}\NormalTok{ pi}
+\ExtensionTok{t}\NormalTok{ = tau}
+
+\CommentTok{\# Define the units}
+\ExtensionTok{meters}\NormalTok{ = var}\ErrorTok{(}\StringTok{\textquotesingle{}m\textquotesingle{}}\KeywordTok{)}
+\ExtensionTok{m}\NormalTok{ = one}\PreprocessorTok{*}\NormalTok{meters}
+
+\ExtensionTok{seconds}\NormalTok{ = var}\ErrorTok{(}\StringTok{\textquotesingle{}s\textquotesingle{}}\KeywordTok{)}
+\ExtensionTok{s}\NormalTok{ = seconds}
+
+\ExtensionTok{kilograms}\NormalTok{ = var}\ErrorTok{(}\StringTok{\textquotesingle{}kg\textquotesingle{}}\KeywordTok{)}
+\ExtensionTok{kg}\NormalTok{ = kilograms}
+
+\ExtensionTok{newtons}\NormalTok{ = kg }\PreprocessorTok{*}\NormalTok{ m / s\^{}2}
+\ExtensionTok{N}\NormalTok{ = newtons}
+
+\ExtensionTok{joules}\NormalTok{ = N }\PreprocessorTok{*}\NormalTok{ m}
+\ExtensionTok{J}\NormalTok{ = joules}
+
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"pi    ="}\ExtensionTok{,}\NormalTok{ pi}\KeywordTok{)}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"tau   ="}\ExtensionTok{,}\NormalTok{ t}\KeywordTok{)}
+
+\CommentTok{\# Speed of light in meters/second}
+\ExtensionTok{speed\_of\_light}\NormalTok{ = 299792458 }\PreprocessorTok{*}\NormalTok{ meters/seconds}
+\ExtensionTok{sol}\NormalTok{ = speed\_of\_light}
+\ExtensionTok{c}\NormalTok{ = sol}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"si c  ="}\ExtensionTok{,}\NormalTok{ c}\KeywordTok{)}
+
+\ExtensionTok{rnu\_c}\NormalTok{ = c / c}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"R\textbackslash{}u03BD c  ="}\ExtensionTok{,}\NormalTok{ rnu\_c}\KeywordTok{)}
+
+\CommentTok{\# Gravitational Constant}
+\ExtensionTok{gravitational\_constant}\NormalTok{ = 6.67384e{-}11 }\PreprocessorTok{*}\NormalTok{ N}\PreprocessorTok{*(}\NormalTok{m\^{}2/kg\^{}2}\PreprocessorTok{)}
+\ExtensionTok{G}\NormalTok{ = gravitational\_constant}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"si G  ="}\ExtensionTok{,}\NormalTok{ G}\KeywordTok{)}
+
+\ExtensionTok{rnu\_G}\NormalTok{ = 4}\PreprocessorTok{*}\NormalTok{pi}\PreprocessorTok{*}\NormalTok{G/c\^{}2}
+\ExtensionTok{Go}\NormalTok{ = rnu\_G}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"R\textbackslash{}u03BD Go ="}\ExtensionTok{,}\NormalTok{ Go}\KeywordTok{)}
+
+
+\CommentTok{\# Planck\textquotesingle{}s Constant}
+\ExtensionTok{reduced\_plancks\_constant}\NormalTok{ = 1.054571726e{-}34 }\PreprocessorTok{*}\NormalTok{ J}\PreprocessorTok{*}\NormalTok{s}
+\ExtensionTok{h\_bar}\NormalTok{ = reduced\_plancks\_constant}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"si \textbackslash{}u210F  ="}\ExtensionTok{,}\NormalTok{ h\_bar}\KeywordTok{)}
+
+\ExtensionTok{rnu\_h\_bar}\NormalTok{ = h\_bar }\PreprocessorTok{*}\NormalTok{ Go / c}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"R\textbackslash{}u03BD "}\ExtensionTok{u}\StringTok{"\textbackslash{}u210F  ="}\ExtensionTok{,}\NormalTok{ rnu\_h\_bar}\KeywordTok{)}
+
+\CommentTok{\# Planck Length}
+\ExtensionTok{rnu\_h\_bar\_str}\NormalTok{ = str}\ErrorTok{(}\ExtensionTok{rnu\_h\_bar}\KeywordTok{)} 
+\ExtensionTok{numerical\_part\_str}\NormalTok{ = rnu\_h\_bar\_str.split}\ErrorTok{(}\StringTok{\textquotesingle{}*\textquotesingle{}}\KeywordTok{)}\ExtensionTok{[0]}  
+\ExtensionTok{numerical\_part\_str}\NormalTok{ = numerical\_part\_str.strip}\ErrorTok{(}\StringTok{\textquotesingle{}()\textquotesingle{}}\KeywordTok{)}
+\ExtensionTok{numerical\_part}\NormalTok{ = float}\ErrorTok{(}\ExtensionTok{numerical\_part\_str}\KeywordTok{)}
+\ExtensionTok{rnu\_sqrt\_h\_bar}\NormalTok{ = numerical\_part\^{}}\ErrorTok{(}\ExtensionTok{1/2}\KeywordTok{)}
+\CommentTok{\# \^{} Sage cannot process sqrt on units... Lame.}
+\ExtensionTok{lP}\NormalTok{ = rnu\_sqrt\_h\_bar }\PreprocessorTok{*}\NormalTok{ m}
+\ExtensionTok{print}\ErrorTok{(}\StringTok{"R\textbackslash{}u03BD \textbackslash{}u221A\textbackslash{}u210F ="}\ExtensionTok{,}\NormalTok{ lP}\KeywordTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Output}\label{output}
+
+\begin{verbatim}
+pi    = 3.14159
+tau   = 6.28319
+si c  = 299792458*m/s
+Rν c  = 1
+si G  = (6.67384e-11)*m^3/(kg*s^2)
+Rν Go = (9.33135e-27)*m/kg
+si ℏ  = (1.05457e-34)*kg*m^2/s
+Rν ℏ  = (3.28246e-69)*m^2
+Rν √ℏ = (5.72928e-35)*m
+si lP = (1.61620e-35)*sqrt(m^2)
+Rν lP = (2.77455e-47)*sqrt(m^3/kg)
+\end{verbatim}
+
+\chapter{Terminology}\label{terminology}
+
+\chapter*{Citations}\label{citations}
+\addcontentsline{toc}{chapter}{Citations}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-IsaacNewtonLetter}
+{``Isaac {Newton} Letter to {Robert Hooke}, 1675.''} n.d.
+
+\end{CSLReferences}
+
+\backmatter
+\end{document}

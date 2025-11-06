@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>00_Introduction</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="conf/style.css" />
+</head>
+<body>
+<div class="frontmatter">
+
+  <!-- Title Page -->
+  <h1 style="margin-top:3em; font-size:2.4em; text-align:center;">Big Beautiful Book</h1>
+  <h2 style="text-align:center; font-weight:normal;">A book</h2>
+
+  <div style="text-align:center; margin:2em 0;">
+    <img src="lib/img/Revolving_circles.480x480_white.png" alt="Cover illustration" style="max-width:240px;">
+  </div>
+
+  <h3 style="text-align:center;">John Haverlack</h3>
+  <p style="text-align:center;">© 2025 — CC BY-ND 4.0</p>
+
+  <hr style="margin:3em 0;">
+  
+
+  <!-- Metadata Page (PDF analog) -->
+  <div style="text-align:center; margin-top:5em;">
+    <p><strong>Author</strong>: John Haverlack</p>
+    <p><strong>Copyright</strong>: © 2025 John Haverlack</p>
+    <p><strong>License</strong>: CC BY-ND 4.0</p>
+    <p><strong>Version</strong>: 0.0.1</p>
+    <p><strong>Date</strong>: 2025-11-05</p>
+  </div>
+
+  <hr style="margin:3em 0;">
+
+
+  <!-- Image attribution + perception note (PDF analog) -->
+  <div style="max-width:40em; margin:auto;">
+
+    <div style="width:100%; text-align:center; display:block; margin:1em 0;">
+      <img src="lib/img/Revolving_circles.480x480_white.png"
+       alt="Revolving Circles optical illusion"
+       style="display:inline-block; max-width:200px;">
+    </div>
+
+
+    <p style="font-size:0.9em; text-align:center;">
+      <em>“Revolving Circles.” n.d. Accessed October 31, 2025.</em><br>
+      <a href="https://en.wikipedia.org/wiki/File/Revolving_circles.svg">Wikipedia source</a>
+    </p>
+
+    <p>
+      The cover image presents a visual illusion of motion. When you focus on the
+      central point and move the page toward or away from your eyes, the concentric
+      circles appear to rotate.
+    </p>
+
+    <p>
+      This reflects a central theme of this work: perception shapes what we think of as
+      “reality.” In this illusion, motion exists only in our minds. We perceive, we do
+      not directly know; our brains construct experience.
+    </p>
+
+  </div>
+
+  <hr style="margin:4em 0;">
+
+</div>
+
+
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="lib/mathjax/tex-mml-chtml.js"></script>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contents</h2>
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a>
+<ul>
+<li><a href="#conventions" id="toc-conventions">Conventions</a>
+<ul>
+<li><a href="#new-concepts" id="toc-new-concepts">New Concepts</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#chapter-1" id="toc-chapter-1">Chapter 1</a></li>
+<li><a href="#example-content" id="toc-example-content">Example
+Content</a>
+<ul>
+<li><a href="#si-conversion-factors" id="toc-si-conversion-factors">SI
+Conversion Factors</a></li>
+<li><a href="#physical-constants" id="toc-physical-constants">Physical
+Constants</a></li>
+<li><a href="#fine-structure-constant"
+id="toc-fine-structure-constant">Fine Structure Constant</a></li>
+<li><a href="#newtons-law-of-gravity"
+id="toc-newtons-law-of-gravity">Newton’s Law of Gravity</a>
+<ul>
+<li><a href="#relativistic-energy-momentum-relation"
+id="toc-relativistic-energy-momentum-relation">Relativistic Energy
+Momentum Relation</a></li>
+</ul></li>
+<li><a href="#plancks-constant" id="toc-plancks-constant">Planck’s
+Constant</a></li>
+<li><a href="#planck-length" id="toc-planck-length">Planck
+Length</a></li>
+<li><a href="#fine-structure-constant-1"
+id="toc-fine-structure-constant-1">Fine Structure Constant</a></li>
+<li><a href="#sage-code" id="toc-sage-code">Sage Code</a></li>
+</ul></li>
+<li><a href="#terminology" id="toc-terminology">Terminology</a></li>
+<li><a href="#citations" id="toc-citations">Citations</a></li>
+</ul>
+</nav>
+<h1 id="introduction">Introduction</h1>
+<blockquote>
+<p>“<em>If I have seen further it is by standing on the shoulders of
+Giants.</em>”</p>
+<p>– Isaac Newton <span class="citation"
+data-cites="IsaacNewtonLetter">(<a href="#ref-IsaacNewtonLetter"
+role="doc-biblioref"><span>“Isaac <span>Newton</span> Letter to
+<span>Robert Hooke</span>, 1675,”</span> n.d.</a>)</span></p>
+</blockquote>
+<h2 id="conventions">Conventions</h2>
+<p>In this book we’ll use a few conventions.</p>
+<h3 id="new-concepts">New Concepts</h3>
+<p>As many of the topics discussed in this book are a mix of
+<strong>established</strong> math and physics, <strong>proposed</strong>
+dualistic interpretations of established ideas, and also
+<strong>speculative</strong> ideas that I don’t yet know how to address,
+I wanted a way to clearly distinguish these concepts. I’ve come up with
+the following convention to highlight these classes of concepts to
+indicate their level of mainstream acceptance.</p>
+<p>In this book, established concept may be highlighted in green, and
+represent mainstream physics or math concepts.</p>
+<div class="callout-established">
+<p><strong>Established Concept</strong></p>
+<p> Einsteins Relativistic Dynamics Equations <span
+class="math display"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub> ⋅ <em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em> ⋅ <em>c</em>)<sup>2</sup></span></p>
+</div>
+<p>New ideas proposed by the author which have not been peer reviewed,
+verified or tested, and should be looked at with scrutiny.</p>
+<div class="callout-proposed">
+<p><strong>Proposed Concept</strong></p>
+<p> With the speed of light, <span
+class="math inline"><em>c</em> = 1</span>: <span
+class="math display"><em>E</em><sup>2</sup> = <em>m</em><sub>0</sub><sup>2</sup> + <em>p</em><sup>2</sup></span></p>
+</div>
+<p>Speculative Idea, that the author wonders about, but does not know
+how to demonstrate, or ideas that need further treatment to prove or
+disprove.</p>
+<div class="callout-speculative">
+<p><strong>Speculative Concept</strong></p>
+<p> With the speed of light, <span
+class="math inline"><em>c</em> = 1</span>: <span
+class="math display"><em>E</em><sup>2</sup> = <em>m</em><sub>0</sub><sup>2</sup> + <em>p</em><sup>2</sup></span></p>
+</div>
+<h1 id="chapter-1">Chapter 1</h1>
+<p>Blah blah blah</p>
+<h1 id="example-content">Example Content</h1>
+<p>In <span class="math inline"><em>R</em><em>ν</em></span> the <a
+href="https://en.wikipedia.org/wiki/Planck_units#Planck_length">Planck
+Length</a> is the universal unit for measurement of distance, and is
+defined approximately to be: <span
+class="math display">$$\boxed{L_P=\sqrt{\hbar}=5.72928\times10^{-35}m=1
+L}$$</span> Where <span class="math inline">1 <em>L</em></span>, is 1
+Planck Length of distance.</p>
+<h3 id="si-conversion-factors">SI Conversion Factors</h3>
+<p>The following conversion factors can be used to convert observable
+quantities of measure from the <em>SI</em> system of units to <span
+class="math inline"><em>R</em><em>ν</em></span> to ~6 significant
+digits.</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 9%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr>
+<th>Conversion Factor</th>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meters to Planck Length</td>
+<td><span
+class="math inline"><em>χ</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.74542\times10^{34}
+\frac{L}{m}$</span></td>
+</tr>
+<tr>
+<td>seconds to Planck Length</td>
+<td><span
+class="math inline"><em>τ</em><sub><em>p</em></sub></span></td>
+<td><span class="math inline">$5.23264\times10^{42}
+\frac{L}{s}$</span></td>
+</tr>
+<tr>
+<td>mass to Planck Length</td>
+<td><span
+class="math inline"><em>G</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.62871\times10^8
+\frac{L}{kg}$</span></td>
+</tr>
+<tr>
+<td>energy to Planck Length</td>
+<td><span
+class="math inline"><em>E</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.81219\times10^9
+\frac{L}{J}$</span></td>
+</tr>
+<tr>
+<td>momentum to Planck Length</td>
+<td><span
+class="math inline"><em>P</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$5.43280\times10^{-1} \frac{L\cdot s}{kg
+\cdot m}$</span></td>
+</tr>
+<tr>
+<td>temperature to Planck Length</td>
+<td><span
+class="math inline"><em>k</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$2.501998\times10^{-14}
+\frac{L}{K}$</span></td>
+</tr>
+<tr>
+<td>charge to Planck Length</td>
+<td><span
+class="math inline"><em>C</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.89007\times10^{18}
+\frac{L}{C}$</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="physical-constants">Physical Constants</h3>
+<p>Applying conversion factors from the table above, we can convert SI
+values to Reduced Natural Units. For example, performing this analysis
+on the the speed of light yields a unit-less number with a value of
+1:</p>
+<p><span class="math inline">$c = 299792458 \frac{m}{s} = 299792458
+\frac{m}{s} \cdot 1.74542\times10^{34} \frac{L}{m} \cdot
+\frac{1}{5.23264\times10^{42} \frac{L}{s}} = 1.00000$</span></p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 9%" />
+<col style="width: 45%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>SI</th>
+<th><span class="math inline"><em>ν</em></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed of Light</td>
+<td><span class="math inline"><em>c</em></span></td>
+<td><span class="math inline">$299792458 \frac{m}{s}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Reduced Gravitational Constant</td>
+<td><span class="math inline"><em>G</em><sub>0</sub></span></td>
+<td><span class="math inline">$8.38659\times10^{-10} \frac{m^3}{kg \cdot
+s^2}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Boltzmann’s Constant</td>
+<td><span class="math inline"><em>k</em></span></td>
+<td><span class="math inline">$k=1.380649\times10^-23
+\frac{J}{K}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Permittivity of Free Space</td>
+<td><span
+class="math inline"><em>ϵ</em><sub><em>o</em></sub></span></td>
+<td><span class="math inline">$8.854187817620\times10^{-12}
+\frac{C^{2}s^2}{kg \cdot m^3}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Permeability of Free Space</td>
+<td><span
+class="math inline"><em>μ</em><sub><em>o</em></sub></span></td>
+<td><span class="math inline">$\huge{\frac{1}{\epsilon_{o} \cdot
+c^{2}}}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Reduced Planck’s Constant</td>
+<td><span class="math inline">ℏ</span></td>
+<td><span class="math inline">$1.054571726\times10^-34 \frac{kg \cdot
+m^2}{s}$</span></td>
+<td><span class="math inline">1<em>L</em><sup>2</sup></span></td>
+</tr>
+<tr>
+<td>Mass of the Electron</td>
+<td><span
+class="math inline"><em>m</em><sub><em>e</em></sub></span></td>
+<td><span
+class="math inline">9.10938 × 10<sup>−31</sup><em>k</em><em>g</em></span></td>
+<td><span
+class="math inline">1.48366 × 10<sup>−22</sup><em>L</em></span></td>
+</tr>
+<tr>
+<td>Charge of the Electron</td>
+<td><span class="math inline"><em>e</em><sup>−</sup></span></td>
+<td><span
+class="math inline">−1.60218 × 10<sup>−19</sup><em>C</em></span></td>
+<td><span
+class="math inline">−3.02822 × 10<sup>−1</sup><em>L</em></span></td>
+</tr>
+<tr>
+<td>Unit Cycle</td>
+<td><span class="math inline"><em>Θ</em></span></td>
+<td><span
+class="math inline">2<em>π</em> = 6.28318... <em>R</em><em>a</em><em>d</em><em>i</em><em>a</em><em>n</em><em>s</em></span></td>
+<td><span
+class="math inline">1<em>τ</em> = 6.28318... <em>R</em><em>a</em><em>d</em><em>i</em><em>a</em><em>n</em><em>s</em></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="fine-structure-constant">Fine Structure Constant</h2>
+<p>As a consistency check, we compute the <em><a
+href="https://en.wikipedia.org/wiki/Fine-structure_constant">Fine
+Structure Constant</a></em> using Reduced Natural Units which is a unit
+less ratio that should be independent of our system of units.</p>
+<p><span
+class="math inline">$\huge{\alpha=\frac{e^2}{4\pi\epsilon_o\hbar
+c}=\frac{e^2}{2\tau}=0.00729735≈\frac{1}{137}}$</span></p>
+<h4 id="dimensional-analysis">Dimensional Analysis</h4>
+<p>The reader should be familiar with high school physics and chemistry
+<a href="https://en.wikipedia.org/wiki/Dimensional_analysis">dimensional
+analysis</a>.</p>
+<ul>
+<li><span
+class="math inline">1 <em>m</em><em>e</em><em>t</em><em>e</em><em>r</em> (<em>m</em>) = 100 <em>c</em><em>e</em><em>n</em><em>t</em><em>i</em><em>m</em><em>e</em><em>t</em><em>e</em><em>r</em><em>s</em> (<em>c</em><em>m</em>)</span></li>
+<li><span
+class="math inline">1 <em>k</em><em>i</em><em>l</em><em>o</em><em>m</em><em>e</em><em>t</em><em>e</em><em>r</em> (<em>k</em><em>m</em>) = 1000 <em>m</em><em>e</em><em>t</em><em>e</em><em>r</em><em>s</em> (<em>m</em>)</span></li>
+<li><span
+class="math inline">1 <em>m</em><em>i</em><em>l</em><em>e</em> = 5280 <em>f</em><em>e</em><em>e</em><em>t</em> (<em>f</em><em>t</em> <em>o</em><em>r</em> <sup>′</sup>)</span></li>
+<li><span class="math inline">$1\ foot\ (ft\ or\ ') = 12\ inches\ (in\
+or\ ")$</span></li>
+<li><span class="math inline">$1\ inch\ (") = 2.54\ centimeters\
+(cm)$</span></li>
+</ul>
+<p>How many kilometers are in 1 mile? <span class="math inline">$1\ mile
+= 1\ mile \times \frac{5280\ ft}{mile} \times \frac{12\ in}{ft} \times
+\frac{2.54\ cm}{in}\times \frac{1\ m}{100 cm} \times \frac{1\ km}{1000
+m} = \frac{5280 \times 12 \times 2.54}{100 \times 1000}\ km =
+\frac{160934.40}{100000}\ km = 1.6\ km$</span> Note that each unit in
+the denominator cancels with one if the numerator until we are left with
+only km.</p>
+<h2 id="newtons-law-of-gravity">Newton’s Law of Gravity</h2>
+<p>The force of gravity (<span
+class="math inline"><em>F</em><sub><em>g</em></sub></span>) between 2
+masses, <span class="math inline"><em>m</em>1</span> and <span
+class="math inline"><em>m</em>2</span> separated by distance <span
+class="math inline"><em>r</em></span> is given by <a
+href="https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation">Newton’s
+Law of Gravity</a>:</p>
+<p><span class="math inline">$F_{g} = G \frac{m_{1}
+m_{2}}{r^{2}}$</span></p>
+<p>Where <span class="math inline"><em>G</em></span>, is the <a
+href="http://en.wikipedia.org/wiki/Gravitational_Constant">Gravitational
+Constant</a>.</p>
+<p><span class="math inline">$G = 6.67430 \times 10^{-11}\
+N\frac{m^2}{kg^2}$</span></p>
+<p>The strength of gravitational force follow the inverse square law
+distributing gravitational flux over the surface area of a sphere (<span
+class="math inline">4<em>π</em><em>r</em><sup>2</sup></span>).</p>
+<h4 id="inverse-square-law">Inverse Square Law</h4>
+<p>Any source of a signal strength (<span
+class="math inline"><em>S</em><sub>0</sub></span>) that radiates
+isotropically in 3-dimensional space will distribute that signal
+strength (<span class="math inline"><em>S</em><sub>0</sub></span>) over
+the surface area of a sphere (<span
+class="math inline"><em>S</em><em>A</em> = 4<em>π</em><em>r</em></span>)
+of radius (<span class="math inline"><em>r</em></span>). Such that the
+intensity (<span class="math inline"><em>I</em></span>) at distance
+(<span class="math inline"><em>r</em></span>) is:</p>
+<p><span class="math display">$$I(r) = \frac{S_0}{4 \pi
+r^{2}}=\frac{S_0}{2 \tau r^{2}}$$</span> <img
+src="lib/img/Inverse_square_law.svg.png" alt="inverse square law" />
+#### <span class="math inline"><em>R</em><em>ν</em></span> Reduced
+Gravitational Constant In this version of Newton’s Law of Gravity we
+introduce a new constant <span
+class="math inline"><em>G</em><sub>0</sub></span>, the reduced
+gravitational constant to accommodate for the factor of <span
+class="math inline">4<em>π</em> = 2<em>τ</em></span> which is has been
+integrated in the SI version of the gravitational constant.</p>
+<p><span class="math inline">$F_g =G \frac{m_{1} m_{2}}{r^{2}}= G_0
+\frac{m_{1} m_{2}}{4 \pi r^{2}}=G_0 \frac{m_{1} m_{2}}{2 \tau
+r^{2}}$</span></p>
+<p>Where:</p>
+<p><span class="math inline">$G = \frac{G_{0}}{2\tau} = 6.67384 \times
+10^{-11} \frac{N \cdot m^2}{kg^2}$</span></p>
+<p>Analyzing the units: <span class="math display">$$\frac{N \cdot
+m^2}{kg^2} = \left( \frac{\left( kg \cdot \frac{m}{s^2} \right) \cdot
+m^2}{kg^2} \right)=\frac{m^3}{s^2 kg}$$</span> Converting seconds to
+meters with the SI speed of light as a conversion factor: <span
+class="math display">$$\frac{m^3}{s^2
+kg}\cdot\frac{1}{c^2}=\frac{m^3}{s^2
+kg}\cdot\frac{s^2}{m^2}=\frac{m}{kg}$$</span></p>
+<p>Thus where space and time are measured in units of meters, the
+reduced gravitational constant, is:</p>
+<p><span class="math display">$$\boxed{G_0=\frac{2\tau
+G}{c^2}=\frac{2\tau \cdot 6.67384 \times 10^{-11}}{299792458^2}
+\frac{m}{kg} = 9.33135 \times 10^-27 \frac{m}{kg}}$$</span></p>
+<blockquote>
+<p>Observation This implies that not only can space an time be measure
+in units of meters, but so can mass.</p>
+</blockquote>
+<h3 id="relativistic-energy-momentum-relation">Relativistic Energy
+Momentum Relation</h3>
+<p>Einsteins <a
+href="https://en.wikipedia.org/wiki/Energy%E2%80%93momentum_relation">Relativistic
+Energy Momentum</a> relationship shows a Pythagorean relation between
+the total energy (<span class="math inline"><em>E</em></span>), rest
+mass (<span class="math inline"><em>m</em><sub>0</sub></span>) and
+momentum (<span class="math inline"><em>p</em></span>) of a system.</p>
+<p><span
+class="math inline"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub> ⋅ <em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em> ⋅ <em>c</em>)<sup>2</sup></span></p>
+<p>Where space and time are both measure in units of meters, c=1.</p>
+<p><span
+class="math inline"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub>)<sup>2</sup> + (<em>p</em>)<sup>2</sup></span></p>
+<p>From this we can see that Energy, Momentum and Mass have equivalent
+units.</p>
+<blockquote>
+<p><em>While we do not really know what energy, mass and momentum are we
+know that they are fundamentally “made” out of the same stuff because
+they have the same units.</em></p>
+</blockquote>
+<h5 id="objects-of-mass-at-rest">Objects of mass at rest</h5>
+<p>For an object at rest with no momentum (<span
+class="math inline"><em>p</em> = 0</span>) we see Einstein’s famous
+equations:</p>
+<p><span
+class="math inline"><em>E</em> = <em>m</em><sub>0</sub> ⋅ <em>c</em><sup>2</sup></span></p>
+<p>Or, with <span class="math inline"><em>c</em> = 1</span>, this is
+much simpler to understand. Energy = Mass</p>
+<p><span class="math inline"><em>E</em> = <em>m</em><sub>0</sub></span>
+##### Zero mass objects moving at the speed of light And for objects
+with no mass, like photos, (<span
+class="math inline"><em>m</em><sub>0</sub> = 0</span>):</p>
+<p><span
+class="math inline"><em>E</em> = <em>p</em><em>c</em></span></p>
+<p>Or, with <span class="math inline"><em>c</em> = 1</span>, this is
+much simpler to understand. Energy = Momentum</p>
+<p><span class="math inline"><em>E</em> = <em>p</em></span></p>
+<h2 id="plancks-constant">Planck’s Constant</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Planck_constant">Reduced
+Planck constant</a> , ħ, represents a conversion factor for relating the
+frequency, <span class="math inline"><em>ω</em></span> (in <span
+class="math inline">2<em>π</em></span> radians per second), of a photon
+to the energy of that photon. This can easily be seen from the simple
+but profound relationship:</p>
+<p><span class="math inline"><em>E</em> = ℏ<em>ω</em></span></p>
+<p>Where:</p>
+<p><span
+class="math inline">ℏ = 1.054571726 × 10<sup>−34</sup><em>J</em> ⋅ <em>s</em></span></p>
+<p>and</p>
+<p><span class="math inline">$J \cdot s =
+{kg}\cdot\frac{m^2}{s}$</span></p>
+<blockquote>
+<p>Reduced Planck’s Constant <span class="math inline">$\hbar =
+\frac{h}{2\pi} = \frac{h}{\tau}$</span></p>
+</blockquote>
+<p>Simplifying our units by converting time and mass to units of meters:
+<span class="math display">$$\boxed{\hbar=1.054571726 \times 10^{−34}
+{kg}\cdot\frac{m^2}{s}\cdot\frac{G_0}{c}=3.282462\times10^{-69}m^2}$$</span></p>
+<p>Which suggest that the Plank constant can be interpreted as an areas
+for which the square root of is suspiciously close to the Plank
+length:</p>
+<p><span
+class="math display">$$\boxed{\sqrt{\hbar}=\sqrt{3.282462\times10^{-69}m^2}=5.72928\times10^{-35}m}$$</span></p>
+<h4 id="planck-area">Planck Area</h4>
+<p>The <a
+href="https://en.wikipedia.org/wiki/Planck_units#Derived_units">Planck
+Area</a> is the square of the <a
+href="https://en.wikipedia.org/wiki/Planck_units#Planck_length">Planck
+Length</a>.</p>
+<p><span class="math inline">$l_{P}= \sqrt{\frac{\hbar
+G}{c^3}}$</span></p>
+<p>and <span class="math inline">$l_{P}^{2}= \frac{\hbar
+G}{c^3}$</span></p>
+<p>In <span class="math inline"><em>R</em><em>ν</em></span> units both
+<span class="math inline"><em>c</em></span> and <span
+class="math inline"><em>G</em><sub><em>o</em></sub></span> are 1.</p>
+<p><span class="math inline">$l_{P} = \sqrt{\hbar}$</span></p>
+<p>and <span
+class="math inline"><em>l</em><sub><em>P</em></sub><sup>2</sup> = ℏ</span>
+## Bekenstein’s Bound After having recently read <em>Three Roads to
+Quantum Gravity</em> by Lee Smolin, I now suspect the meaning of this
+areas is related to the <a
+href="https://en.wikipedia.org/wiki/Bekenstein_bound">Bekensteins
+Law</a> as applied to a surface areas surrounding a mass. Where the <a
+href="https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)">thermodynamic
+entropy</a>, <em>S</em>, is proportional to the the enclosed surface
+area, <span class="math inline"><em>A</em></span>.</p>
+<p><span
+class="math inline">$S=\frac{1}{4}\cdot\frac{A}{G\hbar}$</span></p>
+<p><span class="math inline">$S=\frac{k c^{3} A}{4 G \hbar}$</span></p>
+<p><span class="math inline">$S \le \frac{2\pi k R E}{\hbar c} =
+\frac{\tau R k E}{\hbar c}$</span></p>
+<p>From our new values for <span
+class="math inline"><em>G</em><sub>0</sub></span>and <span
+class="math inline">ℏ</span> we can likely rewrite this:</p>
+<p><span class="math inline">$S=\frac{\pi\cdot A}{\hbar G_0}$</span></p>
+<p>With the limiting case being at the Plank scale.</p>
+<p><span class="math inline">$S=\frac{\pi\cdot \sqrt{\hbar}}{\hbar
+G_0}$</span></p>
+<h2 id="planck-length">Planck Length</h2>
+<p>https://en.wikipedia.org/wiki/Planck_length</p>
+<p>The concept of the Planck Length comes from exploring the limits of
+Quantum Mechanics and General Relativity. The limits of General
+Relativity can be seen a the event horizon of a black hole, described by
+the Schwarzschild Radius. And the limits of Quantum Mechanics can be
+found in the Compton Wavelength for a given quanta.</p>
+<p>The <a
+href="https://simple.wikipedia.org/wiki/Schwarzschild_radius">Schwarzschild
+Radius</a> is defined as the distance at which light cannot escape from
+the gravitational field of a mass (m):</p>
+<p>Classic Derivation.</p>
+<p><span class="math inline">$r_S=\frac{2G m}{c^2}$</span></p>
+<p>The reduced <a
+href="https://en.wikipedia.org/wiki/Compton_wavelength">Compton
+Wavelength</a> represents a lower limit on the wavelength for quanta
+that can interact with a quantum particle with mass (m):</p>
+<p><span class="math inline">$\lambda_C=\frac{h}{m c}$</span></p>
+<p><span class="math inline">$\bar{\lambda_C}=\frac{2\pi\hbar}{m
+c}=\frac{\tau\hbar}{m c}$</span></p>
+<p>And set the Schwarzschild Radius equal to the Compton Wavelength:
+<span
+class="math inline"><em>r</em><sub><em>S</em></sub> = <em>λ</em><sub><em>C</em></sub></span></p>
+<p><span class="math inline">$\frac{2Gm}{c^{2}}=\frac{h}{m
+c}$</span></p>
+<p><span class="math inline">$m^{2}= \frac{hc}{2G}$</span></p>
+<p><span class="math inline">$m = \sqrt{\frac{hc}{2G}}$</span></p>
+<p><span
+class="math inline">$l_P=\frac{2G\sqrt{\frac{hc}{2G}}}{c^2}$</span>
+<span class="math inline">$l_P=\frac{2G\sqrt{\frac{hc}{2G}}}{c^{2}}=
+\sqrt{\frac{2Gh}{c^2}}$</span></p>
+<p>With reduced Compton Wavelength <span
+class="math inline">$r_S=\bar{\lambda_C}$</span></p>
+<p><span class="math inline">$\frac{2Gm}{c^{2}}=\frac{\tau\hbar}{m
+c}$</span></p>
+<p><span class="math inline">$m^2=\frac{\tau\ \hbar\ c}{2G}$</span></p>
+<p><span class="math inline">$m = \sqrt{\frac{\tau\ \hbar\
+c}{2G}}$</span></p>
+<p><span class="math inline">$l_P=\frac{2G\sqrt{\frac{\tau\ \hbar\
+c}{2G}}}{c^2}$</span></p>
+<p><span class="math inline">$l_P=\frac{2G\sqrt{\frac{\tau\ \hbar\
+c}{2G}}}{c^{2}}=\sqrt{\frac{4\ \tau\ G\ \hbar}{c^3}}$</span></p>
+<p>If we reduce the units in these equation to those of mass and time
+measured in meters.</p>
+<p><span class="math inline">$l_P=\sqrt{4\tau\hbar G_{o}}$</span></p>
+<p>and</p>
+<p><span class="math inline">$\lambda_C=\frac{\hbar}{m}$</span></p>
+<p><span
+class="math inline">$m=R_s=\lambda_C=\frac{\hbar}{m}$</span></p>
+<p>This is known as the Planck Mass, <span
+class="math inline"><em>M</em><sub><em>P</em></sub></span>. <span
+class="math inline">$M_P=m=\sqrt{\hbar}$</span></p>
+<p>Solving the Compton Wavelength for distance we find the classic Plank
+Length:</p>
+<p><span
+class="math inline">$\lambda_C=\frac{\hbar}{\sqrt{\hbar}}=\frac{\sqrt{\hbar}}{\sqrt{\hbar}}\cdot\frac{\hbar}{\sqrt{\hbar}}=\sqrt{\hbar}=L_P$</span></p>
+<p>Which is in precise agreement with the value we found in above. Thus
+the Plank Length is:</p>
+<p><span
+class="math inline">$L_P=\sqrt{\hbar}=5.72928\times10^{-35}m$</span></p>
+<p>When we measure distance, time, and mass in units of distance, c=1,
+and the Plank Time, <span
+class="math inline"><em>T</em><sub><em>P</em></sub></span>, is equal to
+Plank Length, <span
+class="math inline"><em>L</em><sub><em>P</em></sub></span>, which is
+equal to the Plank Mass, <span
+class="math inline"><em>M</em><sub><em>P</em></sub></span>:</p>
+<p><span class="math display">$$\boxed{L_P=T_P=M_P}$$</span></p>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr>
+<th>Conversion Factor</th>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meters to Planck Length</td>
+<td><span
+class="math inline"><em>χ</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.74542\times10^{34}
+\frac{L}{m}$</span></td>
+</tr>
+<tr>
+<td>seconds to Planck Length</td>
+<td><span
+class="math inline"><em>τ</em><sub><em>p</em></sub></span></td>
+<td><span class="math inline">$5.23264\times10^{42}
+\frac{L}{s}$</span></td>
+</tr>
+<tr>
+<td>mass to Planck Length</td>
+<td><span
+class="math inline"><em>G</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.62871\times10^8
+\frac{L}{kg}$</span></td>
+</tr>
+<tr>
+<td>energy to Planck Length</td>
+<td><span
+class="math inline"><em>E</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.81219\times10^9
+\frac{L}{J}$</span></td>
+</tr>
+<tr>
+<td>momentum to Planck Length</td>
+<td><span
+class="math inline"><em>P</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$5.43280\times10^{-1} \frac{L\cdot s}{kg
+\cdot m}$</span></td>
+</tr>
+<tr>
+<td>temperature to Planck Length</td>
+<td><span
+class="math inline"><em>k</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$2.501998\times10^{-14}
+\frac{L}{K}$</span></td>
+</tr>
+<tr>
+<td>charge to Planck Length</td>
+<td><span
+class="math inline"><em>C</em><sub><em>P</em></sub></span></td>
+<td><span class="math inline">$1.89007\times10^{18}
+\frac{L}{C}$</span></td>
+</tr>
+</tbody>
+</table>
+<p>Applying conversion factors from the table above, we can convert SI
+values to Reduced Natural Units. <span
+class="math inline">$c=\frac{1}{\sqrt{\epsilon_o \mu_o}}$</span></p>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>SI</th>
+<th><span class="math inline"><em>ν</em></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed of Light</td>
+<td><span class="math inline"><em>c</em></span></td>
+<td><span class="math inline">$299792458 \frac{m}{s}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Gravitational Constant</td>
+<td><span class="math inline"><em>G</em><sub>0</sub></span></td>
+<td><span class="math inline">$8.38659\times10^{-10} \frac{m^3}{kg \cdot
+s^2}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Boltzmann’s Constant</td>
+<td><span class="math inline"><em>k</em></span></td>
+<td><span class="math inline">$k=1.380649\times10^-23
+\frac{J}{K}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Permittivity of Free Space</td>
+<td><span
+class="math inline"><em>ϵ</em><sub><em>o</em></sub></span></td>
+<td><span class="math inline">$8.854187817620\times10^{-12}
+\frac{C^{2}s^2}{kg \cdot m^3}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Permeability of Free Space</td>
+<td><span
+class="math inline"><em>μ</em><sub><em>o</em></sub></span></td>
+<td><span class="math inline">$\huge{\frac{1}{\epsilon_{o} \cdot
+c^{2}}}$</span></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Planck’s Constant</td>
+<td><span class="math inline">ℏ</span></td>
+<td><span class="math inline">$1.054571726\times10^-34 \frac{kg \cdot
+m^2}{s}$</span></td>
+<td><span class="math inline">1<em>L</em><sup>2</sup></span></td>
+</tr>
+<tr>
+<td>Mass of the Electron</td>
+<td><span
+class="math inline"><em>m</em><sub><em>e</em></sub></span></td>
+<td><span
+class="math inline">9.10938 × 10<sup>−31</sup><em>k</em><em>g</em></span></td>
+<td><span
+class="math inline">1.48366 × 10<sup>−22</sup><em>L</em></span></td>
+</tr>
+<tr>
+<td>Charge of the Electron</td>
+<td><span class="math inline"><em>e</em><sup>−</sup></span></td>
+<td><span
+class="math inline">−1.60218 × 10<sup>−19</sup><em>C</em></span></td>
+<td><span
+class="math inline">−3.02822 × 10<sup>−1</sup><em>L</em></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="fine-structure-constant-1">Fine Structure Constant</h2>
+<p>https://en.wikipedia.org/wiki/Fine-structure_constant As a
+consistency check, we compute the <em>Fine Structure Constant</em> using
+Reduced Natural Units which is a unit less ratio that should be
+independent of our system of units.</p>
+<p><span
+class="math inline">$\huge{\alpha=\frac{e^2}{4\pi\epsilon_o\hbar
+c}=\frac{e^2}{4\pi}=0.00729735≈\frac{1}{137}}$</span></p>
+<p>This check confirms that our system of Reduced Natural Units has
+internally consistent values for <span
+class="math inline"><em>c</em></span>, <span
+class="math inline"><em>ϵ</em><sub><em>o</em></sub></span>, <span
+class="math inline">ℏ</span> and <span
+class="math inline"><em>e</em>−</span>. And also <span
+class="math inline"><em>G</em><sub><em>o</em></sub></span> which was
+used to computer prior values is also consistent.</p>
+<h2 id="sage-code">Sage Code</h2>
+<p>Unit Analysis computations have been performed with <a
+href="https://www.sagemath.org/">Sage Math</a>.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define constance</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">one</span> = 1.n<span class="er">(</span><span class="va">digits</span><span class="op">=</span>6<span class="kw">)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pi</span> = pi.n<span class="er">(</span><span class="va">digits</span><span class="op">=</span>6<span class="kw">)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">tau</span> = 2 <span class="pp">*</span> pi</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">t</span> = tau</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the units</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">meters</span> = var<span class="er">(</span><span class="st">&#39;m&#39;</span><span class="kw">)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">m</span> = one<span class="pp">*</span>meters</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">seconds</span> = var<span class="er">(</span><span class="st">&#39;s&#39;</span><span class="kw">)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">s</span> = seconds</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">kilograms</span> = var<span class="er">(</span><span class="st">&#39;kg&#39;</span><span class="kw">)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">kg</span> = kilograms</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ex">newtons</span> = kg <span class="pp">*</span> m / s^2</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ex">N</span> = newtons</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ex">joules</span> = N <span class="pp">*</span> m</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ex">J</span> = joules</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;pi    =&quot;</span><span class="ex">,</span> pi<span class="kw">)</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;tau   =&quot;</span><span class="ex">,</span> t<span class="kw">)</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Speed of light in meters/second</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ex">speed_of_light</span> = 299792458 <span class="pp">*</span> meters/seconds</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ex">sol</span> = speed_of_light</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ex">c</span> = sol</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;si c  =&quot;</span><span class="ex">,</span> c<span class="kw">)</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ex">rnu_c</span> = c / c</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;R\u03BD c  =&quot;</span><span class="ex">,</span> rnu_c<span class="kw">)</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Gravitational Constant</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ex">gravitational_constant</span> = 6.67384e-11 <span class="pp">*</span> N<span class="pp">*(</span>m^2/kg^2<span class="pp">)</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ex">G</span> = gravitational_constant</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;si G  =&quot;</span><span class="ex">,</span> G<span class="kw">)</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ex">rnu_G</span> = 4<span class="pp">*</span>pi<span class="pp">*</span>G/c^2</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ex">Go</span> = rnu_G</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;R\u03BD Go =&quot;</span><span class="ex">,</span> Go<span class="kw">)</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Planck&#39;s Constant</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ex">reduced_plancks_constant</span> = 1.054571726e-34 <span class="pp">*</span> J<span class="pp">*</span>s</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ex">h_bar</span> = reduced_plancks_constant</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;si \u210F  =&quot;</span><span class="ex">,</span> h_bar<span class="kw">)</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ex">rnu_h_bar</span> = h_bar <span class="pp">*</span> Go / c</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;R\u03BD &quot;</span><span class="ex">u</span><span class="st">&quot;\u210F  =&quot;</span><span class="ex">,</span> rnu_h_bar<span class="kw">)</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Planck Length</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ex">rnu_h_bar_str</span> = str<span class="er">(</span><span class="ex">rnu_h_bar</span><span class="kw">)</span> </span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ex">numerical_part_str</span> = rnu_h_bar_str.split<span class="er">(</span><span class="st">&#39;*&#39;</span><span class="kw">)</span><span class="ex">[0]</span>  </span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ex">numerical_part_str</span> = numerical_part_str.strip<span class="er">(</span><span class="st">&#39;()&#39;</span><span class="kw">)</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ex">numerical_part</span> = float<span class="er">(</span><span class="ex">numerical_part_str</span><span class="kw">)</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ex">rnu_sqrt_h_bar</span> = numerical_part^<span class="er">(</span><span class="ex">1/2</span><span class="kw">)</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co"># ^ Sage cannot process sqrt on units... Lame.</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ex">lP</span> = rnu_sqrt_h_bar <span class="pp">*</span> m</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="st">&quot;R\u03BD \u221A\u210F =&quot;</span><span class="ex">,</span> lP<span class="kw">)</span></span></code></pre></div>
+<h4 id="output">Output</h4>
+<pre><code>pi    = 3.14159
+tau   = 6.28319
+si c  = 299792458*m/s
+Rν c  = 1
+si G  = (6.67384e-11)*m^3/(kg*s^2)
+Rν Go = (9.33135e-27)*m/kg
+si ℏ  = (1.05457e-34)*kg*m^2/s
+Rν ℏ  = (3.28246e-69)*m^2
+Rν √ℏ = (5.72928e-35)*m
+si lP = (1.61620e-35)*sqrt(m^2)
+Rν lP = (2.77455e-47)*sqrt(m^3/kg)</code></pre>
+<h1 id="terminology">Terminology</h1>
+<h1 class="unnumbered" id="citations">Citations</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="list">
+<div id="ref-IsaacNewtonLetter" class="csl-entry" role="listitem">
+<span>“Isaac <span>Newton</span> Letter to <span>Robert Hooke</span>,
+1675.”</span> n.d.
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# pandoc.yaml
+input-files:
+  - chapters/00_Introduction.md
+  - chapters/01_Chapter1.md
+  - chapters/02_Chapter2.md
+  - chapters/Terminology.md
+  - chapters/Citations.md
+
+from: markdown+yaml_metadata_block+raw_tex
+standalone: true
+
+
+metadata:
+  mainfont: "Libertinus Serif"
+  sansfont: "Libertinus Sans"
+  monofont: "DejaVu Sans Mono"
+  date: ""            # <-- forces maketitle to exist, but blank
+  link-citations: true
+
+variables:
+  documentclass: book
+  fontsize: 12pt
+  geometry:
+    - margin=1in
+  toc: true                  # ✅ Pandoc-recognized variable
+  toc-depth: 3               # ✅ nested inside variables
+  toc-title: "Contents"      # ✅ controls TOC heading
+  numbersections: true       # ✅ correct key (not number-sections)
+  colorlinks: true           # nice PDF hyperlinks
+  linkcolor: blue
+
+resource-path:
+  - .
+  - lib/img
+
+citeproc: true
+bibliography: lib/citations.bib
+
+

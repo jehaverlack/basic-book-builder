@@ -1,0 +1,24 @@
+# conf/html.yaml
+from: markdown
+to: html5
+standalone: true
+output-file: build/b3.html
+
+include-before-body:
+  - conf/frontmatter.html
+
+metadata:
+
+# This enables EPUB TOC
+toc: true
+toc-depth: 3
+
+css:
+  - conf/style.css
+
+resource-path:
+  - .
+  - lib/img
+
+filters:
+  - filters/callouts-html.lua
