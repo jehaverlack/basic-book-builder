@@ -35,6 +35,6 @@ resource-path:
   - lib/img
 
 citeproc: true
-bibliography: lib/citations.bib
+bibliography: lib/zotero.bib
 
 
