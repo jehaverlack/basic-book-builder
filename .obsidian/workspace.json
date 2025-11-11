@@ -8,17 +8,51 @@
         "type": "tabs",
         "children": [
           {
+            "id": "7c859398719a1e19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f638e1a8b87077ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8c0b940e83a0cce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "chapters/01_Getting_Started.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01_Getting_Started"
+            }
+          },
+          {
             "id": "aea7b6310a1ff6ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chapters/02_Features.md",
+                "file": "chapters/00_Introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_Features"
+              "title": "00_Introduction"
             }
           }
         ]
@@ -257,14 +291,23 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "6852f526864219b9",
+  "active": "b8c0b940e83a0cce",
   "lastOpenFiles": [
-    "lib/zotero.bib",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff",
+    "lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff",
+    "README.md",
     "chapters/01_Getting_Started.md",
-    "chapters/02_Features.md",
     "chapters/00_Introduction.md",
-    "conf/sedcoz12V",
-    "build/lib/diag",
+    "chapters/02_Features.md",
     "build/lib/img/ACEP Logo for Canvas.png",
     "build/lib/img/ACEP Logo.png",
     "build/lib/img/ACEP-50px.png",
@@ -273,17 +316,8 @@
     "build/lib/img/UAF.png",
     "build/lib/img/UAFLogo_A_black.png",
     "build/lib/img/UAFLogo_A_blue.png",
-    "README.md",
-    "build/b3.epub",
-    "build/Paths-to-Perception.epub",
-    "build/media",
     "chapters/Citations.md",
     "chapters/Terminology.md",
-    "lib/old-citations.bib",
-    "build/b3.html",
-    "build/b3.tex",
-    "build/Paths-to-Perception.tex",
-    "build/Paths-to-Perception.html",
     "build/lib/img/unit-circle-with-tau.png",
     "build/lib/img/unit-circle-with-pi.png.png",
     "pm/Book Action Items.md",

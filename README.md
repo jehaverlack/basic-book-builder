@@ -1,6 +1,6 @@
 # basic-book-builder (b3)
 
-This is a basic book (article) builder template based on a Pandoc build process in conjunction with a number of other tools to generate PDF, ODT, HTML, LaTex, and Epub book formats from Markdown source content in an Obsidian vault.
+This is a basic book (article) builder template based on a Pandoc build process in conjunction with a number of other tools to generate PDF, ODT, HTML, LaTex, Markdown, and Epub book formats from Markdown source content in an Obsidian vault.
 
 ## Directory Structure
 
@@ -75,8 +75,8 @@ Install the Better BibTex Plugin for Zotero
 
 - Zotero > File > Export Library > Format: Better BibTeX
 - [ ] Keep Updated
-- [ ] Save to:  ~/Documents/Lib/Citations.bib
-- [ ] Symlink your ~/Documents/Lib/Citations.bib to basic-book-builder/lib/citations.bib
+- [ ] Save to:  ~/Documents/Lib/zotero.bib
+- [ ] Symlink your ~/Documents/Lib/Citations.bib to basic-book-builder/lib/zotero.bib
 
 #### Zotero Connector Browser Plugin
 
@@ -91,6 +91,7 @@ Provides you the ability to auto add Web resources to your Zotero citation datab
 ```
 sudo apt install https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb
 ```
+
 #### Pandoc
 
 - https://pandoc.org/
@@ -141,6 +142,7 @@ sudo apt install https://github.com/johnfactotum/foliate/releases/download/2.6.4
 ```
 sudo apt install calibre
 ```
+
 #### MathJax
 
 - https://www.mathjax.org/
