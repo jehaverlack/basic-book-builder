@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chapters/00_Introduction.md",
+                "file": "chapters/02_Features.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_Introduction"
+              "title": "02_Features"
             }
           }
         ]
@@ -257,8 +257,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "c8db6b72741a9d4b",
+  "active": "6852f526864219b9",
   "lastOpenFiles": [
+    "chapters/01_Getting_Started.md",
+    "chapters/02_Features.md",
+    "chapters/00_Introduction.md",
     "conf/sedcoz12V",
     "build/lib/diag",
     "build/lib/img/ACEP Logo for Canvas.png",
@@ -269,9 +272,6 @@
     "build/lib/img/UAF.png",
     "build/lib/img/UAFLogo_A_black.png",
     "build/lib/img/UAFLogo_A_blue.png",
-    "chapters/02_Chapter2.md",
-    "chapters/01_Chapter1.md",
-    "chapters/00_Introduction.md",
     "README.md",
     "build/b3.epub",
     "build/Paths-to-Perception.epub",
@@ -283,7 +283,6 @@
     "build/b3.tex",
     "build/Paths-to-Perception.tex",
     "build/Paths-to-Perception.html",
-    "build/conf/style.css",
     "build/lib/img/unit-circle-with-tau.png",
     "build/lib/img/unit-circle-with-pi.png.png",
     "pm/Book Action Items.md",

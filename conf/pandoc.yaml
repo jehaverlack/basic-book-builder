@@ -1,8 +1,8 @@
 # pandoc.yaml
 input-files:
   - chapters/00_Introduction.md
-  - chapters/01_Chapter1.md
-  - chapters/02_Chapter2.md
+  - chapters/01_Getting_Started.md
+  - chapters/02_Features.md
   - chapters/Terminology.md
   - chapters/Citations.md
 
