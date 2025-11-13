@@ -11,10 +11,8 @@
 {\Large $subtitle$ \par}
 
 \vspace{1.2cm}
-\includegraphics[width=0.33\textwidth]{$logo$}
+\includegraphics[width=0.5\textwidth]{$logo$}
 
-\vspace{1.2cm}
-{\Large $author$ \par}
 
 \vfill
 
@@ -23,34 +21,25 @@
 % ----- COPYRIGHT / META PAGE -----
 \newpage
 \thispagestyle{empty}
+
+\vspace*{\fill}
+
 \begin{center}
-
-\vspace*{\fill}
-
-\textbf{Title}: $title$
-
-\textbf{Subtitle}: $subtitle$
-
-\textbf{Affiliation}: $affiliation$
-
-\textbf{Institution}: $institution$
-
-\textbf{Author}: $author$
-
-\textbf{Copyright} $copyright$
-
-\textbf{License}: $license$
-
-\textbf{Version}: $version$
-
-\textbf{Date}: $date$
-
-\textbf{State}: $state$
-
-\textbf{Source}: $source$
-
-\vspace*{\fill}
-
+\renewcommand{\arraystretch}{1.3} % row spacing
+\setlength{\tabcolsep}{8pt}       % column padding
+\begin{tabular}{@{}p{0.28\textwidth}p{0.65\textwidth}@{}}
+\textbf{Title:}        & $title$ \\
+\textbf{Subtitle:}     & $subtitle$ \\
+\textbf{Affiliation:}  & $affiliation$ \\
+\textbf{Institution:}  & $institution$ \\
+\textbf{Author:}       & $author$ \\
+\textbf{Copyright:}    & $copyright$ \\
+\textbf{License:}      & $license$ \\
+\textbf{Version:}      & $version$ \\
+\textbf{Date:}         & $date$ \\
+\textbf{State:}        & $state$ \\
+\textbf{Source:}       & $source$ \\
+\end{tabular}
 \end{center}
 
 \vspace*{\fill}

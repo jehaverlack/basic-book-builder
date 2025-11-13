@@ -29,6 +29,10 @@ h1 {
   padding-bottom: 0.4rem;
 }
 
+h1.title {
+  display: none;
+}
+
 h2 {
   font-size: 1.6rem;
 }

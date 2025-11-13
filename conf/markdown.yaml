@@ -1,0 +1,23 @@
+# conf/markdown.yaml
+from: markdown
+to: gfm
+standalone: true
+output-file: build/ClearSkies.md
+
+include-before-body:
+  - conf/frontmatter-md.html   # HTML frontmatter works fine here
+
+metadata:
+  title: "Clear Skies - A Reference Architecture for Resilient Alaskan Microgrid Cyberinfrastructure"
+  title-block: false
+
+toc: true
+toc-depth: 3
+
+resource-path:
+  - .
+  - lib/img
+  - lib/diag
+
+filters:
+  - filters/callouts-html.lua

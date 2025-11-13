@@ -4,8 +4,26 @@
 \usepackage{xparse}
 \tcbuselibrary{breakable}
 
+% --- Disable floating figures globally ---
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][H]{\origfigure[H]}{\endorigfigure}
+
+% --- Colors ---
+\usepackage{xcolor}
 \definecolor{speculativeback}{RGB}{247,232,255}  % #f7e8ff
 \definecolor{speculativeframe}{RGB}{139,43,226}  % #8b2be2
+
+% --- Left-align all Pandoc tables ---
+\usepackage{longtable}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\par\raggedright}{}{}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\makeatother
+
 
 % Helper to show a blank title if empty
 \newcommand{\blanktitle}{\mbox{}}
@@ -13,6 +31,17 @@
 % =========================================================
 % Concept Boxes
 % =========================================================
+\newtcolorbox{infobox}[1][Information]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=blue!3!white,
+  colframe=blue!50!black,
+  colbacktitle=blue!10!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
 \newtcolorbox{proposedbox}[1][Proposed Concept]{%
   title=\ifstrempty{#1}{\blanktitle}{#1},
   colback=blue!5!white,
