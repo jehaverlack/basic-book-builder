@@ -1,5 +1,6 @@
 title: "Basic Book Builder"
 subtitle: "A Pandoc Template for building books and articles"
+name: "basic-book-builder"
 author: "John Haverlack"
 author-email: "jehaverlack@alaska.edu"
 affiliation: "Alaska Center for Energy and Power"

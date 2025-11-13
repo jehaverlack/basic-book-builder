@@ -2,7 +2,7 @@
 from: markdown
 to: latex
 standalone: true
-output-file: build/basic-book-builder.tex
+output-file: build/$name$.tex
 
 include-in-header:
   - conf/header.tex   # fonts, tcolorbox, etc.

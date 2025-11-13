@@ -30,5 +30,5 @@ make epub
 ## Getting Started
 
 Download PDF or HTML version of the b3 book.  Which self documents how to use this template:
-- [b3.pdf ](build/b3.pdf)
-- [b3.html](build/b3.html)
+- [b3.pdf ](build/basic-book-builder.pdf)
+- [b3.html](build/basic-book-builder.html)

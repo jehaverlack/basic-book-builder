@@ -1,7 +1,7 @@
 # pdf.yaml
 to: pdf
 pdf-engine: xelatex
-output-file: build/basic-book-builder.pdf
+output-file: build/$name$.pdf
 
 include-before-body:
   - conf/frontmatter.tex

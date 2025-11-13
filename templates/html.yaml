@@ -2,7 +2,7 @@
 from: markdown
 to: html5
 standalone: true
-output-file: build/basic-book-builder.html
+output-file: build/$name$.html
 
 include-before-body:
   - conf/frontmatter.html

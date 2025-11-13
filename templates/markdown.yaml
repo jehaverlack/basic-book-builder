@@ -2,7 +2,7 @@
 from: markdown
 to: gfm
 standalone: true
-output-file: build/basic-book-builder.md
+output-file: build/$name$.md
 
 include-before-body:
   - conf/frontmatter-md.html   # HTML frontmatter works fine here

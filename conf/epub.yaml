@@ -1,14 +1,14 @@
 from: markdown
 to: epub
-output-file: build/b3.epub
+output-file: build/basic-book-builder.epub
 
 metadata:
-  title: "Big Beautiful Book"
+  title: "Basic Book Builder"
   author: "John Haverlack"
-  date: "2025-11-05"
-  rights: "© 2025 — CC BY-ND 4.0"
+  date: "2025-11-11"
+  rights: "© 2025 Alaska Center for Energy and Power"
 
-epub-cover-image: lib/img/Revolving_circles.480x480_white.png
+epub-cover-image: lib/img/UAF-ACEP.png
 
 include-before-body:
   - conf/frontmatter_epub.xhtml

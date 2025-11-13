@@ -1,0 +1,24 @@
+from: markdown
+to: epub
+output-file: build/$name$.epub
+
+metadata:
+  title: "$title$"
+  author: "$author$"
+  date: "$date$"
+  rights: "$copyright$"
+
+epub-cover-image: $logo$
+
+include-before-body:
+  - conf/frontmatter_epub.xhtml
+
+resource-path:
+  - .
+  - lib/img
+
+css:
+  - conf/style_epub.css
+
+filters:
+  - filters/callouts-html.lua

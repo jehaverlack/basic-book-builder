@@ -5,7 +5,7 @@
 %
 \documentclass[
   12pt,
-]{book}
+]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -137,52 +137,116 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{etoolbox}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
+\usepackage{xparse}
 \tcbuselibrary{breakable}
+
+% --- Disable floating figures globally ---
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][H]{\origfigure[H]}{\endorigfigure}
+
+% --- Colors ---
+\usepackage{xcolor}
+\definecolor{speculativeback}{RGB}{247,232,255}  % #f7e8ff
+\definecolor{speculativeframe}{RGB}{139,43,226}  % #8b2be2
+
+% --- Left-align all Pandoc tables ---
+\usepackage{longtable}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\par\raggedright}{}{}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\makeatother
+
+
+% Helper to show a blank title if empty
+\newcommand{\blanktitle}{\mbox{}}
 
 % =========================================================
 % Concept Boxes
 % =========================================================
-\newtcolorbox{proposedbox}{
-  title=Proposed Concept,
+\newtcolorbox{infobox}[1][Information]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=blue!3!white,
+  colframe=blue!50!black,
+  colbacktitle=blue!10!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{proposedbox}[1][Proposed Concept]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
   colback=blue!5!white,
   colframe=blue!75!black,
   colbacktitle=blue!15!white,
   fonttitle=\bfseries,
   coltitle=black,
-  enhanced,
-  sharp corners,
-  breakable,
-  after = \par\vspace{6pt}
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
 }
 
-\newtcolorbox{establishedbox}{
-  title=Established Concept,
+\newtcolorbox{establishedbox}[1][Established Concept]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
   colback=green!5!white,
   colframe=green!75!black,
   colbacktitle=green!15!white,
   fonttitle=\bfseries,
   coltitle=black,
-  enhanced,
-  sharp corners,
-  breakable,
-  after = \par\vspace{6pt}
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
 }
 
-\newtcolorbox{speculativebox}{
-  title=Speculative Concept,
-  colback=purple!5!white,
-  colframe=purple!75!black,
-  colbacktitle=purple!15!white,
+\newtcolorbox{speculativebox}[1][Speculative Concept]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=speculativeback,
+  colframe=speculativeframe,
+  colbacktitle=speculativeback!80!white, % lighter variant for title bar
   fonttitle=\bfseries,
   coltitle=black,
-  enhanced,
-  sharp corners,
-  breakable,
-  after = \par\vspace{6pt}
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
 }
 
+
+\newtcolorbox{cautionbox}[1][Caution]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=orange!5!white,
+  colframe=orange!75!black,
+  colbacktitle=orange!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{warningbox}[1][Warning]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=orange!5!white,
+  colframe=orange!75!black,
+  colbacktitle=orange!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{dangerbox}[1][Danger]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=red!5!white,
+  colframe=red!75!black,
+  colbacktitle=red!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -191,7 +255,6 @@
 \date{}
 
 \begin{document}
-\frontmatter
 
 \renewcommand*\contentsname{Contents}
 {
@@ -199,80 +262,398 @@
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\mainmatter
 \hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\section{Introduction}\label{introduction}}
 
-This book builder template was currated by John
+This is a basic book (or article) builder template based on a Pandoc
+build process in conjunction with a number of other tools to generate
+PDF, ODT, HTML, LaTex, Markdown, and Epub book output formats from
+Markdown source content , which can optionally be edited as an Obsidian
+vault.
+
+This book builder template has been curated by John
 Haverlack.(\protect\hyperlink{ref-JohnHaverlackACEP}{{``John {Haverlack}
 \textbar{} {ACEP}''} n.d.})
 
-\begin{quote}
-``\emph{If I have seen further it is by standing on the shoulders of
-Giants.}''
-
--- Isaac Newton
-\end{quote}
-
 \hypertarget{conventions}{%
-\section{Conventions}\label{conventions}}
+\subsection{Conventions}\label{conventions}}
 
-In this book we'll use a few conventions.
+A few callout box styles have been added to easily highlight content.
 
-\hypertarget{new-concepts}{%
-\subsection{New Concepts}\label{new-concepts}}
-
-As many of the topics discussed in this book are a mix of
-\textbf{established} math and physics, \textbf{proposed} dualistic
-interpretations of established ideas, and also \textbf{speculative}
-ideas that I don't yet know how to address, I wanted a way to clearly
-distinguish these concepts. I've come up with the following convention
-to highlight these classes of concepts to indicate their level of
-mainstream acceptance.
-
-In this book, established concept may be highlighted in green, and
-represent mainstream physics or math concepts.
-
-\begin{establishedbox}
-Established Concept Einsteins Relativistic Dynamics Equations
+\begin{establishedbox}[Established Concept]
+Einsteins Relativistic Dynamics Equations
 \[E^2 = (m_{0} \cdot c^2)^2 + (p \cdot c)^2 \]
 \end{establishedbox}
 
-New ideas proposed by the author which have not been peer reviewed,
-verified or tested, and should be looked at with scrutiny.
-
-\begin{proposedbox}
-Proposed Concept With the speed of light, \(c = 1\):
-\[E^2 = m_{0}^2 + p^2 \]
+\begin{proposedbox}[Proposed Concept]
+With the speed of light, \(c = 1\): \[E^2 = m_{0}^2 + p^2 \]
 \end{proposedbox}
 
-Speculative Idea, that the author wonders about, but does not know how
-to demonstrate, or ideas that need further treatment to prove or
-disprove.
-
-\begin{speculativebox}
-Speculative Concept With the speed of light, \(c = 1\):
-\[E^2 = m_{0}^2 + p^2 \]
+\begin{speculativebox}[Speculative Concept]
+With the speed of light, \(c = 1\): \[E^2 = m_{0}^2 + p^2 \]
 \end{speculativebox}
 
-\hypertarget{citation-example}{%
-\chapter{Citation Example}\label{citation-example}}
+\begin{cautionbox}[Caution Note]
+Beware of this section.
+\end{cautionbox}
+
+\begin{warningbox}[Warning Note]
+Beware of this section.
+\end{warningbox}
+
+\begin{dangerbox}[Alerts]
+Extreme Highlight
+\end{dangerbox}
+
+\hypertarget{getting-started}{%
+\section{Getting Started}\label{getting-started}}
+
+\hypertarget{installing-pre-requisites}{%
+\subsection{Installing Pre-Requisites}\label{installing-pre-requisites}}
+
+For Debian / ZorinOS and likely Ubuntu based systems.
+
+\begin{cautionbox}[TODO]
+It would be nice to roll a setup script to take care of this.
+\end{cautionbox}
+
+\hypertarget{required}{%
+\subsubsection{Required}\label{required}}
+
+\hypertarget{pandoc}{%
+\paragraph{Pandoc}\label{pandoc}}
 
 \begin{itemize}
 \tightlist
 \item
-  Numerical Linear
-  Algebra(\protect\hyperlink{ref-trefethenNumericalLinearAlgebra2022a}{Trefethen
-  and Bau 2022})
+  https://pandoc.org/
+\item
+  \href{https://github.com/jgm/pandoc/releases/tag/3.8.2.1}{Download}
 \end{itemize}
 
-\hypertarget{best-words-ever}{%
-\chapter{Best Words Ever}\label{best-words-ever}}
+\begin{verbatim}
+sudo apt install https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb
+\end{verbatim}
 
-Blah blah blah
+\hypertarget{code-editor}{%
+\paragraph{Code Editor}\label{code-editor}}
+
+\begin{establishedbox}[Code Editor]
+\href{https://vscodium.com/}{VSCodium} is recommend for privacy
+(telemetry/tracking) reasons - https://vscodium.com/
+\end{establishedbox}
+
+But any text editor will work. \#\#\#\# make
+
+\begin{verbatim}
+sudo apt install make
+\end{verbatim}
+
+\hypertarget{jq-and-yq}{%
+\paragraph{jq and yq}\label{jq-and-yq}}
+
+\begin{verbatim}
+sudo apt install jq yq
+\end{verbatim}
+
+\hypertarget{texlive}{%
+\paragraph{texlive}\label{texlive}}
+
+\begin{verbatim}
+sudo apt install texlive texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+\end{verbatim}
+
+\hypertarget{mathjax}{%
+\paragraph{MathJax}\label{mathjax}}
+
+\begin{itemize}
+\tightlist
+\item
+  https://www.mathjax.org/
+\end{itemize}
+
+\begin{verbatim}
+wget https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz
+tar xzf mathjax-3.2.2.tgz
+mv package/es5/* lib/mathjax
+rm -rf package mathjax-3.2.2.tgz
+\end{verbatim}
+
+\begin{cautionbox}[TODO]
+This need to be rolled into a setup script.
+\end{cautionbox}
+
+\hypertarget{optional}{%
+\subsubsection{Optional}\label{optional}}
+
+The following are not strictly requires to use this book builder
+template.
+
+\hypertarget{obsidian}{%
+\paragraph{Obsidian}\label{obsidian}}
+
+\begin{establishedbox}[Highly Recommended]
+Editing book chapter content in Obsidian is a very productive means for
+editing Markdown source content.
+\end{establishedbox}
+
+\begin{itemize}
+\tightlist
+\item
+  https://obsidian.md/
+\item
+  \href{https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb}{Deb
+  Package}
+\end{itemize}
+
+\begin{verbatim}
+sudo apt install https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb
+\end{verbatim}
+
+\hypertarget{zotero}{%
+\paragraph{Zotero}\label{zotero}}
+
+\begin{establishedbox}[Highly Recommended]
+If you need to managed citations and references, Zotero integration is
+highly recommended.
+\end{establishedbox}
+
+\begin{itemize}
+\tightlist
+\item
+  https://www.zotero.org/
+\end{itemize}
+
+\begin{verbatim}
+sudo cp ./scripts/deps/zotero.list /etc/apt/sources.list.d/
+\end{verbatim}
+
+\begin{verbatim}
+sudo apt update
+\end{verbatim}
+
+\begin{verbatim}
+sudo apt install zotero
+\end{verbatim}
+
+\hypertarget{better-bibtex-for-zotero}{%
+\subparagraph{Better BibTex for Zotero}\label{better-bibtex-for-zotero}}
+
+Install the Better BibTex Plugin for Zotero - Zotero \textgreater{} Tool
+\textgreater{} Plugins
+
+\hypertarget{export-citations.bib}{%
+\subparagraph{Export citations.bib}\label{export-citations.bib}}
+
+\begin{itemize}
+\tightlist
+\item
+  Zotero \textgreater{} File \textgreater{} Export Library
+  \textgreater{} Format: Better BibTeX
+\item[$\square$]
+  Keep Updated
+\item[$\square$]
+  Save to: \textasciitilde/Documents/Lib/zotero.bib
+\item[$\square$]
+  Symlink your \textasciitilde/Documents/Lib/Citations.bib to
+  basic-book-builder/lib/zotero.bib
+\end{itemize}
+
+\hypertarget{zotero-connector-browser-plugin}{%
+\subparagraph{Zotero Connector Browser
+Plugin}\label{zotero-connector-browser-plugin}}
+
+\begin{itemize}
+\tightlist
+\item
+  https://chromewebstore.google.com/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc
+\end{itemize}
+
+Provides you the ability to auto add Web resources to your Zotero
+citation database.
+
+\hypertarget{lmodern}{%
+\paragraph{lmodern}\label{lmodern}}
+
+\begin{verbatim}
+sudo apt install lmodern
+\end{verbatim}
+
+\hypertarget{epubcheck}{%
+\paragraph{epubcheck}\label{epubcheck}}
+
+\begin{verbatim}
+sudo apt install epubcheck
+\end{verbatim}
+
+\hypertarget{foliate}{%
+\paragraph{foliate}\label{foliate}}
+
+An EPub Reader
+
+\begin{itemize}
+\tightlist
+\item
+  https://johnfactotum.github.io/foliate/
+\end{itemize}
+
+\begin{verbatim}
+sudo apt install https://github.com/johnfactotum/foliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb
+\end{verbatim}
+
+\hypertarget{calibre}{%
+\paragraph{calibre}\label{calibre}}
+
+An EPub Reader
+
+\begin{itemize}
+\tightlist
+\item
+  https://calibre-ebook.com
+\end{itemize}
+
+\begin{verbatim}
+sudo apt install calibre
+\end{verbatim}
+
+\hypertarget{editing-the-configuration}{%
+\subsection{Editing the Configuration}\label{editing-the-configuration}}
+
+\hypertarget{editing-the-book}{%
+\section{Editing the Book}\label{editing-the-book}}
+
+\hypertarget{configuration}{%
+\subsubsection{Configuration}\label{configuration}}
+
+There are a number of other config files for each format:
+
+\begin{verbatim}
+conf/
+├── epub-metadata.xml
+├── epub_template.html
+├── epub.yaml
+├── frontmatter_epub.md
+├── frontmatter_epub.xhtml
+├── frontmatter.html
+├── frontmatter.tex
+├── header.tex
+├── html.yaml
+├── latex.yaml
+├── markdown.yaml
+├── metadata.yaml
+├── pandoc.yaml
+├── pdf.yaml
+├── style.css
+└── style_epub.css
+\end{verbatim}
+
+\hypertarget{main-config-files}{%
+\paragraph{Main Config Files}\label{main-config-files}}
+
+\begin{itemize}
+\tightlist
+\item
+  metadata.yaml - Set Title, etc
+\item
+  pandoc.yaml - Main Pandoc Config \#\#\#\# Per format Configs
+\item
+  \texttt{pdf.yaml}
+\item
+  \texttt{html.yaml}
+\item
+  \texttt{latex.yaml}
+\item
+  \texttt{epub.yaml}
+\end{itemize}
+
+\hypertarget{frontmatter-config}{%
+\subsubsection{FrontMatter Config}\label{frontmatter-config}}
+
+There are 2 Version of the FrontMatter for PDF, and HTML bases formats
+that set the Title, Author, Verizon, Copyright, etc\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{frontmatter.tex}
+\item
+  \texttt{frontmatter.html}
+\item
+  \texttt{frontmatter\_epub.*} - Work in Progress
+\end{itemize}
+
+\begin{quote}
+There is probably a better way to do this.
+\end{quote}
+
+\hypertarget{editing-the-content}{%
+\subsection{Editing the Content}\label{editing-the-content}}
+
+To edit the book open the \texttt{basic-book-builder} directory as an
+Obsidian Vault.
+
+\begin{itemize}
+\tightlist
+\item
+  Edit the Markdown content in the \texttt{chapters} directory.
+\end{itemize}
+
+\hypertarget{citations}{%
+\subsubsection{Citations}\label{citations}}
+
+\begin{quote}
+Note: the Zotero database needs configured to export automatically to
+\texttt{lib/citations.bib}
+\end{quote}
+
+To insert a Zotero Citation - Ensure the Zotero App and DB are running
+on you system. - Alt + I (to insert citation) - Search for and select
+citation reference
+
+\hypertarget{usage-building-the-book}{%
+\subsection{Usage: Building the Book}\label{usage-building-the-book}}
+
+\hypertarget{pdf}{%
+\paragraph{PDF}\label{pdf}}
+
+\begin{verbatim}
+make pdf
+\end{verbatim}
+
+\hypertarget{html}{%
+\paragraph{HTML}\label{html}}
+
+\begin{verbatim}
+make html
+\end{verbatim}
+
+\hypertarget{latex}{%
+\paragraph{LaTex}\label{latex}}
+
+\begin{verbatim}
+make latex
+\end{verbatim}
+
+\hypertarget{markdown}{%
+\paragraph{Markdown}\label{markdown}}
+
+\begin{verbatim}
+make markdown
+\end{verbatim}
+
+\hypertarget{epub}{%
+\paragraph{EPub}\label{epub}}
+
+\begin{quote}
+Note: This ePub configuration still needs tuning.
+\end{quote}
+
+\begin{verbatim}
+make epub
+\end{verbatim}
 
 \hypertarget{example-content}{%
-\chapter{Example Content}\label{example-content}}
+\section{Example Content}\label{example-content}}
 
 In \(R\nu\) the
 \href{https://en.wikipedia.org/wiki/Planck_units\#Planck_length}{Planck
@@ -282,7 +663,7 @@ defined approximately to be:
 is 1 Planck Length of distance.
 
 \hypertarget{si-conversion-factors}{%
-\subsection{SI Conversion Factors}\label{si-conversion-factors}}
+\subsubsection{SI Conversion Factors}\label{si-conversion-factors}}
 
 The following conversion factors can be used to convert observable
 quantities of measure from the \emph{SI} system of units to \(R\nu\) to
@@ -318,7 +699,7 @@ charge to Planck Length & \(C_P\) &
 \end{longtable}
 
 \hypertarget{physical-constants}{%
-\subsection{Physical Constants}\label{physical-constants}}
+\subsubsection{Physical Constants}\label{physical-constants}}
 
 Applying conversion factors from the table above, we can convert SI
 values to Reduced Natural Units. For example, performing this analysis
@@ -364,7 +745,7 @@ Unit Cycle & \(\Theta\) & \(2\pi = 6.28318...\ Radians\) &
 \end{longtable}
 
 \hypertarget{fine-structure-constant}{%
-\section{Fine Structure Constant}\label{fine-structure-constant}}
+\subsection{Fine Structure Constant}\label{fine-structure-constant}}
 
 As a consistency check, we compute the
 \emph{\href{https://en.wikipedia.org/wiki/Fine-structure_constant}{Fine
@@ -374,7 +755,7 @@ ratio that should be independent of our system of units.
 \(\huge{\alpha=\frac{e^2}{4\pi\epsilon_o\hbar c}=\frac{e^2}{2\tau}=0.00729735≈\frac{1}{137}}\)
 
 \hypertarget{dimensional-analysis}{%
-\subsubsection{Dimensional Analysis}\label{dimensional-analysis}}
+\paragraph{Dimensional Analysis}\label{dimensional-analysis}}
 
 The reader should be familiar with high school physics and chemistry
 \href{https://en.wikipedia.org/wiki/Dimensional_analysis}{dimensional
@@ -400,7 +781,7 @@ Note that each unit in the denominator cancels with one if the numerator
 until we are left with only km.
 
 \hypertarget{newtons-law-of-gravity}{%
-\section{Newton's Law of Gravity}\label{newtons-law-of-gravity}}
+\subsection{Newton's Law of Gravity}\label{newtons-law-of-gravity}}
 
 The force of gravity (\(F_g\)) between 2 masses, \(m1\) and \(m2\)
 separated by distance \(r\) is given by
@@ -420,7 +801,7 @@ distributing gravitational flux over the surface area of a sphere
 (\(4\pi r^2\)).
 
 \hypertarget{inverse-square-law}{%
-\subsubsection{Inverse Square Law}\label{inverse-square-law}}
+\paragraph{Inverse Square Law}\label{inverse-square-law}}
 
 Any source of a signal strength (\(S_0\)) that radiates isotropically in
 3-dimensional space will distribute that signal strength (\(S_0\)) over
@@ -457,7 +838,7 @@ units of meters, but so can mass.
 \end{quote}
 
 \hypertarget{relativistic-energy-momentum-relation}{%
-\subsection{Relativistic Energy Momentum
+\subsubsection{Relativistic Energy Momentum
 Relation}\label{relativistic-energy-momentum-relation}}
 
 Einsteins
@@ -482,7 +863,7 @@ they have the same units.}
 \end{quote}
 
 \hypertarget{objects-of-mass-at-rest}{%
-\paragraph{Objects of mass at rest}\label{objects-of-mass-at-rest}}
+\subparagraph{Objects of mass at rest}\label{objects-of-mass-at-rest}}
 
 For an object at rest with no momentum (\(p = 0\)) we see Einstein's
 famous equations:
@@ -491,7 +872,12 @@ famous equations:
 
 Or, with \(c=1\), this is much simpler to understand. Energy = Mass
 
-\(E = m_0\) \#\#\#\#\# Zero mass objects moving at the speed of light
+\(E = m_0\)
+
+\hypertarget{zero-mass-objects-moving-at-the-speed-of-light}{%
+\subparagraph{Zero mass objects moving at the speed of
+light}\label{zero-mass-objects-moving-at-the-speed-of-light}}
+
 And for objects with no mass, like photos, (\(m_{0}= 0\)):
 
 \(E=pc\)
@@ -501,7 +887,7 @@ Or, with \(c=1\), this is much simpler to understand. Energy = Momentum
 \(E=p\)
 
 \hypertarget{plancks-constant}{%
-\section{Planck's Constant}\label{plancks-constant}}
+\subsection{Planck's Constant}\label{plancks-constant}}
 
 The \href{https://en.wikipedia.org/wiki/Planck_constant}{Reduced Planck
 constant} , ħ, represents a conversion factor for relating the
@@ -532,7 +918,7 @@ which the square root of is suspiciously close to the Plank length:
 \[\boxed{\sqrt{\hbar}=\sqrt{3.282462\times10^{-69}m^2}=5.72928\times10^{-35}m}\]
 
 \hypertarget{planck-area}{%
-\subsubsection{Planck Area}\label{planck-area}}
+\paragraph{Planck Area}\label{planck-area}}
 
 The
 \href{https://en.wikipedia.org/wiki/Planck_units\#Derived_units}{Planck
@@ -572,7 +958,7 @@ With the limiting case being at the Plank scale.
 \(S=\frac{\pi\cdot \sqrt{\hbar}}{\hbar G_0}\)
 
 \hypertarget{planck-length}{%
-\section{Planck Length}\label{planck-length}}
+\subsection{Planck Length}\label{planck-length}}
 
 https://en.wikipedia.org/wiki/Planck\_length
 
@@ -721,7 +1107,7 @@ Charge of the Electron & \(e^-\) & \(-1.60218\times10^{-19} C\) &
 \end{longtable}
 
 \hypertarget{fine-structure-constant-1}{%
-\section{Fine Structure Constant}\label{fine-structure-constant-1}}
+\subsection{Fine Structure Constant}\label{fine-structure-constant-1}}
 
 https://en.wikipedia.org/wiki/Fine-structure\_constant As a consistency
 check, we compute the \emph{Fine Structure Constant} using Reduced
@@ -736,7 +1122,7 @@ internally consistent values for \(c\), \(\epsilon_o\), \(\hbar\) and
 consistent.
 
 \hypertarget{sage-code}{%
-\section{Sage Code}\label{sage-code}}
+\subsection{Sage Code}\label{sage-code}}
 
 Unit Analysis computations have been performed with
 \href{https://www.sagemath.org/}{Sage Math}.
@@ -808,7 +1194,7 @@ Unit Analysis computations have been performed with
 \end{Shaded}
 
 \hypertarget{output}{%
-\subsubsection{Output}\label{output}}
+\paragraph{Output}\label{output}}
 
 \begin{verbatim}
 pi    = 3.14159
@@ -825,11 +1211,11 @@ Rν lP = (2.77455e-47)*sqrt(m^3/kg)
 \end{verbatim}
 
 \hypertarget{terminology}{%
-\chapter{Terminology}\label{terminology}}
+\section{Terminology}\label{terminology}}
 
-\hypertarget{citations}{%
-\chapter*{Citations}\label{citations}}
-\addcontentsline{toc}{chapter}{Citations}
+\hypertarget{citations-1}{%
+\section*{Citations}\label{citations-1}}
+\addcontentsline{toc}{section}{Citations}
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
@@ -838,12 +1224,6 @@ Rν lP = (2.77455e-47)*sqrt(m^3/kg)
 https://www.uaf.edu/acep/about/our-team/john-haverlack.php. Accessed
 September 30, 2025.
 
-\leavevmode\vadjust pre{\hypertarget{ref-trefethenNumericalLinearAlgebra2022a}{}}%
-Trefethen, Lloyd N., and III David Bau. 2022. \emph{Numerical {Linear
-Algebra}: {Twenty-Fifth Anniversary Edition}}. Philadelphia, PA:
-{SIAM-Society for Industrial and Applied Mathematics}.
-
 \end{CSLReferences}
 
-\backmatter
 \end{document}
