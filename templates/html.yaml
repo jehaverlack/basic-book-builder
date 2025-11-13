@@ -8,7 +8,7 @@ include-before-body:
   - conf/frontmatter.html
 
 metadata:
-  title: "Basic Book Builder"
+  title: "$title$"
   title-block: false
 
 # This enables EPUB TOC
