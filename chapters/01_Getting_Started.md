@@ -15,7 +15,6 @@ For Debian / ZorinOS and likely Ubuntu based systems.
 - https://pandoc.org/
 - [Download](https://github.com/jgm/pandoc/releases/tag/3.8.2.1)
 
-> [!proposed] Pandoc Install
 > ```sudo apt install https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb```
 
 #### Code Editor
@@ -39,9 +38,8 @@ sudo apt install jq yq
 
 #### texlive
 
-```
-sudo apt install texlive texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
-```
+
+> ```sudo apt install texlive texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra```
 
 
 #### MathJax
