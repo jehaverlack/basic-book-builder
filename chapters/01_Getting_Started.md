@@ -19,6 +19,7 @@ For Debian / ZorinOS and likely Ubuntu based systems.
 
 #### Code Editor
 
+
 > [!established] Code Editor
 > [VSCodium](https://vscodium.com/) is recommend for privacy (telemetry/tracking) reasons
 > - https://vscodium.com/

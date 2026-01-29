@@ -257,7 +257,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -274,6 +275,7 @@
   },
   "active": "b8c0b940e83a0cce",
   "lastOpenFiles": [
+    "conf/sedSNuLNp",
     "chapters/00_Introduction.md",
     "chapters/01_Getting_Started.md",
     "chapters/02_Features.md",
