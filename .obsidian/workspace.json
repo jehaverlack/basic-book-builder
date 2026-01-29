@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "f638e1a8b87077ad",
+        "id": "c87664783c6ed11a",
         "type": "tabs",
         "children": [
+          {
+            "id": "f34ae8bbfb2ffa45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "chapters/00_Introduction.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00_Introduction"
+            }
+          },
           {
             "id": "b8c0b940e83a0cce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chapters/02_Features.md",
+                "file": "chapters/01_Getting_Started.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_Features"
+              "title": "01_Getting_Started"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,8 +172,8 @@
             "state": {
               "type": "mathpad-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "mathpad-view"
+              "icon": "sigma",
+              "title": "Mathpad"
             }
           },
           {
@@ -246,6 +261,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mathpad:Open Mathpad": false,
+      "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -256,6 +274,9 @@
   },
   "active": "b8c0b940e83a0cce",
   "lastOpenFiles": [
+    "chapters/00_Introduction.md",
+    "chapters/01_Getting_Started.md",
+    "chapters/02_Features.md",
     "build/basic-book-builder.html",
     "templates/epub.yaml",
     "conf/frontmatter-md.html",
@@ -268,13 +289,9 @@
     "templates/html.yaml",
     "build/basic-book-builder.md",
     "lib/img/UAF-ACEP.png",
-    "templates/frontmatter-md.html",
     "build/lib/img/UAF-ACEP.png",
     "LICENSE.md",
-    "chapters/00_Introduction.md",
-    "chapters/01_Getting_Started.md",
     "README.md",
-    "chapters/02_Features.md",
     "build/lib/img/ACEP Logo for Canvas.png",
     "build/lib/img/ACEP Logo.png",
     "build/lib/img/ACEP-50px.png",

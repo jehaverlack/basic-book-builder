@@ -15,9 +15,8 @@ For Debian / ZorinOS and likely Ubuntu based systems.
 - https://pandoc.org/
 - [Download](https://github.com/jgm/pandoc/releases/tag/3.8.2.1)
 
-```
-sudo apt install https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb
-```
+> [!proposed] Pandoc Install
+> ```sudo apt install https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb```
 
 #### Code Editor
 
