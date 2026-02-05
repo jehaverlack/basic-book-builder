@@ -1,14 +1,15 @@
 -- Map callout types to LaTeX environments
 local callout_env_map = {
-    idea = "ideabox",
-    proposed = "proposedbox",
-    established = "establishedbox",
-    speculative = "speculativebox",
-    caution = "cautionbox",
-    warning = "warningbox",
-    danger = "dangerbox"
-  }
-  
+  idea = "ideabox",
+  proposed = "proposedbox",
+  established = "establishedbox",
+  speculative = "speculativebox",
+  caution = "cautionbox",
+  warning = "warningbox",
+  danger = "dangerbox",
+  code = "codebox",
+  cli = "clibox"
+}
 
 function BlockQuote(el)
   if #el.content > 0 and el.content[1].t == "Para" then

@@ -42,44 +42,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\newenvironment{Shaded}{}{}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
@@ -158,6 +120,8 @@
 \usepackage{xcolor}
 \definecolor{speculativeback}{RGB}{247,232,255}  % #f7e8ff
 \definecolor{speculativeframe}{RGB}{139,43,226}  % #8b2be2
+\definecolor{lightgrayback}{RGB}{245,245,245}
+\definecolor{lightgrayframe}{RGB}{180,180,180}
 
 % --- Left-align all Pandoc tables ---
 \usepackage{longtable}
@@ -251,6 +215,33 @@
   colback=red!5!white,
   colframe=red!75!black,
   colbacktitle=red!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+
+% =========================================================
+% Code / CLI Boxes
+% =========================================================
+
+\newtcolorbox{codebox}[1][Code]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=lightgrayback,
+  colframe=lightgrayframe,
+  colbacktitle=lightgrayback!90!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{clibox}[1][Command Line]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=lightgrayback,
+  colframe=lightgrayframe,
+  colbacktitle=lightgrayback!90!white,
   fonttitle=\bfseries,
   coltitle=black,
   enhanced, sharp corners, breakable,
@@ -438,23 +429,26 @@ Haverlack.(\citeproc{ref-JohnHaverlackACEP}{\emph{John {Haverlack}
 \section{Cloning the Basic Book
 Builder}\label{cloning-the-basic-book-builder}
 
-\begin{quote}
-{[}!cli{]} Cloning the repository
+\begin{clibox}[Cloning the repository]
+\begin{verbatim}
+git clone https://github.com/jehaverlack/basic-book-builder.git
+\end{verbatim}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{git}\NormalTok{ clone https://github.com/jehaverlack/basic{-}book{-}builder.git}
-\end{Highlighting}
-\end{Shaded}
-\end{quote}
+\end{clibox}
 
-\begin{quote}
-{[}!cli{]} Navigate to the repo directory
-
+\begin{clibox}[Navigate to the repo directory]
 \begin{verbatim}
 cd basic-book-builder
 \end{verbatim}
-\end{quote}
+
+\end{clibox}
+
+\begin{codebox}[Code Example]
+\begin{verbatim}
+if then else
+\end{verbatim}
+
+\end{codebox}
 
 \section{Setting Up Build
 Environment}\label{setting-up-build-environment}
@@ -464,15 +458,12 @@ This script only support Debian based linux system (Debian, Ubunutu,
 Zorin, etc) This script has not been widely tested across platforms
 \end{cautionbox}
 
-\begin{quote}
-{[}!cli{]} Setup Build Environment
+\begin{clibox}[Setup Build Environment]
+\begin{verbatim}
+./scripts/setup-linux-deb.sh
+\end{verbatim}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\ExtensionTok{./scripts/setup{-}linux{-}deb.sh}
-\end{Highlighting}
-\end{Shaded}
-\end{quote}
+\end{clibox}
 
 For more information on setting up the build environment for your system
 see Appendix A.

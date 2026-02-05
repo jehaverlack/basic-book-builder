@@ -4,7 +4,7 @@
 
 
 > [!cli] Cloning the repository
-> ```bash
+> ```
 > git clone https://github.com/jehaverlack/basic-book-builder.git
 > ```
 
@@ -12,6 +12,11 @@
 > [!cli] Navigate to the repo directory
 > ```
 > cd basic-book-builder
+> ```
+
+> [!code] Code Example
+> ```
+> if then else
 > ```
 
 ## Setting Up Build Environment
@@ -24,7 +29,7 @@
 
 
 > [!cli] Setup Build Environment
-> ```bash
+> ```
 > ./scripts/setup-linux-deb.sh
 > ```
 

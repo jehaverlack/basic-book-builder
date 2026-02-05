@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "63d80c6eb3872afa",
+        "id": "ae41ba9882c0a3d6",
         "type": "tabs",
         "children": [
           {
-            "id": "dc8c249564ffac56",
+            "id": "01161538f53367e8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "chapters/01_Getting_Started.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "01_Getting_Started"
             }
           }
         ]
@@ -264,26 +268,26 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "dc8c249564ffac56",
+  "active": "01161538f53367e8",
   "lastOpenFiles": [
-    "conf/sedK5OZdk",
-    "conf/sed0lodyQ",
-    "conf/sedVrX4GJ",
-    "templates/odt.yaml",
-    "templates/frontmatter-docx.md",
-    "templates/docx.yaml",
-    "scripts/new-project.sh",
+    "conf/sedO6HWQd",
+    "conf/sedLQxQGf",
+    "conf/sedIsN7C4",
+    "conf/sed8HHrHm",
+    "conf/sed0agSpY",
+    "conf/sed9gY2gw",
+    "conf/seddo6XG6",
+    "conf/sedyheY4U",
+    "conf/seduL1p1z",
+    "conf/sedltGqhZ",
+    "conf/sedv2m0sa",
     "chapters/01_Getting_Started.md",
+    "templates/frontmatter-docx.md",
     "chapters/00_Introduction.md",
-    "conf/sedBC8U5P",
     "chapters/AppendixB.md",
     "chapters/03_Features.md",
     "chapters/02_Usage.md",
     "chapters/02_Features.md",
-    "conf/frontmatter.tex",
-    "conf/sed7Vpnn0",
-    "conf/latex.yaml",
-    "conf/sedOEGv7F",
     "chapters/Preface.md",
     "chapters/Index.md",
     "chapters/Glossary.md",
