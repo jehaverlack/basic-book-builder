@@ -1,0 +1,16 @@
+from: markdown
+to: odt
+standalone: true
+
+include-before-body:
+  - conf/frontmatter-docx.md
+
+toc: true
+number-sections: true
+
+resource-path:
+  - .
+  - lib/img
+
+filters:
+  - filters/callouts.lua
