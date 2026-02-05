@@ -270,6 +270,8 @@
   },
   "active": "9aca980657068944",
   "lastOpenFiles": [
+    "conf/sed1hMVp9",
+    "conf/sed4bQnF2",
     "build/html/basic-book-builder.html",
     "conf/frontmatter.html",
     "conf/html.yaml",
@@ -282,9 +284,7 @@
     "build/html/lib/diag",
     "build/html/lib",
     "build/html/conf",
-    "build/html",
     "chapters/01_Getting_Started.md",
-    "build/pdf/basic-book-builder.pdf",
     "chapters/AppendixA.md",
     "chapters/00_Introduction.md",
     "build/html/lib/img/unit-circle-with-tau.png",
