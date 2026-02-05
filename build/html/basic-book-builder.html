@@ -24,71 +24,6 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { color: #008000; } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { color: #008000; font-weight: bold; } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -205,6 +140,41 @@ Builder</a></li>
 <li><a href="#setting-up-build-environment"
 id="toc-setting-up-build-environment">Setting Up Build
 Environment</a></li>
+<li><a href="#testing" id="toc-testing">Testing</a></li>
+<li><a href="#creating-a-new-project"
+id="toc-creating-a-new-project">Creating a New Project</a>
+<ul>
+<li><a href="#zotero-configuration-optional"
+id="toc-zotero-configuration-optional">Zotero Configuration
+(Optional)</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#usage" id="toc-usage">Usage</a>
+<ul>
+<li><a href="#editing-content" id="toc-editing-content">Editing
+Content</a></li>
+<li><a href="#building" id="toc-building">Building</a>
+<ul>
+<li><a href="#pdf" id="toc-pdf">PDF</a></li>
+<li><a href="#html" id="toc-html">HTML</a></li>
+<li><a href="#docx" id="toc-docx">DocX</a></li>
+<li><a href="#odt" id="toc-odt">ODT</a></li>
+<li><a href="#make-all" id="toc-make-all">Make All</a></li>
+</ul></li>
+<li><a href="#callouts" id="toc-callouts">Callouts</a></li>
+</ul></li>
+<li><a href="#appendix-a-build-environment-notes"
+id="toc-appendix-a-build-environment-notes">Appendix A: Build
+Environment Notes</a>
+<ul>
+<li><a href="#installing-pre-requisites"
+id="toc-installing-pre-requisites">Installing Pre-Requisites</a>
+<ul>
+<li><a href="#required" id="toc-required">Required</a></li>
+<li><a href="#optional" id="toc-optional">Optional</a></li>
+</ul></li>
+<li><a href="#editing-the-configuration"
+id="toc-editing-the-configuration">Editing the Configuration</a></li>
 </ul></li>
 <li><a href="#glossary" id="toc-glossary">Glossary</a></li>
 <li><a href="#bibliography" id="toc-bibliography">Bibliography</a></li>
@@ -230,9 +200,8 @@ href="#ref-JohnHaverlackACEP" role="doc-biblioref"><em>John
 <h2 id="cloning-the-basic-book-builder">Cloning the Basic Book
 Builder</h2>
 <div class="callout-cli">
-<p><strong>Cloning the repository</strong></p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/jehaverlack/basic-book-builder.git</span></code></pre></div>
+<p><strong>Clone the repository</strong></p>
+<pre><code>git clone https://github.com/jehaverlack/basic-book-builder.git</code></pre>
 </div>
 <div class="callout-cli">
 <p><strong>Navigate to the repo directory</strong></p>
@@ -240,17 +209,194 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 </div>
 <h2 id="setting-up-build-environment">Setting Up Build Environment</h2>
 <div class="callout-caution">
-<p><strong>Debian Based Linux</strong></p>
-<p> This script only support Debian based linux system (Debian, Ubunutu,
+<p><strong>~Debian Linux</strong></p>
+<p> This script only support Debian based Linux system (Debian, Ubunutu,
 Zorin, etc) This script has not been widely tested across platforms</p>
 </div>
 <div class="callout-cli">
 <p><strong>Setup Build Environment</strong></p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./scripts/setup-linux-deb.sh</span></span></code></pre></div>
+<pre><code>./scripts/setup-linux-deb.sh</code></pre>
 </div>
 <p>For more information on setting up the build environment for your
 system see Appendix A.</p>
+<h2 id="testing">Testing</h2>
+<p>If you can build all format for the <strong>Basic Book Build</strong>
+then you have a working build environment.</p>
+<div class="callout-cli">
+<p><strong>Testing Build Environment</strong></p>
+<pre><code>make all</code></pre>
+</div>
+<h2 id="creating-a-new-project">Creating a New Project</h2>
+<h3 id="zotero-configuration-optional">Zotero Configuration
+(Optional)</h3>
+<h1 id="usage">Usage</h1>
+<h2 id="editing-content">Editing Content</h2>
+<h2 id="building">Building</h2>
+<h3 id="pdf">PDF</h3>
+<pre><code>make pdf</code></pre>
+<blockquote>
+<p>NOTE: Building the PDF also builds the <strong>LaTeX</strong> version
+of the book.</p>
+</blockquote>
+<h3 id="html">HTML</h3>
+<pre><code>make html</code></pre>
+<h3 id="docx">DocX</h3>
+<pre><code>make docx</code></pre>
+<blockquote>
+<p>NOTE: DocX is a work in progress. Frontmatter and formatting need
+work.</p>
+</blockquote>
+<h3 id="odt">ODT</h3>
+<pre><code>make odt</code></pre>
+<blockquote>
+<p>NOTE: ODT is a work in progress. Frontmatter and formatting need
+work.</p>
+</blockquote>
+<h3 id="make-all">Make All</h3>
+<p>To build all supported formats</p>
+<pre><code>make all</code></pre>
+<h2 id="callouts">Callouts</h2>
+<p>A few callout box styles have been added to easily highlight
+content.</p>
+<div class="callout-established">
+<p><strong>Established Concept</strong></p>
+<p> Einsteins Relativistic Dynamics Equations <span
+class="math display"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub> ⋅ <em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em> ⋅ <em>c</em>)<sup>2</sup></span></p>
+</div>
+<div class="callout-proposed">
+<p><strong>Proposed Concept</strong></p>
+<p> With the speed of light, <span
+class="math inline"><em>c</em> = 1</span>: <span
+class="math display"><em>E</em><sup>2</sup> = <em>m</em><sub>0</sub><sup>2</sup> + <em>p</em><sup>2</sup></span></p>
+</div>
+<div class="callout-speculative">
+<p><strong>Speculative Concept</strong></p>
+<p> With the speed of light, <span
+class="math inline"><em>c</em> = 1</span>: <span
+class="math display"><em>E</em><sup>2</sup> = <em>m</em><sub>0</sub><sup>2</sup> + <em>p</em><sup>2</sup></span></p>
+</div>
+<div class="callout-caution">
+<p><strong>Caution Note</strong></p>
+<p> Beware of this section.</p>
+</div>
+<div class="callout-warning">
+<p><strong>Warning Note</strong></p>
+<p> Beware of this section.</p>
+</div>
+<div class="callout-danger">
+<p><strong>Alerts</strong></p>
+<p> Extreme Highlight</p>
+</div>
+<p>Appendix A</p>
+<h1 id="appendix-a-build-environment-notes">Appendix A: Build
+Environment Notes</h1>
+<h2 id="installing-pre-requisites">Installing Pre-Requisites</h2>
+<div class="callout-caution">
+<p><strong>Not Cross-platform Tested</strong></p>
+<p> For Debian / ZorinOS and likely Ubuntu based systems.</p>
+</div>
+<h3 id="required">Required</h3>
+<h4 id="pandoc">Pandoc</h4>
+<ul>
+<li>https://pandoc.org/</li>
+<li><a
+href="https://github.com/jgm/pandoc/releases/tag/3.8.2.1">Download</a></li>
+</ul>
+<blockquote>
+<p><code>sudo apt install https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb</code></p>
+</blockquote>
+<h4 id="code-editor">Code Editor</h4>
+<div class="callout-established">
+<p><strong>Code Editor</strong></p>
+<p> <a href="https://vscodium.com/">VSCodium</a> is recommend for
+privacy (telemetry/tracking) reasons - https://vscodium.com/</p>
+</div>
+<p>But any text editor will work. #### make</p>
+<pre><code>sudo apt install make</code></pre>
+<h4 id="jq-and-yq">jq and yq</h4>
+<pre><code>sudo apt install jq yq</code></pre>
+<h4 id="texlive">texlive</h4>
+<blockquote>
+<p><code>sudo apt install texlive texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra</code></p>
+</blockquote>
+<h4 id="mathjax">MathJax</h4>
+<ul>
+<li>https://www.mathjax.org/</li>
+</ul>
+<pre><code>wget https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz
+tar xzf mathjax-3.2.2.tgz
+mv package/es5/* lib/mathjax
+rm -rf package mathjax-3.2.2.tgz</code></pre>
+<div class="callout-caution">
+<p><strong>TODO</strong></p>
+<p> This need to be rolled into a setup script.</p>
+</div>
+<h3 id="optional">Optional</h3>
+<p>The following are not strictly requires to use this book builder
+template.</p>
+<h4 id="obsidian">Obsidian</h4>
+<div class="callout-established">
+<p><strong>Highly Recommended</strong></p>
+<p> Editing book chapter content in Obsidian is a very productive means
+for editing Markdown source content.</p>
+</div>
+<ul>
+<li>https://obsidian.md/</li>
+<li><a
+href="https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb">Deb
+Package</a></li>
+</ul>
+<pre><code>sudo apt install https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb</code></pre>
+<h4 id="zotero">Zotero</h4>
+<div class="callout-established">
+<p><strong>Highly Recommended</strong></p>
+<p> If you need to managed citations and references, Zotero integration
+is highly recommended.</p>
+</div>
+<ul>
+<li>https://www.zotero.org/</li>
+</ul>
+<pre><code>sudo cp ./scripts/deps/zotero.list /etc/apt/sources.list.d/</code></pre>
+<pre><code>sudo apt update</code></pre>
+<pre><code>sudo apt install zotero</code></pre>
+<h5 id="better-bibtex-for-zotero">Better BibTex for Zotero</h5>
+<p>Install the Better BibTex Plugin for Zotero - Zotero &gt; Tool &gt;
+Plugins</p>
+<h5 id="export-citations.bib">Export citations.bib</h5>
+<ul>
+<li>Zotero &gt; File &gt; Export Library &gt; Format: Better BibTeX</li>
+<li><label><input type="checkbox" />Keep Updated</label></li>
+<li><label><input type="checkbox" />Save to:
+~/Documents/Lib/zotero.bib</label></li>
+<li><label><input type="checkbox" />Symlink your
+~/Documents/Lib/Citations.bib to
+basic-book-builder/lib/zotero.bib</label></li>
+</ul>
+<h5 id="zotero-connector-browser-plugin">Zotero Connector Browser
+Plugin</h5>
+<ul>
+<li>https://chromewebstore.google.com/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc</li>
+</ul>
+<p>Provides you the ability to auto add Web resources to your Zotero
+citation database.</p>
+<h4 id="lmodern">lmodern</h4>
+<pre><code>sudo apt install lmodern</code></pre>
+<h4 id="epubcheck">epubcheck</h4>
+<pre><code>sudo apt install epubcheck</code></pre>
+<h4 id="foliate">foliate</h4>
+<p>An EPub Reader</p>
+<ul>
+<li>https://johnfactotum.github.io/foliate/</li>
+</ul>
+<pre><code>sudo apt install https://github.com/johnfactotum/foliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb</code></pre>
+<h4 id="calibre">calibre</h4>
+<p>An EPub Reader</p>
+<ul>
+<li>https://calibre-ebook.com</li>
+</ul>
+<pre><code>sudo apt install calibre</code></pre>
+<h2 id="editing-the-configuration">Editing the Configuration</h2>
+
 <h1 class="unnumbered" id="glossary">Glossary</h1>
 <table>
 <colgroup>

@@ -3,7 +3,7 @@
 ## Cloning the Basic Book Builder
 
 
-> [!cli] Cloning the repository
+> [!cli] Clone the repository
 > ```
 > git clone https://github.com/jehaverlack/basic-book-builder.git
 > ```
@@ -14,16 +14,11 @@
 > cd basic-book-builder
 > ```
 
-> [!code] Code Example
-> ```
-> if then else
-> ```
-
 ## Setting Up Build Environment
 
 
-> [!caution] Debian Based Linux
-> This script only support Debian based linux system (Debian, Ubunutu, Zorin, etc)
+> [!caution] ~Debian Linux
+> This script only support Debian based Linux system (Debian, Ubunutu, Zorin, etc)
 > This script has not been widely tested across platforms
 
 
@@ -35,3 +30,23 @@
 
 For more information on setting up the build environment for your system see Appendix A.
 
+
+
+
+
+
+## Testing
+
+
+If you can build all format for the **Basic Book Build** then you have a working build environment.
+
+> [!cli] Testing Build Environment
+> ```
+> make all
+> ```
+
+
+## Creating a New Project
+
+
+### Zotero Configuration (Optional)

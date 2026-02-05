@@ -3,9 +3,10 @@ input-files:
   # - chapters/Preface.md
   - chapters/00_Introduction.md
   - chapters/01_Getting_Started.md
-  # - chapters/02_Features.md
-  # - chapters/Appendix.md
-  # - chapters/AppendixA.md
+  - chapters/02_Usage.md
+  - chapters/03_Features.md
+  - chapters/Appendix.md
+  - chapters/AppendixA.md
   # - chapters/AppendixB.md
   - chapters/Glossary.md
   - chapters/Index.md

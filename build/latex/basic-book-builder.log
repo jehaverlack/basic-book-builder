@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 13:01
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 13:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1736,18 +1736,17 @@ LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 349.
  [2]
-(./basic-book-builder.toc)
+(./basic-book-builder.toc [1
+
+
+])
 \tf@toc=\write5
 \openout5 = `basic-book-builder.toc'.
 
- [1
-
-
-] [2
-
-]
+ [2]
 Chapter 1.
 [1
+
 
 ]
 Chapter 2.
@@ -1762,47 +1761,95 @@ k-builder.git[]
 [2
 
 ] [3]
-Underfull \hbox (badness 10000) in alignment at lines 479--487
+Chapter 3.
+[4
+
+] [5]
+Appendix A.
+
+Overfull \hbox (295.84503pt too wide) in paragraph at lines 587--588
+[]\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/jgm/pandoc/rel
+eases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--595
+[][][]\TU/NotoSerif(0)/m/n/12 VSCodium[][] is recommend for privacy (telemetry/
+tracking) reasons -
+ []
+
+[6
+
+]
+Overfull \hbox (358.24503pt too wide) in paragraph at lines 656--656
+[]\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/obsidianmd/obs
+idian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb[] 
+ []
+
+
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
+ [7]
+Overfull \hbox (12.02498pt too wide) in paragraph at lines 701--703
+[]\TU/NotoSerif(0)/m/n/12 Symlink your ~/Documents/Lib/Citations.bib to basic-b
+ook-builder/lib/zotero.bib 
+ []
+
+
+Overfull \hbox (107.64897pt too wide) in paragraph at lines 711--712
+[]\TU/NotoSerif(0)/m/n/12 https://chromewebstore.google.com/detail/zotero-conne
+ctor/ekhagklcjbdpajgpjgmbionohlpdbjgc 
+ []
+
+
+Overfull \hbox (430.245pt too wide) in paragraph at lines 740--740
+[]\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/johnfactotum/f
+oliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb[] 
+
+ []
+
+[8] [9]
+Underfull \hbox (badness 10000) in alignment at lines 767--775
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 487--489
+Underfull \hbox (badness 10000) in alignment at lines 775--777
 [] []
  []
 
 
-Overfull \hbox (1.68248pt too wide) in paragraph at lines 493--493
+Overfull \hbox (1.68248pt too wide) in paragraph at lines 781--781
 []|\TU/NotoSerif(0)/b/n/12 Bibliography|  
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 489--541
+Underfull \hbox (badness 10000) in alignment at lines 777--829
 [] []
  []
 
-[4
+[10
 
 
-] [5] (./basic-book-builder.ind) [6
+] [11] (./basic-book-builder.ind) [12
 
-] [7
+] [13
 
 ]
-Underfull \hbox (badness 3977) in paragraph at lines 576--578
+Underfull \hbox (badness 3977) in paragraph at lines 864--866
 []\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
 Https://www.uaf.edu/acep/about/our-team/john-
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 588--590
+Underfull \hbox (badness 3977) in paragraph at lines 876--878
 []\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
 Https://www.uaf.edu/acep/about/our-team/john-
  []
 
-[8
+[14
 
-] [9
+] [15
 
 ] (./basic-book-builder.aux)
 
@@ -1810,12 +1857,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36014 strings out of 478775
- 745203 string characters out of 5850945
- 1858991 words of memory out of 5000000
- 55441 multiletter control sequences out of 15000+600000
+ 36087 strings out of 478775
+ 746049 string characters out of 5850945
+ 1859991 words of memory out of 5000000
+ 55514 multiletter control sequences out of 15000+600000
  516036 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,11n,122p,1015b,948s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,122p,1015b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on basic-book-builder.pdf (13 pages).
+Output written on basic-book-builder.pdf (19 pages).
