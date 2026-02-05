@@ -1,7 +1,8 @@
+.PHONY: all bootstrap latex index pdf html markdown clean
 PANDOC   = pandoc
 XELATEX  = xelatex -interaction=nonstopmode -halt-on-error -file-line-error
 BASE     = conf/pandoc.yaml
-METADATA = conf/metadata.yaml
+METADATA = metadata.yaml
 
 # Extract metadata fields
 META_NAME     := $(shell sed -n 's/^name:[[:space:]]*//p' $(METADATA))
@@ -21,9 +22,20 @@ all: html pdf markdown
 
 
 # ---------------------------------------------
+# Globals
+# ---------------------------------------------
+bootstrap:
+	mkdir -p conf
+	cp -r templates/pandoc.yaml conf/pandoc.yaml
+	cp -r templates/style.css conf/style.css
+	cp -r templates/style_epub.css conf/style_epub.css
+
+
+
+# ---------------------------------------------
 # LATEX PHASE (Pandoc → LaTeX)
 # ---------------------------------------------
-latex:
+latex: bootstrap
 	rm -rf $(LATEX_BUILD)
 	mkdir -p $(LATEX_BUILD)/lib/img
 	mkdir -p $(LATEX_BUILD)/lib/diag
@@ -70,7 +82,7 @@ pdf: index
 # ============================================================
 # HTML
 # ============================================================
-html:
+html: bootstrap
 	rm -rf $(HTML_BUILD)
 	mkdir -p $(HTML_BUILD)/lib/img $(HTML_BUILD)/lib/diag $(HTML_BUILD)/lib/mathjax $(HTML_BUILD)/conf
 
@@ -94,23 +106,25 @@ html:
 # ============================================================
 # EPUB
 # ============================================================
-epub:
-	rm -rf $(EPUB_BUILD)
-	mkdir -p $(EPUB_BUILD)/media
+# FIXME:  Needs work before release
+#
+# epub:
+# 	rm -rf $(EPUB_BUILD)
+# 	mkdir -p $(EPUB_BUILD)/media
 
-	scripts/replace-metadata.sh $(METADATA) templates/epub.yaml conf/epub.yaml
-	scripts/replace-metadata.sh $(METADATA) templates/frontmatter.html conf/frontmatter.html
+# 	scripts/replace-metadata.sh $(METADATA) templates/epub.yaml conf/epub.yaml
+# 	scripts/replace-metadata.sh $(METADATA) templates/frontmatter.html conf/frontmatter.html
 
-	$(PANDOC) --defaults=$(BASE) --defaults=conf/epub.yaml \
-		-o $(EPUB_BUILD)/$(META_NAME).epub
+# 	$(PANDOC) --defaults=$(BASE) --defaults=conf/epub.yaml \
+# 		-o $(EPUB_BUILD)/$(META_NAME).epub
 
-	@echo "Produced $(EPUB_BUILD)/$(META_NAME).epub"
+# 	@echo "Produced $(EPUB_BUILD)/$(META_NAME).epub"
 
 
 # ============================================================
 # MARKDOWN
 # ============================================================
-markdown:
+markdown: bootstrap
 	rm -rf $(MD_BUILD)
 	mkdir -p $(MD_BUILD)
 	cp -r lib/img      $(MD_BUILD)/lib/
@@ -131,3 +145,4 @@ markdown:
 # ============================================================
 clean:
 	rm -rf build
+	rm -rf conf

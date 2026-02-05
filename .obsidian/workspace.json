@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chapters/01_Getting_Started.md",
+                "file": "chapters/Preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_Getting_Started"
+              "title": "Preface"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5,
-    "collapsed": true
+    "width": 314.5
   },
   "right": {
     "id": "90580ebd1e9dc8ca",
@@ -271,17 +270,21 @@
   },
   "active": "9aca980657068944",
   "lastOpenFiles": [
-    "templates/style_epub.css",
-    "templates/style.css",
-    "templates/pandoc.yaml",
-    "templates/metadata.yaml",
-    "templates/epub_template.html",
-    "conf/sedYBewXK",
-    "conf/sedEJ4vx7",
-    "conf/sedhZUvts",
-    "conf/sedX6LM6n",
-    "conf/sedvTzKO0",
-    "conf/sedlEPqb2",
+    "build/html/basic-book-builder.html",
+    "conf/frontmatter.html",
+    "conf/html.yaml",
+    "build/html/lib/img/6-node-directed-compete-graph.pdf",
+    "build/html/lib/img/4-node-directed-graph.png",
+    "build/html/lib/img/2-node-undirected-complete-graph.png",
+    "build/html/lib/img/2-node-directed-graph.png",
+    "build/html/lib/mathjax",
+    "build/html/lib/img",
+    "build/html/lib/diag",
+    "build/html/lib",
+    "build/html/conf",
+    "build/html",
+    "chapters/01_Getting_Started.md",
+    "build/pdf/basic-book-builder.pdf",
     "chapters/AppendixA.md",
     "chapters/00_Introduction.md",
     "build/html/lib/img/unit-circle-with-tau.png",
@@ -291,10 +294,6 @@
     "build/html/lib/img/directed-proximity.png",
     "build/html/lib/img/Unit_circle_angles_color.png",
     "build/html/lib/img/UAFLogo_A_blue.png",
-    "build/html/lib/img/UAFLogo_A_black.png",
-    "build/html/lib/img/UAF.png",
-    "build/html/lib/img/UAF-ACEP.png",
-    "chapters/01_Getting_Started.md",
     "chapters/02_Features.md",
     "chapters/Glossary.md",
     "chapters/Terminology.md",
