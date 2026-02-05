@@ -1,4 +1,4 @@
-.PHONY: all bootstrap latex index pdf html markdown clean
+.PHONY: all bootstrap latex index pdf html markdown docx odt clean
 PANDOC   = pandoc
 XELATEX  = xelatex -interaction=nonstopmode -halt-on-error -file-line-error
 BASE     = conf/pandoc.yaml
@@ -14,11 +14,13 @@ META_NAME     := $(shell sed -n 's/^name:[[:space:]]*//p' $(METADATA))
 LATEX_BUILD    = build/latex
 PDF_BUILD      = build/pdf
 HTML_BUILD     = build/html
+DOCX_BUILD     = build/docx
+ODT_BUILD      = build/odt
 EPUB_BUILD     = build/epub
 MD_BUILD       = build/md
 
 
-all: html pdf markdown
+all: html pdf docx odt
 
 
 # ---------------------------------------------
@@ -104,6 +106,43 @@ html: bootstrap
 	open $(HTML_BUILD)/$(META_NAME).html
 
 # ============================================================
+# DOCX
+# ============================================================
+docx: bootstrap
+	rm -rf $(DOCX_BUILD)
+	mkdir -p $(DOCX_BUILD)
+
+	cp templates/docx.yaml conf/docx.yaml
+	scripts/replace-metadata.sh $(METADATA) templates/frontmatter-docx.md conf/frontmatter-docx.md
+
+	$(PANDOC) \
+		--defaults=$(BASE) \
+		--defaults=conf/docx.yaml \
+		-o $(DOCX_BUILD)/$(META_NAME).docx
+
+	open $(DOCX_BUILD)/$(META_NAME).docx
+
+
+# ============================================================
+# ODT
+# ============================================================
+odt: bootstrap
+	rm -rf $(ODT_BUILD)
+	mkdir -p $(ODT_BUILD)
+
+	cp templates/odt.yaml conf/odt.yaml
+	scripts/replace-metadata.sh $(METADATA) templates/frontmatter-docx.md conf/frontmatter-docx.md
+
+	$(PANDOC) \
+		--defaults=$(BASE) \
+		--defaults=conf/odt.yaml \
+		-o $(ODT_BUILD)/$(META_NAME).odt
+
+	open $(ODT_BUILD)/$(META_NAME).odt
+
+
+
+# ============================================================
 # EPUB
 # ============================================================
 # FIXME:  Needs work before release
@@ -139,6 +178,7 @@ markdown: bootstrap
 
 	@echo "Produced $(MD_BUILD)/$(META_NAME).md"
 
+	open $(MD_BUILD)/$(META_NAME).md
 
 # ============================================================
 # CLEAN
