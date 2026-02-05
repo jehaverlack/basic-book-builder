@@ -54,13 +54,48 @@ mkdir -p build/pdf build/html build/latex build/epub build/md
 mkdir -p scripts/tmp
 mkdir -p lib/img lib/diag
 
-# 7. Optional Tools (Checks if they are installed, otherwise prompts)
-echo "🔍 Checking for optional tools..."
-for tool in foliate calibre epubcheck; do
-    if ! command -v $tool &> /dev/null; then
-        echo "💡 Tip: You might want to 'sudo apt install $tool' for better EPub testing."
-    fi
-done
+
+# 7. Obsidian Setup
+echo "📦 Installing Obsidian..."
+wget -O scripts/tmp/obsidian_1.9.14_amd64.deb https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb
+sudo apt install -y ./scripts/tmp/obsidian_1.9.14_amd64.deb
+
+
+# 8. Zotero Setup
+echo "📦 Installing Zotero..."
+
+sudo mkdir -p /usr/share/keyrings
+
+# Install key (direct binary key, no gpg needed)
+# sudo curl -fsSL \
+#   https://raw.githubusercontent.com/retorquere/zotero-deb/master/zotero-archive-keyring.gpg \
+#   -o /usr/share/keyrings/zotero-archive-keyring.gpg
+
+# sudo chmod 644 /usr/share/keyrings/zotero-archive-keyring.gpg
+
+# # Add repository (use tee, not echo >)
+# echo "deb [signed-by=/usr/share/keyrings/zotero-archive-keyring.gpg by-hash=force] https://zotero.retorque.re/file/apt-package-archive ./" \
+#   | sudo tee /etc/apt/sources.list.d/zotero.list > /dev/null
+
+curl -sL https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash -s -- -m sources
+
+sudo apt update
+sudo apt install -y zotero
+
+
+
+
+
+# 9. Optional Tools (Checks if they are installed, otherwise prompts)
+# echo "🔍 Checking for optional tools..."
+# for tool in foliate calibre epubcheck; do
+#     if ! command -v $tool &> /dev/null; then
+#         echo "💡 Tip: You might want to 'sudo apt install $tool' for better EPub testing."
+#     fi
+# done
+
+
+
 
 echo "---------------------------------------------------"
 echo "🎉 Setup Complete!"
