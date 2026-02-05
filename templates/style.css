@@ -89,7 +89,9 @@ ul, ol {
 .callout-speculative,
 .callout-caution,
 .callout-warning,
-.callout-danger {
+.callout-danger,
+.callout-code,
+.callout-cli {
   border-radius: 6px;
   padding: 5px;  /* internal padding */
   margin-top: 5px;     /* external spacing tightened */
@@ -104,7 +106,9 @@ ul, ol {
 .callout-speculative p:first-child strong,
 .callout-caution p:first-child strong,
 .callout-warning p:first-child strong,
-.callout-danger p:first-child strong {
+.callout-danger p:first-child strong,
+.callout-code p:first-child strong,
+.callout-cli p:first-child strong {
   display: block;
   font-family: "Libertinus Sans", sans-serif;
   font-weight: 600;
@@ -118,7 +122,9 @@ ul, ol {
 .callout-speculative p,
 .callout-caution p,
 .callout-warning p,
-.callout-danger p {
+.callout-danger p,
+.callout-code p,
+.callout-cli p {
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 1.45;  /* slightly condensed text spacing */
@@ -181,6 +187,23 @@ ul, ol {
   border-left-color: #d83b3a;
 }
 
+/* ------------------------------
+   Code / CLI Callouts
+   ------------------------------ */
+
+  .callout-code {
+  background: #f5f5f5;
+  border-left-color: #b4b4b4;
+}
+
+.callout-cli {
+  background: #f0f0f0;
+  border-left-color: #777;
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 0.95em;
+}
+
+  
 /* ------------------------------
    Images (in body content)
    ------------------------------ */

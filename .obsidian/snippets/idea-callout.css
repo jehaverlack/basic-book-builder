@@ -21,3 +21,19 @@
   background-color: rgba(128, 0, 128, 0.05);
   border-left: 4px solid rgb(128, 0, 128);
 }
+
+/* Code: light grey */
+.callout[data-callout="code"] {
+  --callout-color: 120, 120, 120;
+  --callout-icon: code;
+  background-color: rgba(120, 120, 120, 0.06);
+  border-left: 4px solid rgb(120, 120, 120);
+}
+
+/* CLI: terminal-style grey */
+.callout[data-callout="cli"] {
+  --callout-color: 90, 90, 90;
+  --callout-icon: terminal;
+  background-color: rgba(90, 90, 90, 0.06);
+  border-left: 4px solid rgb(90, 90, 90);
+}

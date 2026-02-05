@@ -42,6 +42,55 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \newsavebox\pandoc@box
@@ -290,6 +339,8 @@
 \textbf{Author:}       & John Haverlack \\
 \textbf{Version:}      & 1.1.0 \\
 \textbf{Date:}         & 2026-02-04 \\
+\textbf{Affiliation:}  & Alaska Center for Energy and Power \\
+\textbf{Institution:}  & University of Alaska Fairbanks \\
 \textbf{ISBN:}         & UNSPECIFIED \\
 \textbf{DOI:}          & UNSPECIFIED \\
 \textbf{Maturity:}       & BETA \\
@@ -367,33 +418,76 @@ Licensed under the Creative Commons Attribution-NoDerivatives 4.0 International 
 \tableofcontents
 }
 \mainmatter
-\markboth{Preface}{Preface}
-
-\chapter*{Preface}\label{preface}
-\addcontentsline{toc}{chapter}{Preface}
-
-Preface to the Book\ldots{}
-
 \chapter{Introduction}\label{introduction}
 
-This is a basic book (or article) builder template based on a Pandoc
+This is a basic book (or article / document) builder template based on a
+Pandoc(\citeproc{ref-PandocIndex}{\textbf{PandocIndex?}})\index{Pandoc}
 build process in conjunction with a number of other tools to generate
-PDF, ODT, HTML, LaTex, Markdown, and Epub book output formats from
-Markdown source content , which can optionally be edited as an Obsidian
-vault.
+PDF, HTML, LaTex, Markdown, ODT, DOCX, and Epub book output formats from
+a single set Markdown source content , which can optionally be edited as
+an Obsidian vault.
 
-This book builder template has been curated by John
+This \textbf{basic book
+builder}(\citeproc{ref-JehaverlackBasicbookbuilderPandoca}{\textbf{JehaverlackBasicbookbuilderPandoca?}})
+template has been curated by John
 Haverlack.(\citeproc{ref-JohnHaverlackACEP}{\emph{John {Haverlack}
 \textbar{} {ACEP}}, n.d.})
 
 \chapter{Getting Started}\label{getting-started}
 
+\section{Cloning the Basic Book
+Builder}\label{cloning-the-basic-book-builder}
+
+\begin{quote}
+{[}!cli{]} Cloning the repository
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ clone https://github.com/jehaverlack/basic{-}book{-}builder.git}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{quote}
+{[}!cli{]} Navigate to the repo directory
+
+\begin{verbatim}
+cd basic-book-builder
+\end{verbatim}
+\end{quote}
+
+\section{Setting Up Build
+Environment}\label{setting-up-build-environment}
+
+\begin{cautionbox}[Debian Based Linux]
+This script only support Debian based linux system (Debian, Ubunutu,
+Zorin, etc) This script has not been widely tested across platforms
+\end{cautionbox}
+
+\begin{quote}
+{[}!cli{]} Setup Build Environment
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{./scripts/setup{-}linux{-}deb.sh}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+For more information on setting up the build environment for your system
+see Appendix A.
+
+\appendix
+
+Appendix A
+
+\chapter{Appendix A: Build Environment
+Notes}\label{appendix-a-build-environment-notes}
+
 \section{Installing Pre-Requisites}\label{installing-pre-requisites}
 
+\begin{cautionbox}[Not Cross-platform Tested]
 For Debian / ZorinOS and likely Ubuntu based systems.
-
-\begin{cautionbox}[TODO]
-It would be nice to roll a setup script to take care of this.
 \end{cautionbox}
 
 \subsection{Required}\label{required}
@@ -581,7 +675,8 @@ sudo apt install calibre
 
 \section{Editing the Configuration}\label{editing-the-configuration}
 
-\chapter{Editing the Book}\label{editing-the-book}
+\chapter{Appendix B: Editing the
+Book}\label{appendix-b-editing-the-book}
 
 \subsection{Configuration}\label{configuration}
 
@@ -702,23 +797,78 @@ Note: This ePub configuration still needs tuning.
 make epub
 \end{verbatim}
 
-\appendix
-
-Appendix A
-
-First Appendix
-
 \backmatter
 
 \chapter*{Glossary}\label{glossary}
 \addcontentsline{toc}{chapter}{Glossary}
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{AI} - Artificial Intelligence
-\item
-\end{itemize}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1734}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8266}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Term
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{AST (Abstract Syntax Tree)} & Pandoc's internal structured
+representation of a document. Lua filters operate on the AST before
+rendering to a target format. \\
+\textbf{Bibliography} & A \texttt{.bib} file (e.g., Zotero export) used
+by Pandoc with \texttt{citeproc} to generate formatted citations and
+reference lists. \\
+\textbf{Callout} & A styled block (e.g., \texttt{{[}!warning{]}})
+transformed by Lua filters into format-specific output such as LaTeX
+environments or HTML \texttt{\textless{}div\textgreater{}} elements. \\
+\textbf{Defaults File (YAML)} & A Pandoc configuration file defining
+output format, filters, metadata, and rendering options (e.g.,
+\texttt{pdf.yaml}, \texttt{html.yaml}). \\
+\textbf{DOCX} & Microsoft Word document format generated by Pandoc;
+styling is controlled via a \texttt{reference.docx} file. \\
+\textbf{Filter (Lua)} & A script that modifies Pandoc's AST before
+rendering. Used in this workflow for callouts and other structural
+transformations. \\
+\textbf{Frontmatter} & Format-specific content inserted before the main
+body (e.g., \texttt{frontmatter.tex}, \texttt{frontmatter.html},
+\texttt{frontmatter-docx.md}). \\
+\textbf{HTML} & Web output format generated by Pandoc, typically styled
+via CSS and supporting interactive features. \\
+\textbf{LaTeX} & Typesetting system used for high-quality PDF generation
+via XeLaTeX in this workflow. \\
+\textbf{Lua Filter} & A lightweight scripting extension used by Pandoc
+to customize document transformations programmatically. \\
+\textbf{Makefile} & Automation script orchestrating the build pipeline
+for PDF, HTML, DOCX, ODT, and Markdown outputs. \\
+\textbf{Markdown} & Plain-text markup language serving as the source
+format for all outputs in the workflow. \\
+\textbf{Metadata} & Key--value pairs (e.g., \texttt{metadata.yaml})
+defining title, author, license, version, and other document
+variables. \\
+\textbf{ODT} & OpenDocument Text format used by LibreOffice; similar to
+DOCX but open-standard. \\
+\textbf{Pandoc} & Universal document converter used to transform
+Markdown into PDF, HTML, DOCX, ODT, EPUB, and more. \\
+\textbf{PDF} & Portable Document Format output produced via Pandoc +
+XeLaTeX. \\
+\textbf{Reference Document} & A DOCX or ODT file defining styles (fonts,
+headings, spacing) used when generating Word/LibreOffice outputs. \\
+\textbf{Resource Path} & Directories Pandoc searches for images,
+diagrams, and other assets during rendering. \\
+\textbf{Template} & A format-specific layout file (e.g., LaTeX template)
+used to control document structure beyond styling. \\
+\textbf{TOC (Table of Contents)} & Automatically generated navigation
+structure controlled by \texttt{toc} and \texttt{toc-depth} options. \\
+\textbf{XeLaTeX} & LaTeX engine used to generate PDFs with modern font
+support (via \texttt{fontspec}). \\
+\textbf{Zotero} & Reference manager used to generate \texttt{.bib} files
+for citation processing with Pandoc. \\
+\end{longtable}
+}
 
 \clearpage
 \thispagestyle{plain}
