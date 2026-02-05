@@ -13,22 +13,43 @@
 
   <!-- Metadata Page (PDF analog) -->
   <div style="text-align:left; margin-top:5em;">
-  <!-- Metadata Page (PDF analog) -->
+  
+    <h2>$title$</h2>
+    <i>$subtitle$</i>
+
+    <!-- Metadata Page (PDF analog) -->
     <table style="margin-top:5em; width:100%; border-collapse:collapse;">
       <tbody>
-        <tr><td style="width:30%; font-weight:bold;">Title</td><td>$title$</td></tr>
-        <tr><td style="font-weight:bold;">Subtitle</td><td>$subtitle$</td></tr>
-        <tr><td style="font-weight:bold;">Affiliation</td><td>$affiliation$</td></tr>
-        <tr><td style="font-weight:bold;">Institution</td><td>$institution$</td></tr>
+        <!-- <tr><td style="width:30%; font-weight:bold;">Title</td><td>$title$</td></tr>
+        <tr><td style="font-weight:bold;">Subtitle</td><td>$subtitle$</td></tr> -->
+        <!-- <tr><td style="font-weight:bold;">Affiliation</td><td>$affiliation$</td></tr> -->
+        <!-- <tr><td style="font-weight:bold;">Institution</td><td>$institution$</td></tr> -->
         <tr><td style="font-weight:bold;">Author</td><td>$author$</td></tr>
-        <tr><td style="font-weight:bold;">Copyright</td><td>$copyright$</td></tr>
-        <tr><td style="font-weight:bold;">License</td><td>$license$</td></tr>
         <tr><td style="font-weight:bold;">Version</td><td>$version$</td></tr>
+        <!-- <tr><td style="font-weight:bold;">Copyright</td><td>$copyright$</td></tr>
+        <tr><td style="font-weight:bold;">License</td><td>$license$</td></tr> -->
         <tr><td style="font-weight:bold;">Date</td><td>$date$</td></tr>
+        <tr><td style="font-weight:bold;">ISBN:</td><td>$isbn-pdf$</td></tr>
+        <tr><td style="font-weight:bold;">DOI:</td><td>$doi$</td></tr>
         <tr><td style="font-weight:bold;">State</td><td>$state$</td></tr>
-        <tr><td style="font-weight:bold;">Source</td><td>$source$</td></tr>
+        <!-- <tr><td style="font-weight:bold;">Source</td><td>$source$</td></tr> -->
       </tbody>
     </table>
+
+    <p>Copyright $copyright$</p>
+
+    <h3>Licensing</h3>
+
+    <h4>Open Source Edition (PDF and HTML)</h4>
+    <p>Licensed under the $license-os-text$
+      <ul>
+        <li>License: <a href="$license-os-url$">$license-os$</a></li>
+      </ul>
+    </p>
+
+    <h4>Commercial Edition (ebook and print)</h4>
+    <p>$license-com$ $license-com-text$</p>
+
   </div>
 
 

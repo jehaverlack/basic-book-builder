@@ -1,0 +1,760 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  12pt,
+  openany]{book}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Noto Serif}
+  \setsansfont[]{Noto Sans}
+  \setmonofont[]{Noto Sans Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{etoolbox}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{xparse}
+\tcbuselibrary{breakable}
+
+% --- Disable floating figures globally ---
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][H]{\origfigure[H]}{\endorigfigure}
+
+% --- Colors ---
+\usepackage{xcolor}
+\definecolor{speculativeback}{RGB}{247,232,255}  % #f7e8ff
+\definecolor{speculativeframe}{RGB}{139,43,226}  % #8b2be2
+
+% --- Left-align all Pandoc tables ---
+\usepackage{longtable}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\par\raggedright}{}{}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\makeatother
+
+% Enable index generation
+\usepackage{makeidx}
+\makeindex
+
+
+% Helper to show a blank title if empty
+\newcommand{\blanktitle}{\mbox{}}
+
+% =========================================================
+% Concept Boxes
+% =========================================================
+\newtcolorbox{infobox}[1][Information]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=blue!3!white,
+  colframe=blue!50!black,
+  colbacktitle=blue!10!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{proposedbox}[1][Proposed Concept]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  colbacktitle=blue!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{establishedbox}[1][Established Concept]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=green!5!white,
+  colframe=green!75!black,
+  colbacktitle=green!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{speculativebox}[1][Speculative Concept]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=speculativeback,
+  colframe=speculativeframe,
+  colbacktitle=speculativeback!80!white, % lighter variant for title bar
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+
+\newtcolorbox{cautionbox}[1][Caution]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=orange!5!white,
+  colframe=orange!75!black,
+  colbacktitle=orange!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{warningbox}[1][Warning]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=orange!5!white,
+  colframe=orange!75!black,
+  colbacktitle=orange!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\newtcolorbox{dangerbox}[1][Danger]{%
+  title=\ifstrempty{#1}{\blanktitle}{#1},
+  colback=red!5!white,
+  colframe=red!75!black,
+  colbacktitle=red!15!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  enhanced, sharp corners, breakable,
+  after=\par\vspace{6pt}
+}
+
+\usepackage{xurl}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+% --- Chapter-opening pages (plain style) ---
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[C]{\leftmark}      % Chapter title
+  \cfoot{Basic Book Builder: A Pandoc template for building books and articles}   % Book title
+  \rfoot{\thepage}              % Page number
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% --- Normal running pages ---
+\pagestyle{fancy}
+\fancyhf{}
+
+% Header
+\fancyhead[C]{\leftmark}        % Chapter title (centered)
+
+% Footer
+\cfoot{Basic Book Builder: A Pandoc template for building books and articles}     % Book title
+\rfoot{\thepage}                % Page number
+
+% Line rules
+\renewcommand{\headrulewidth}{0pt}   % rule under header
+\renewcommand{\footrulewidth}{0pt}     % no rule above footer
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+\frontmatter
+
+% -------------------------
+% 1. Title Page
+% -------------------------
+\begin{titlepage}
+\centering
+
+\vspace*{2cm}
+
+{\Huge\bfseries Basic Book Builder \par}
+\vspace{0.4cm}
+{\Large A Pandoc template for building books and articles \par}
+
+\vspace{1.2cm}
+\includegraphics[width=0.5\textwidth]{lib/img/UAF-ACEP.png}
+
+\vfill
+
+\end{titlepage}
+
+% -------------------------
+% 2. COPYRIGHT / META PAGE
+% -------------------------
+\newpage
+\thispagestyle{empty}
+
+{\Large\bfseries Basic Book Builder \par}
+\vspace{0.2cm}
+{\normalsize\textit{A Pandoc template for building books and articles}\par}
+\vspace{0.4cm}
+
+\renewcommand{\arraystretch}{1.3} % row spacing
+\setlength{\tabcolsep}{8pt}       % column padding
+\begin{tabular}{@{}p{0.28\textwidth}p{0.65\textwidth}@{}}
+\textbf{Author:}       & John Haverlack \\
+\textbf{Version:}      & 1.1.0 \\
+\textbf{Date:}         & 2026-02-04 \\
+\textbf{ISBN:}         & UNSPECIFIED \\
+\textbf{DOI:}          & UNSPECIFIED \\
+\textbf{Maturity:}       & BETA \\
+\end{tabular}
+
+\vspace{0.5cm}
+
+\textbf{Copyright} © 2026 Alaska Center for Energy and Power
+
+\vspace{0.5cm}
+
+% ----- Licensing Section -----
+\section*{Licensing}
+
+\subsection*{Open Source Edition (PDF and HTML)}
+Licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License.
+
+\begin{itemize}
+  \item License: \href{https://creativecommons.org/licenses/by-nd/4.0/}{CC BY-ND 4.0}
+\end{itemize}
+
+% \subsection*{Commercial Edition (ebook and print)}
+% All Rights Reserved. No part of the EPUB or printed editions may be reproduced or redistributed without permission.
+
+\vspace*{\fill}
+
+% -------------------------
+% 3. Cover Illustration Page
+% -------------------------
+% ----- Title Page Image Note -----
+\newpage
+\thispagestyle{empty}
+
+% \vspace*{1.5cm}
+
+% {\Large\bfseries Cover Illustration\par}
+
+% \begin{center}
+%     \includegraphics[width=0.33\textwidth]{lib/img/UAF-ACEP.png}
+
+%     \vspace{0.6cm}
+
+
+%     \vspace{0.8cm}
+
+%     {\small
+%     \textit{“Cover illustration by****”}
+% \end{center}
+
+
+% -------------------------
+% Reset numbering 
+% -------------------------
+\clearpage
+\pagenumbering{roman}
+
+% -------------------------
+% Insert dedication
+% -------------------------
+
+% \begin{titlepage}
+%   \centering
+%   \vspace*{\fill}
+
+%   \textit{This book is dedicated to ****.}
+
+%   \vspace*{\fill}
+% \end{titlepage}
+
+% (Pandoc will insert the TOC next, using roman numerals)
+
+\renewcommand*\contentsname{Contents}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\mainmatter
+\markboth{Preface}{Preface}
+
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+Preface t the Book\ldots{}
+
+\chapter{Introduction}\label{introduction}
+
+This is a basic book (or article) builder template based on a Pandoc
+build process in conjunction with a number of other tools to generate
+PDF, ODT, HTML, LaTex, Markdown, and Epub book output formats from
+Markdown source content , which can optionally be edited as an Obsidian
+vault.
+
+This book builder template has been curated by John
+Haverlack.(\citeproc{ref-JohnHaverlackACEP}{\emph{John {Haverlack}
+\textbar{} {ACEP}}, n.d.})
+
+\chapter{Getting Started}\label{getting-started}
+
+\section{Installing Pre-Requisites}\label{installing-pre-requisites}
+
+For Debian / ZorinOS and likely Ubuntu based systems.
+
+\begin{cautionbox}[TODO]
+It would be nice to roll a setup script to take care of this.
+\end{cautionbox}
+
+\subsection{Required}\label{required}
+
+\subsubsection{Pandoc}\label{pandoc}
+
+\begin{itemize}
+\tightlist
+\item
+  https://pandoc.org/
+\item
+  \href{https://github.com/jgm/pandoc/releases/tag/3.8.2.1}{Download}
+\end{itemize}
+
+\begin{quote}
+\texttt{sudo\ apt\ install\ https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb}
+\end{quote}
+
+\subsubsection{Code Editor}\label{code-editor}
+
+\begin{establishedbox}[Code Editor]
+\href{https://vscodium.com/}{VSCodium} is recommend for privacy
+(telemetry/tracking) reasons - https://vscodium.com/
+\end{establishedbox}
+
+But any text editor will work. \#\#\#\# make
+
+\begin{verbatim}
+sudo apt install make
+\end{verbatim}
+
+\subsubsection{jq and yq}\label{jq-and-yq}
+
+\begin{verbatim}
+sudo apt install jq yq
+\end{verbatim}
+
+\subsubsection{texlive}\label{texlive}
+
+\begin{quote}
+\texttt{sudo\ apt\ install\ texlive\ texlive-xetex\ texlive-latex-extra\ texlive-fonts-recommended\ texlive-fonts-extra}
+\end{quote}
+
+\subsubsection{MathJax}\label{mathjax}
+
+\begin{itemize}
+\tightlist
+\item
+  https://www.mathjax.org/
+\end{itemize}
+
+\begin{verbatim}
+wget https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz
+tar xzf mathjax-3.2.2.tgz
+mv package/es5/* lib/mathjax
+rm -rf package mathjax-3.2.2.tgz
+\end{verbatim}
+
+\begin{cautionbox}[TODO]
+This need to be rolled into a setup script.
+\end{cautionbox}
+
+\subsection{Optional}\label{optional}
+
+The following are not strictly requires to use this book builder
+template.
+
+\subsubsection{Obsidian}\label{obsidian}
+
+\begin{establishedbox}[Highly Recommended]
+Editing book chapter content in Obsidian is a very productive means for
+editing Markdown source content.
+\end{establishedbox}
+
+\begin{itemize}
+\tightlist
+\item
+  https://obsidian.md/
+\item
+  \href{https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb}{Deb
+  Package}
+\end{itemize}
+
+\begin{verbatim}
+sudo apt install https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb
+\end{verbatim}
+
+\subsubsection{Zotero}\label{zotero}
+
+\begin{establishedbox}[Highly Recommended]
+If you need to managed citations and references, Zotero integration is
+highly recommended.
+\end{establishedbox}
+
+\begin{itemize}
+\tightlist
+\item
+  https://www.zotero.org/
+\end{itemize}
+
+\begin{verbatim}
+sudo cp ./scripts/deps/zotero.list /etc/apt/sources.list.d/
+\end{verbatim}
+
+\begin{verbatim}
+sudo apt update
+\end{verbatim}
+
+\begin{verbatim}
+sudo apt install zotero
+\end{verbatim}
+
+\paragraph{Better BibTex for Zotero}\label{better-bibtex-for-zotero}
+
+Install the Better BibTex Plugin for Zotero - Zotero \textgreater{} Tool
+\textgreater{} Plugins
+
+\paragraph{Export citations.bib}\label{export-citations.bib}
+
+\begin{itemize}
+\tightlist
+\item
+  Zotero \textgreater{} File \textgreater{} Export Library
+  \textgreater{} Format: Better BibTeX
+\item[$\square$]
+  Keep Updated
+\item[$\square$]
+  Save to: \textasciitilde/Documents/Lib/zotero.bib
+\item[$\square$]
+  Symlink your \textasciitilde/Documents/Lib/Citations.bib to
+  basic-book-builder/lib/zotero.bib
+\end{itemize}
+
+\paragraph{Zotero Connector Browser
+Plugin}\label{zotero-connector-browser-plugin}
+
+\begin{itemize}
+\tightlist
+\item
+  https://chromewebstore.google.com/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc
+\end{itemize}
+
+Provides you the ability to auto add Web resources to your Zotero
+citation database.
+
+\subsubsection{lmodern}\label{lmodern}
+
+\begin{verbatim}
+sudo apt install lmodern
+\end{verbatim}
+
+\subsubsection{epubcheck}\label{epubcheck}
+
+\begin{verbatim}
+sudo apt install epubcheck
+\end{verbatim}
+
+\subsubsection{foliate}\label{foliate}
+
+An EPub Reader
+
+\begin{itemize}
+\tightlist
+\item
+  https://johnfactotum.github.io/foliate/
+\end{itemize}
+
+\begin{verbatim}
+sudo apt install https://github.com/johnfactotum/foliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb
+\end{verbatim}
+
+\subsubsection{calibre}\label{calibre}
+
+An EPub Reader
+
+\begin{itemize}
+\tightlist
+\item
+  https://calibre-ebook.com
+\end{itemize}
+
+\begin{verbatim}
+sudo apt install calibre
+\end{verbatim}
+
+\section{Editing the Configuration}\label{editing-the-configuration}
+
+\chapter{Editing the Book}\label{editing-the-book}
+
+\subsection{Configuration}\label{configuration}
+
+There are a number of other config files for each format:
+
+\begin{verbatim}
+conf/
+├── epub-metadata.xml
+├── epub_template.html
+├── epub.yaml
+├── frontmatter_epub.md
+├── frontmatter_epub.xhtml
+├── frontmatter.html
+├── frontmatter.tex
+├── header.tex
+├── html.yaml
+├── latex.yaml
+├── markdown.yaml
+├── metadata.yaml
+├── pandoc.yaml
+├── pdf.yaml
+├── style.css
+└── style_epub.css
+\end{verbatim}
+
+\subsubsection{Main Config Files}\label{main-config-files}
+
+\begin{itemize}
+\tightlist
+\item
+  metadata.yaml - Set Title, etc
+\item
+  pandoc.yaml - Main Pandoc Config \#\#\#\# Per format Configs
+\item
+  \texttt{pdf.yaml}
+\item
+  \texttt{html.yaml}
+\item
+  \texttt{latex.yaml}
+\item
+  \texttt{epub.yaml}
+\end{itemize}
+
+\subsection{FrontMatter Config}\label{frontmatter-config}
+
+There are 2 Version of the FrontMatter for PDF, and HTML bases formats
+that set the Title, Author, Verizon, Copyright, etc\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{frontmatter.tex}
+\item
+  \texttt{frontmatter.html}
+\item
+  \texttt{frontmatter\_epub.*} - Work in Progress
+\end{itemize}
+
+\begin{quote}
+There is probably a better way to do this.
+\end{quote}
+
+\section{Editing the Content}\label{editing-the-content}
+
+To edit the book open the \texttt{basic-book-builder} directory as an
+Obsidian Vault.
+
+\begin{itemize}
+\tightlist
+\item
+  Edit the Markdown content in the \texttt{chapters} directory.
+\end{itemize}
+
+\subsection{Citations}\label{citations}
+
+\begin{quote}
+Note: the Zotero database needs configured to export automatically to
+\texttt{lib/citations.bib}
+\end{quote}
+
+To insert a Zotero Citation - Ensure the Zotero App and DB are running
+on you system. - Alt + I (to insert citation) - Search for and select
+citation reference
+
+\section{Usage: Building the Book}\label{usage-building-the-book}
+
+\subsubsection{PDF}\label{pdf}
+
+\begin{verbatim}
+make pdf
+\end{verbatim}
+
+\subsubsection{HTML}\label{html}
+
+\begin{verbatim}
+make html
+\end{verbatim}
+
+\subsubsection{LaTex}\label{latex}
+
+\begin{verbatim}
+make latex
+\end{verbatim}
+
+\subsubsection{Markdown}\label{markdown}
+
+\begin{verbatim}
+make markdown
+\end{verbatim}
+
+\subsubsection{EPub}\label{epub}
+
+\begin{quote}
+Note: This ePub configuration still needs tuning.
+\end{quote}
+
+\begin{verbatim}
+make epub
+\end{verbatim}
+
+\appendix
+
+Appendix A
+
+First Appendix
+
+\backmatter
+
+\chapter*{Glossary}\label{glossary}
+\addcontentsline{toc}{chapter}{Glossary}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{AI} - Artificial Intelligence
+\item
+\end{itemize}
+
+\clearpage
+\thispagestyle{plain}
+\markboth{Index}{Index}
+
+\let\oldclearpage\clearpage
+\let\oldcleardoublepage\cleardoublepage
+\renewcommand{\clearpage}{}
+\renewcommand{\cleardoublepage}{}
+
+\chapter*{Index}
+\addcontentsline{toc}{chapter}{Index}
+
+\printindex
+
+\renewcommand{\clearpage}{\oldclearpage}
+\renewcommand{\cleardoublepage}{\oldcleardoublepage}
+
+\clearpage
+\thispagestyle{plain}
+\markboth{Bibliography}{Bibliography}
+
+\chapter*{Bibliography}\label{bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-JohnHaverlackACEP}
+\emph{John {Haverlack} \textbar{} {ACEP}}. n.d.
+Https://www.uaf.edu/acep/about/our-team/john-haverlack.php.
+
+\bibitem[\citeproctext]{ref-JohnHaverlackACEP}
+\emph{John {Haverlack} \textbar{} {ACEP}}. n.d.
+Https://www.uaf.edu/acep/about/our-team/john-haverlack.php.
+
+\end{CSLReferences}
+
+\backmatter
+\end{document}

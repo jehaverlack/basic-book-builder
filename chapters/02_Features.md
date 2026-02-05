@@ -1,3 +1,37 @@
+
+
+## Callouts
+
+A few callout box styles have been added to easily highlight content.
+
+> [!established] Established Concept
+> Einsteins Relativistic Dynamics Equations
+> $$E^2 = (m_{0} \cdot c^2)^2 + (p \cdot c)^2 $$
+
+
+> [!proposed] Proposed Concept
+With the speed of light, $c = 1$:
+$$E^2 = m_{0}^2 + p^2 $$
+
+
+> [!speculative] Speculative Concept
+With the speed of light, $c = 1$:
+$$E^2 = m_{0}^2 + p^2 $$
+
+
+> [!caution] Caution Note
+> Beware of this section.
+
+
+> [!warning] Warning Note
+> Beware of this section.
+
+
+> [!danger] Alerts
+> Extreme Highlight
+
+
+
 # Example Content
 
 In $R\nu$ the [Planck Length](https://en.wikipedia.org/wiki/Planck_units#Planck_length) is the universal unit for measurement of distance, and is defined approximately to be:

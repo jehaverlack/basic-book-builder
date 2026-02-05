@@ -24,6 +24,10 @@
 \setlength{\LTright}{0pt}
 \makeatother
 
+% Enable index generation
+\usepackage{makeidx}
+\makeindex
+
 
 % Helper to show a blank title if empty
 \newcommand{\blanktitle}{\mbox{}}
@@ -108,3 +112,33 @@
   enhanced, sharp corners, breakable,
   after=\par\vspace{6pt}
 }
+
+\usepackage{xurl}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+% --- Chapter-opening pages (plain style) ---
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[C]{\leftmark}      % Chapter title
+  \cfoot{Basic Book Builder: A Pandoc template for building books and articles}   % Book title
+  \rfoot{\thepage}              % Page number
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% --- Normal running pages ---
+\pagestyle{fancy}
+\fancyhf{}
+
+% Header
+\fancyhead[C]{\leftmark}        % Chapter title (centered)
+
+% Footer
+\cfoot{Basic Book Builder: A Pandoc template for building books and articles}     % Book title
+\rfoot{\thepage}                % Page number
+
+% Line rules
+\renewcommand{\headrulewidth}{0pt}   % rule under header
+\renewcommand{\footrulewidth}{0pt}     % no rule above footer

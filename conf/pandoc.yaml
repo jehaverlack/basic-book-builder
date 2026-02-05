@@ -1,25 +1,33 @@
 # pandoc.yaml
 input-files:
+  - chapters/Preface.md
   - chapters/00_Introduction.md
   - chapters/01_Getting_Started.md
-  - chapters/02_Features.md
-  - chapters/Terminology.md
-  - chapters/Citations.md
+  # - chapters/02_Features.md
+  # - chapters/Terminology.md
+  # - chapters/Citations.md
+  - chapters/Appendix.md
+  - chapters/AppendixA.md
+  - chapters/Glossary.md
+  - chapters/Index.md
+  - chapters/Bibliography.md
 
 from: markdown+yaml_metadata_block+raw_tex
 standalone: true
 
 
 metadata:
-  mainfont: "Linux Libertine O"
-  sansfont: "Linux Biolinum O"
-  monofont: "DejaVu Sans Mono"
+  mainfont: "Noto Serif"
+  sansfont: "Noto Sans"
+  monofont: "Noto Sans Mono"
+  # mainfont: "Libertinus Serif"
+  # sansfont: "Libertinus Sans"
+  # monofont: "DejaVu Sans Mono"
   date: ""            # <-- forces maketitle to exist, but blank
   link-citations: true
 
 variables:
-  documentclass: article  # set to "article" or "book"
-  suppress-chapter: true
+  documentclass: book
   fontsize: 12pt
   geometry:
     - margin=1in

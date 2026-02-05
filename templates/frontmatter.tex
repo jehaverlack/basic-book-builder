@@ -1,5 +1,5 @@
 % -------------------------
-% Custom Title Page
+% 1. Title Page
 % -------------------------
 \begin{titlepage}
 \centering
@@ -13,48 +13,94 @@
 \vspace{1.2cm}
 \includegraphics[width=0.5\textwidth]{$logo$}
 
-
 \vfill
 
 \end{titlepage}
 
-% ----- COPYRIGHT / META PAGE -----
+% -------------------------
+% 2. COPYRIGHT / META PAGE
+% -------------------------
 \newpage
 \thispagestyle{empty}
 
-\vspace*{\fill}
+{\Large\bfseries $title$ \par}
+\vspace{0.2cm}
+{\normalsize\textit{$subtitle$}\par}
+\vspace{0.4cm}
 
-\Large{$title$}
-
-\normalsize{\textbf{$subtitle$}}
-
-
-\begin{center}
 \renewcommand{\arraystretch}{1.3} % row spacing
 \setlength{\tabcolsep}{8pt}       % column padding
 \begin{tabular}{@{}p{0.28\textwidth}p{0.65\textwidth}@{}}
-\textbf{Affiliation:}  & $affiliation$ \\
-\textbf{Institution:}  & $institution$ \\
 \textbf{Author:}       & $author$ \\
 \textbf{Version:}      & $version$ \\
 \textbf{Date:}         & $date$ \\
-\textbf{State:}        & $state$ \\
-\textbf{Source:}       & $source$ \\
+\textbf{ISBN:}         & $isbn-pdf$ \\
+\textbf{DOI:}          & $doi$ \\
+\textbf{Maturity:}       & $state$ \\
 \end{tabular}
-\end{center}
 
+\vspace{0.5cm}
 
-\textbf{License}
+\textbf{Copyright} $copyright$
 
-This work is licensed under the $license-name$ ($license$)
+\vspace{0.5cm}
 
+% ----- Licensing Section -----
+\section*{Licensing}
 
-\begin{center}
-Copyright $copyright$
-\end{center}
+\subsection*{Open Source Edition (PDF and HTML)}
+Licensed under the $license-os-text$.
+
+\begin{itemize}
+  \item License: \href{$license-os-url$}{$license-os$}
+\end{itemize}
+
+% \subsection*{Commercial Edition (ebook and print)}
+% $license-com$ $license-com-text$
 
 \vspace*{\fill}
 
+% -------------------------
+% 3. Cover Illustration Page
+% -------------------------
+% ----- Title Page Image Note -----
+\newpage
+\thispagestyle{empty}
+
+% \vspace*{1.5cm}
+
+% {\Large\bfseries Cover Illustration\par}
+
+% \begin{center}
+%     \includegraphics[width=0.33\textwidth]{$logo$}
+
+%     \vspace{0.6cm}
+
+
+%     \vspace{0.8cm}
+
+%     {\small
+%     \textit{“Cover illustration by****”}
+% \end{center}
+
+
+% -------------------------
+% Reset numbering 
+% -------------------------
 \clearpage
-\pagenumbering{arabic}
-\setcounter{page}{1}
+\pagenumbering{roman}
+
+% -------------------------
+% Insert dedication
+% -------------------------
+
+% \begin{titlepage}
+%   \centering
+%   \vspace*{\fill}
+
+%   \textit{This book is dedicated to ****.}
+
+%   \vspace*{\fill}
+% \end{titlepage}
+
+% (Pandoc will insert the TOC next, using roman numerals)

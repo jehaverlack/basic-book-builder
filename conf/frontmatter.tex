@@ -1,5 +1,5 @@
 % -------------------------
-% Custom Title Page
+% 1. Title Page
 % -------------------------
 \begin{titlepage}
 \centering
@@ -13,48 +13,94 @@
 \vspace{1.2cm}
 \includegraphics[width=0.5\textwidth]{lib/img/UAF-ACEP.png}
 
-
 \vfill
 
 \end{titlepage}
 
-% ----- COPYRIGHT / META PAGE -----
+% -------------------------
+% 2. COPYRIGHT / META PAGE
+% -------------------------
 \newpage
 \thispagestyle{empty}
 
-\vspace*{\fill}
+{\Large\bfseries Basic Book Builder \par}
+\vspace{0.2cm}
+{\normalsize\textit{A Pandoc template for building books and articles}\par}
+\vspace{0.4cm}
 
-\Large{Basic Book Builder}
-
-\normalsize{\textbf{A Pandoc template for building books and articles}}
-
-
-\begin{center}
 \renewcommand{\arraystretch}{1.3} % row spacing
 \setlength{\tabcolsep}{8pt}       % column padding
 \begin{tabular}{@{}p{0.28\textwidth}p{0.65\textwidth}@{}}
-\textbf{Affiliation:}  & Alaska Center for Energy and Power \\
-\textbf{Institution:}  & University of Alaska Fairbanks \\
 \textbf{Author:}       & John Haverlack \\
-\textbf{Version:}      & 1.0.1 \\
-\textbf{Date:}         & 2025-11-21 \\
-\textbf{State:}        & BETA \\
-\textbf{Source:}       & https://github.com/jehaverlack/basic-book-builder \\
+\textbf{Version:}      & 1.1.0 \\
+\textbf{Date:}         & 2026-02-04 \\
+\textbf{ISBN:}         & UNSPECIFIED \\
+\textbf{DOI:}          & UNSPECIFIED \\
+\textbf{Maturity:}       & BETA \\
 \end{tabular}
-\end{center}
 
+\vspace{0.5cm}
 
-\textbf{License}
+\textbf{Copyright} © 2026 Alaska Center for Energy and Power
 
-This work is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)
+\vspace{0.5cm}
 
+% ----- Licensing Section -----
+\section*{Licensing}
 
-\begin{center}
-Copyright © 2025 Alaska Center for Energy and Power
-\end{center}
+\subsection*{Open Source Edition (PDF and HTML)}
+Licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License.
+
+\begin{itemize}
+  \item License: \href{https://creativecommons.org/licenses/by-nd/4.0/}{CC BY-ND 4.0}
+\end{itemize}
+
+% \subsection*{Commercial Edition (ebook and print)}
+% All Rights Reserved. No part of the EPUB or printed editions may be reproduced or redistributed without permission.
 
 \vspace*{\fill}
 
+% -------------------------
+% 3. Cover Illustration Page
+% -------------------------
+% ----- Title Page Image Note -----
+\newpage
+\thispagestyle{empty}
+
+% \vspace*{1.5cm}
+
+% {\Large\bfseries Cover Illustration\par}
+
+% \begin{center}
+%     \includegraphics[width=0.33\textwidth]{lib/img/UAF-ACEP.png}
+
+%     \vspace{0.6cm}
+
+
+%     \vspace{0.8cm}
+
+%     {\small
+%     \textit{“Cover illustration by****”}
+% \end{center}
+
+
+% -------------------------
+% Reset numbering 
+% -------------------------
 \clearpage
-\pagenumbering{arabic}
-\setcounter{page}{1}
+\pagenumbering{roman}
+
+% -------------------------
+% Insert dedication
+% -------------------------
+
+% \begin{titlepage}
+%   \centering
+%   \vspace*{\fill}
+
+%   \textit{This book is dedicated to ****.}
+
+%   \vspace*{\fill}
+% \end{titlepage}
+
+% (Pandoc will insert the TOC next, using roman numerals)

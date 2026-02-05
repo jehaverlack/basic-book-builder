@@ -5,8 +5,8 @@ output-file: build/basic-book-builder.epub
 metadata:
   title: "Basic Book Builder"
   author: "John Haverlack"
-  date: "2025-11-13"
-  rights: "© 2025 Alaska Center for Energy and Power"
+  date: "2026-02-04"
+  rights: "© 2026 Alaska Center for Energy and Power"
 
 epub-cover-image: lib/img/UAF-ACEP.png
 

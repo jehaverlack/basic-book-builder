@@ -1,20 +1,48 @@
-# latex.yaml
-from: markdown
+from: markdown+yaml_metadata_block+raw_tex
 to: latex
 standalone: true
-output-file: build/basic-book-builder.tex
+
+# Name of the intermediate .tex file is controlled externally
+# (Makefile passes -o build/basic-book-builder.tex)
 
 include-in-header:
-  - conf/header.tex   # fonts, tcolorbox, etc.
+  - conf/header.tex
 
-# no include-before-body for LaTeX .tex export
-# front matter will be produced only in PDF mode
+include-before-body:
+  - conf/frontmatter.tex
+
+filters:
+  - filters/callouts.lua
+
+metadata:
+  # PDF engine used during XeLaTeX compilation
+  pdf-engine: xelatex
+  bookmarks: false
+
+variables:
+  documentclass: book
+  classoption:
+    - openany
+  fontsize: 12pt
+  geometry:
+    - margin=1in
+
+  toc: true
+  toc-depth: 3
+  toc-title: "Contents"
+
+  numbersections: true
+
+  # used by your header template
+  graphics: true
+  colorlinks: true
+  linkcolor: blue
+  float: false
+  figure-latex-placement: H
 
 resource-path:
   - .
   - lib/img
+  - lib/diag
 
-filters:
-  - filters/callouts.lua   # same filter as PDF, since it emits LaTeX environments
-
-pdf-engine: xelatex
+citeproc: true
