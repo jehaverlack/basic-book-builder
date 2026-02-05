@@ -1,3 +1,5 @@
 scripts/tmp
 scripts/deps
 lib/mathjax
+conf/frontmatter*
+conf/header.tex
