@@ -224,6 +224,15 @@ Will render:
 > ```
 
 
+## Advanced 
+
+### Changing Fonts
+
+TBD
+
+### Adding Filters
+
+TBD
 
 
 

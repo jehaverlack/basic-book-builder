@@ -6,6 +6,18 @@ set -euo pipefail
 
 echo "🚀 Starting Basic-Book-Builder Setup..."
 
+# 0. WARNING Message
+echo "⚠️ WARNING: This script is about install APT packages to your system."
+echo "   Please review the package list carefully before proceeding."
+echo "   The following packages will be installed and require SUDO permissions:"
+echo "   - make, jq, yq, wget, curl, tar, git, rsync"
+echo "   - texlive, texlive-xetex, texlive-latex-extra, texlive-fonts-recommended, texlive-fonts-extra, lmodern"
+echo "   - pandoc"
+echo "   - obsidian"
+echo "   - zotero"
+echo ""
+read -p "Press Enter to continue or Ctrl+C to cancel..."
+
 # 1. Update package lists
 sudo apt update
 
@@ -56,9 +68,17 @@ mkdir -p lib/img lib/diag
 
 
 # 7. Obsidian Setup
-echo "📦 Installing Obsidian..."
-wget -O scripts/tmp/obsidian_1.9.14_amd64.deb https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb
-sudo apt install -y ./scripts/tmp/obsidian_1.9.14_amd64.deb
+
+# Check if obsidian is already installed
+if ! command -v obsidian &> /dev/null; then
+    echo "📦 Installing Obsidian..."
+    wget -O scripts/tmp/obsidian_1.9.14_amd64.deb https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb
+    sudo apt install -y ./scripts/tmp/obsidian_1.9.14_amd64.deb
+    rm scripts/tmp/obsidian_1.9.14_amd64.deb
+    echo "✅ Obsidian installed successfully."
+else
+    echo "✅ Obsidian is already installed."
+fi
 
 
 # 8. Zotero Setup
@@ -67,20 +87,20 @@ echo "📦 Installing Zotero..."
 sudo mkdir -p /usr/share/keyrings
 
 # Install key (direct binary key, no gpg needed)
-# sudo curl -fsSL \
-#   https://raw.githubusercontent.com/retorquere/zotero-deb/master/zotero-archive-keyring.gpg \
-#   -o /usr/share/keyrings/zotero-archive-keyring.gpg
 
-# sudo chmod 644 /usr/share/keyrings/zotero-archive-keyring.gpg
+# Check if zotero is already installed
+if ! command -v zotero &> /dev/null; then
+    echo "📥 Downloading and installing Zotero..."
 
-# # Add repository (use tee, not echo >)
-# echo "deb [signed-by=/usr/share/keyrings/zotero-archive-keyring.gpg by-hash=force] https://zotero.retorque.re/file/apt-package-archive ./" \
-#   | sudo tee /etc/apt/sources.list.d/zotero.list > /dev/null
+    curl -sL https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash -s -- -m sources
 
-curl -sL https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash -s -- -m sources
+    sudo apt update
+    sudo apt install -y zotero
 
-sudo apt update
-sudo apt install -y zotero
+    echo "✅ Zotero installed successfully."
+else
+    echo "✅ Zotero is already installed."
+fi
 
 
 
