@@ -6,7 +6,7 @@ logo: "lib/img/UAF-ACEP.png"
 
 # Version / Repo
 version: "1.1.0"
-date: "2026-02-04"
+date: "2026-02-05"
 state: "BETA"
 source: "https://github.com/jehaverlack/basic-book-builder"
 
