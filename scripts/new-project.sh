@@ -8,14 +8,14 @@ if [ "$#" -ne 1 ]; then
 fi
 
 # Resolve directories
+PROJECT_DIR="$1"
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 B3_DIR="$( cd -- "$SCRIPT_DIR/.." >/dev/null 2>&1 && pwd )"
 
-PROJECT_DIR="$1"
 mkdir -p "$PROJECT_DIR"
 
-echo "Script dir: $SCRIPT_DIR"
-echo "Template root: $B3_DIR"
+# echo "Script dir: $SCRIPT_DIR"
+# echo "Template root: $B3_DIR"
 
 # Copy template (excluding .git)
-# rsync -av --exclude ".git" "$B3_DIR/" "$PROJECT_DIR"
+rsync -av --exclude ".git" "$B3_DIR/" "$PROJECT_DIR"
