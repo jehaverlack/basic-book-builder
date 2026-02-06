@@ -2,6 +2,7 @@
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
 \usepackage{xparse}
+\usepackage{titlesec}
 \tcbuselibrary{breakable}
 
 % --- Disable floating figures globally ---
@@ -33,6 +34,22 @@
 
 % Helper to show a blank title if empty
 \newcommand{\blanktitle}{\mbox{}}
+
+
+% =========================================================
+% Chapter Formatting (Suppress "Chapter 1")
+% =========================================================
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries} % formatting of title text
+  {}                          % <-- empty label removes "Chapter 1"
+  {0pt}                       % space between label and title
+  {\Huge}                     % formatting of title itself
+
+\titlespacing*{\chapter}
+  {0pt}   % left margin
+  {0pt}   % space before title
+  {20pt}  % space after title
 
 % =========================================================
 % Concept Boxes

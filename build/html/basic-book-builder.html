@@ -161,7 +161,42 @@ Content</a></li>
 <li><a href="#odt" id="toc-odt">ODT</a></li>
 <li><a href="#make-all" id="toc-make-all">Make All</a></li>
 </ul></li>
-<li><a href="#callouts" id="toc-callouts">Callouts</a></li>
+</ul></li>
+<li><a href="#features" id="toc-features">Features</a>
+<ul>
+<li><a href="#metadata" id="toc-metadata">Metadata</a></li>
+<li><a href="#front-matter" id="toc-front-matter">Front-matter</a>
+<ul>
+<li><a href="#meta-data-page" id="toc-meta-data-page">Meta Data
+Page</a></li>
+</ul></li>
+<li><a href="#chapters" id="toc-chapters">Chapters</a></li>
+<li><a href="#appendixes" id="toc-appendixes">Appendixes</a></li>
+<li><a href="#glossary" id="toc-glossary">Glossary</a></li>
+<li><a href="#index" id="toc-index">Index</a>
+<ul>
+<li><a href="#markdown-indexes" id="toc-markdown-indexes">Markdown
+Indexes</a></li>
+</ul></li>
+<li><a href="#bibliography" id="toc-bibliography">Bibliography</a>
+<ul>
+<li><a href="#zotero-integration" id="toc-zotero-integration">Zotero
+Integration</a></li>
+<li><a href="#obsidian-citations" id="toc-obsidian-citations">Obsidian
+Citations</a></li>
+</ul></li>
+<li><a href="#mathjax-equations" id="toc-mathjax-equations">Mathjax
+Equations</a>
+<ul>
+<li><a href="#left-justified-inline" id="toc-left-justified-inline">Left
+Justified / Inline</a></li>
+<li><a href="#centered" id="toc-centered">Centered</a></li>
+</ul></li>
+<li><a href="#custom-markdown" id="toc-custom-markdown">Custom
+Markdown</a>
+<ul>
+<li><a href="#call-outs" id="toc-call-outs">Call-outs</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#appendix-a-build-environment-notes"
 id="toc-appendix-a-build-environment-notes">Appendix A: Build
@@ -176,8 +211,9 @@ id="toc-installing-pre-requisites">Installing Pre-Requisites</a>
 <li><a href="#editing-the-configuration"
 id="toc-editing-the-configuration">Editing the Configuration</a></li>
 </ul></li>
-<li><a href="#glossary" id="toc-glossary">Glossary</a></li>
-<li><a href="#bibliography" id="toc-bibliography">Bibliography</a></li>
+<li><a href="#glossary-1" id="toc-glossary-1">Glossary</a></li>
+<li><a href="#bibliography-1"
+id="toc-bibliography-1">Bibliography</a></li>
 </ul>
 </nav>
 <h1 id="introduction">Introduction</h1>
@@ -255,37 +291,155 @@ work.</p>
 <h3 id="make-all">Make All</h3>
 <p>To build all supported formats</p>
 <pre><code>make all</code></pre>
-<h2 id="callouts">Callouts</h2>
-<p>A few callout box styles have been added to easily highlight
-content.</p>
+<h1 id="features">Features</h1>
+<h2 id="metadata">Metadata</h2>
+<p>Metadata for the project is managed in <code>metadata.yaml</code>.
+Edit this file to make global changes to variables for your document.
+Changes here will propagate to all format builds.</p>
+<h2 id="front-matter">Front-matter</h2>
+<p>Front matter content is manged in: -
+<code>templates/frontmatter.tex</code> -
+<code>templates/frontmatter.html</code> -
+<code>templates/frontmatter-md.html</code></p>
+<div class="callout-caution">
+<p><strong>Tip</strong></p>
+<p> Unfortunately when you edit one, you need to edit the respective
+changes to the other front-matter formats. ### Title Page</p>
+</div>
+<p>Edit the <strong>Front-matter</strong> files to modify the formatting
+of the Title Page.</p>
+<div class="callout-caution">
+<p><strong>Tip</strong></p>
+<p> You’ll need to modify the HTML / LaTex.</p>
+</div>
+<h3 id="meta-data-page">Meta Data Page</h3>
+<p>Edit the <strong>Front-matter</strong> files to modify the 2nd page
+Metadata format. ### Cover Illustration</p>
+<p>Edit the <strong>Front-matter</strong> files to optionally un-comment
+the Cover Art Acknowledgement. - This is disabled by default ###
+Dedication</p>
+<p>Edit the <strong>Front-matter</strong> files to modify un-comment the
+Book Dedication. - This is disabled by default ## Table of Contents</p>
+<h2 id="chapters">Chapters</h2>
+<p>Chapter Markdown source files are located in the
+<code>chapters</code> directory. Edit the
+<code>template\pandoc.yaml</code> file to control which chapter markdown
+files are in what order.</p>
+<h2 id="appendixes">Appendixes</h2>
+<p>TBD</p>
+<h2 id="glossary">Glossary</h2>
+<p>TBD</p>
+<h2 id="index">Index</h2>
+<p>TBD</p>
+<h3 id="markdown-indexes">Markdown Indexes</h3>
+<p>TBD</p>
+<h2 id="bibliography">Bibliography</h2>
+<p>TBD</p>
+<h3 id="zotero-integration">Zotero Integration</h3>
+<p>TBD</p>
+<h3 id="obsidian-citations">Obsidian Citations</h3>
+<p>TBD</p>
+<h2 id="mathjax-equations">Mathjax Equations</h2>
+<p>TBD</p>
+<h3 id="left-justified-inline">Left Justified / Inline</h3>
+<p>TBD</p>
+<h3 id="centered">Centered</h3>
+<p>TBD</p>
+<h2 id="custom-markdown">Custom Markdown</h2>
+<p>TBD</p>
+<h3 id="call-outs">Call-outs</h3>
+<p>A few call-out box styles have been custom added to easily highlight
+certain types of content.</p>
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!established] Green Call-out Title
+A green box</code></pre>
+</div>
 <div class="callout-established">
-<p><strong>Established Concept</strong></p>
-<p> Einsteins Relativistic Dynamics Equations <span
-class="math display"><em>E</em><sup>2</sup> = (<em>m</em><sub>0</sub> ⋅ <em>c</em><sup>2</sup>)<sup>2</sup> + (<em>p</em> ⋅ <em>c</em>)<sup>2</sup></span></p>
+<p><strong>Green Call-out Title</strong></p>
+<p> A green box</p>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!proposed] Blue Call-out Title
+A blue box</code></pre>
 </div>
 <div class="callout-proposed">
-<p><strong>Proposed Concept</strong></p>
-<p> With the speed of light, <span
-class="math inline"><em>c</em> = 1</span>: <span
-class="math display"><em>E</em><sup>2</sup> = <em>m</em><sub>0</sub><sup>2</sup> + <em>p</em><sup>2</sup></span></p>
+<p><strong>Blue Call-out Title</strong></p>
+<p> A blue box</p>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!speculative] Purple Call-out Title
+A purple box</code></pre>
 </div>
 <div class="callout-speculative">
-<p><strong>Speculative Concept</strong></p>
-<p> With the speed of light, <span
-class="math inline"><em>c</em> = 1</span>: <span
-class="math display"><em>E</em><sup>2</sup> = <em>m</em><sub>0</sub><sup>2</sup> + <em>p</em><sup>2</sup></span></p>
+<p><strong>Purple Call-out Title</strong></p>
+<p> A purple box</p>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!caution] Caution Note
+Beware of this section.  AKA a orange box.</code></pre>
 </div>
 <div class="callout-caution">
 <p><strong>Caution Note</strong></p>
-<p> Beware of this section.</p>
+<p> Beware of this section. AKA a orange box.</p>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!warning] Warning Note
+Same as the Caution Box</code></pre>
 </div>
 <div class="callout-warning">
 <p><strong>Warning Note</strong></p>
-<p> Beware of this section.</p>
+<p> Same as the Caution Box</p>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!danger] Alert
+A slightly stronger warning.  AKA a red box.</code></pre>
 </div>
 <div class="callout-danger">
-<p><strong>Alerts</strong></p>
-<p> Extreme Highlight</p>
+<p><strong>Alert</strong></p>
+<p> A slightly stronger warning. AKA a red box.</p>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!code] Code Block
+&#39;&#39;&#39;
+if [ true ]; do
+  echo &quot;The Cow Jumps over the Moon&quot;
+fi
+&#39;&#39;&#39;</code></pre>
+</div>
+<div class="callout-code">
+<p><strong>Code Block</strong></p>
+<pre><code>if [ true ]; do
+  echo &quot;The Cow Jumps over the Moon&quot;
+fi</code></pre>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Code</strong></p>
+<pre><code>[!cli] Command line
+A command line example
+&#39;&#39;&#39;
+$ ls
+build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  &gt;README.md  scripts  templates
+&#39;&#39;&#39;</code></pre>
+</div>
+<div class="callout-cli">
+<p><strong>Command line</strong></p>
+<p> A command line example</p>
+<pre><code>$ ls
+build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  README.md  scripts  templates</code></pre>
 </div>
 <p>Appendix A</p>
 <h1 id="appendix-a-build-environment-notes">Appendix A: Build
@@ -397,7 +551,7 @@ citation database.</p>
 <pre><code>sudo apt install calibre</code></pre>
 <h2 id="editing-the-configuration">Editing the Configuration</h2>
 
-<h1 class="unnumbered" id="glossary">Glossary</h1>
+<h1 class="unnumbered" id="glossary-1">Glossary</h1>
 <table>
 <colgroup>
 <col style="width: 17%" />
@@ -525,7 +679,7 @@ citation processing with Pandoc.</td>
 </tr>
 </tbody>
 </table>
-<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<h1 class="unnumbered" id="bibliography-1">Bibliography</h1>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="list">
 <div id="ref-JehaverlackBasicbookbuilderPandoca" class="csl-entry"

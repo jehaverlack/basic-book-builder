@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 13:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1174,13 +1174,25 @@ File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '5.1.1'
-)) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box89
+\beforetitleunit=\skip64
+\aftertitleunit=\skip65
+\ttl@plus=\dimen296
+\ttl@minus=\dimen297
+\ttl@toksa=\toks42
+\titlewidth=\dimen298
+\titlewidthlast=\dimen299
+\titlewidthfirst=\dimen300
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count344
-\float@exts=\toks42
-\float@box=\box89
-\@float@everytoks=\toks43
-\@floatcapt=\box90
+\float@exts=\toks43
+\float@box=\box90
+\@float@everytoks=\toks44
+\@floatcapt=\box91
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
@@ -1200,15 +1212,15 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip64
-\f@nch@O@elh=\skip65
-\f@nch@O@erh=\skip66
-\f@nch@O@olh=\skip67
-\f@nch@O@orh=\skip68
-\f@nch@O@elf=\skip69
-\f@nch@O@erf=\skip70
-\f@nch@O@olf=\skip71
-\f@nch@O@orf=\skip72
+\f@nch@headwidth=\skip66
+\f@nch@O@elh=\skip67
+\f@nch@O@erh=\skip68
+\f@nch@O@olh=\skip69
+\f@nch@O@orh=\skip70
+\f@nch@O@elf=\skip71
+\f@nch@O@erf=\skip72
+\f@nch@O@olf=\skip73
+\f@nch@O@orf=\skip74
 )
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
@@ -1242,7 +1254,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count345
 )
-\@linkdim=\dimen296
+\@linkdim=\dimen301
 \Hy@linkcounter=\count346
 \Hy@pagecounter=\count347
 
@@ -1270,7 +1282,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4410.
 \c@Hy@tempcnt=\count349
 LaTeX Info: Redefining \url on input line 4748.
-\XeTeXLinkMargin=\dimen297
+\XeTeXLinkMargin=\dimen302
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1280,8 +1292,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count350
-\Field@Width=\dimen298
-\Fld@charsize=\dimen299
+\Field@Width=\dimen303
+\Fld@charsize=\dimen304
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -1307,7 +1319,7 @@ File: hxetex.def 2022-11-13 v7.00u Hyperref driver for XeTeX
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box91
+\pdfm@box=\box92
 \c@Hy@AnnotLevel=\count354
 \HyField@AnnotCount=\count355
 \Fld@listcount=\count356
@@ -1327,13 +1339,13 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip73
+\Hy@SectionHShift=\skip75
 )
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
 \BKM@id=\count358
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 289.
+Package hyperref Info: Option `colorlinks' set `true' on input line 306.
 
 (./basic-book-builder.aux
 
@@ -1349,26 +1361,26 @@ LaTeX Warning: Label `ref-PandocIndex' multiply defined.
 )
 \openout1 = `basic-book-builder.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 294.
-LaTeX Font Info:    ... okay on input line 294.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1432,7 +1444,7 @@ t=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 14.92346pt on input line 294.
+(Font)              scaled to size 14.92346pt on input line 311.
 
 Package fontspec Info: latinmodern-math scale = 1.243617846722112.
 
@@ -1471,18 +1483,18 @@ t=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.92346pt on input line 294.
+(Font)              scaled to size 14.92346pt on input line 311.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 294.
+(Font)              `operators' in the math version `normal' on input line 311.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 294.
+ line 311.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 294.
+(Font)              `operators' in the math version `bold' on input line 311.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 294.
+t line 311.
 
 Package fontspec Info: latinmodern-math scale = 1.243617846722112.
 
@@ -1569,15 +1581,15 @@ t=math;language=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 294.
+(Font)              `symbols' in the math version `normal' on input line 311.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 294.
+t line 311.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 294.
+(Font)              `symbols' in the math version `bold' on input line 311.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 294.
+t line 311.
 
 Package fontspec Info: latinmodern-math scale = 1.243617846722112.
 
@@ -1646,22 +1658,22 @@ ath.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             =8.95407pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 2
-94.
+(Font)              `largesymbols' in the math version `normal' on input line 3
+11.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 294.
+t line 311.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 294
+(Font)              `largesymbols' in the math version `bold' on input line 311
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 294.
-LaTeX Info: Redefining \microtypecontext on input line 294.
-Package microtype Info: Applying patch `item' on input line 294.
-Package microtype Info: Applying patch `toc' on input line 294.
-Package microtype Info: Applying patch `eqnum' on input line 294.
-Package microtype Info: Applying patch `footnote' on input line 294.
+t line 311.
+LaTeX Info: Redefining \microtypecontext on input line 311.
+Package microtype Info: Applying patch `item' on input line 311.
+Package microtype Info: Applying patch `toc' on input line 311.
+Package microtype Info: Applying patch `eqnum' on input line 311.
+Package microtype Info: Applying patch `footnote' on input line 311.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1672,13 +1684,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \c@lstlisting=\count359
-Package hyperref Info: Link coloring ON on input line 294.
+Package hyperref Info: Link coloring ON on input line 311.
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 305.
+(Font)              scaled to size 24.88pt on input line 322.
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 305.
+(Font)              scaled to size 24.88pt on input line 322.
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 307.
+(Font)              scaled to size 17.28pt on input line 324.
 File: lib/img/UAF-ACEP.png Graphic file (type bmp)
 <lib/img/UAF-ACEP.png>
 [1
@@ -1687,31 +1699,31 @@ File: lib/img/UAF-ACEP.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 322.
+(Font)              scaled to size 17.28pt on input line 339.
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 324.
+(Font)              scaled to size 12.0pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.44641pt on input line 329.
+(Font)              scaled to size 10.44641pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.46173pt on input line 329.
+(Font)              scaled to size 7.46173pt on input line 346.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-29.
+46.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.92493pt on input line 329.
+(Font)              scaled to size 14.92493pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.44743pt on input line 329.
+(Font)              scaled to size 10.44743pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.46246pt on input line 329.
+(Font)              scaled to size 7.46246pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.922pt on input line 329.
+(Font)              scaled to size 14.922pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.44539pt on input line 329.
+(Font)              scaled to size 10.44539pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.461pt on input line 329.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 329
+(Font)              scaled to size 7.461pt on input line 346.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 346
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1720,7 +1732,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 329
+LaTeX Font Info:    Trying to load font information for U+msb on input line 346
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1730,11 +1742,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 330.
+(Font)              scaled to size 12.0pt on input line 347.
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 349.
+(Font)              scaled to size 14.4pt on input line 366.
 LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 349.
+(Font)              scaled to size 14.4pt on input line 366.
  [2]
 (./basic-book-builder.toc [1
 
@@ -1751,9 +1763,9 @@ Chapter 1.
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `TU/NotoSansMono(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 433.
+(Font)              scaled to size 12.0pt on input line 450.
 
-Overfull \hbox (10.34296pt too wide) in paragraph at lines 434--434
+Overfull \hbox (10.34296pt too wide) in paragraph at lines 451--451
 []\TU/NotoSansMono(0)/m/n/12 git clone https://github.com/jehaverlack/basic-boo
 k-builder.git[] 
  []
@@ -1764,92 +1776,110 @@ k-builder.git[]
 Chapter 3.
 [4
 
-] [5]
+]
+Chapter 4.
+[5
+
+] [6] [7] [8]
+Overfull \hbox (262.34303pt too wide) in paragraph at lines 792--792
+[]\TU/NotoSansMono(0)/m/n/12 build  chapters  conf  filters  lib  LICENSE.md  M
+akefile  metadata.yaml  >README.md  scripts  templates[] 
+ []
+
+[9]
+Overfull \hbox (255.14304pt too wide) in paragraph at lines 805--805
+[]\TU/NotoSansMono(0)/m/n/12 build  chapters  conf  filters  lib  LICENSE.md  M
+akefile  metadata.yaml  README.md  scripts  templates[] 
+ []
+
+[10]
 Appendix A.
 
-Overfull \hbox (295.84503pt too wide) in paragraph at lines 587--588
+Overfull \hbox (12.85075pt too wide) in paragraph at lines 815--815
+|\TU/NotoSerif(0)/b/n/24.88 Appendix A: Build Environment Notes| 
+ []
+
+
+Overfull \hbox (295.84503pt too wide) in paragraph at lines 836--837
 []\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/jgm/pandoc/rel
 eases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--595
+Underfull \hbox (badness 10000) in paragraph at lines 842--844
 [][][]\TU/NotoSerif(0)/m/n/12 VSCodium[][] is recommend for privacy (telemetry/
 tracking) reasons -
  []
 
-[6
+[11
 
 ]
-Overfull \hbox (358.24503pt too wide) in paragraph at lines 656--656
+Overfull \hbox (358.24503pt too wide) in paragraph at lines 905--905
 []\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/obsidianmd/obs
 idian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb[] 
  []
 
-
-Underfull \vbox (badness 1888) has occurred while \output is active []
-
- [7]
-Overfull \hbox (12.02498pt too wide) in paragraph at lines 701--703
+[12]
+Overfull \hbox (12.02498pt too wide) in paragraph at lines 950--952
 []\TU/NotoSerif(0)/m/n/12 Symlink your ~/Documents/Lib/Citations.bib to basic-b
 ook-builder/lib/zotero.bib 
  []
 
 
-Overfull \hbox (107.64897pt too wide) in paragraph at lines 711--712
+Overfull \hbox (107.64897pt too wide) in paragraph at lines 960--961
 []\TU/NotoSerif(0)/m/n/12 https://chromewebstore.google.com/detail/zotero-conne
 ctor/ekhagklcjbdpajgpjgmbionohlpdbjgc 
  []
 
 
-Overfull \hbox (430.245pt too wide) in paragraph at lines 740--740
+Overfull \hbox (430.245pt too wide) in paragraph at lines 989--989
 []\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/johnfactotum/f
 oliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb[] 
 
  []
 
-[8] [9]
-Underfull \hbox (badness 10000) in alignment at lines 767--775
+[13]
+Underfull \hbox (badness 10000) in alignment at lines 1016--1024
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 775--777
+Underfull \hbox (badness 10000) in alignment at lines 1024--1026
 [] []
  []
 
 
-Overfull \hbox (1.68248pt too wide) in paragraph at lines 781--781
+Overfull \hbox (1.68248pt too wide) in paragraph at lines 1030--1030
 []|\TU/NotoSerif(0)/b/n/12 Bibliography|  
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 777--829
+Underfull \hbox (badness 10000) in alignment at lines 1026--1078
 [] []
- []
-
-[10
-
-
-] [11] (./basic-book-builder.ind) [12
-
-] [13
-
-]
-Underfull \hbox (badness 3977) in paragraph at lines 864--866
-[]\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
-Https://www.uaf.edu/acep/about/our-team/john-
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 876--878
-[]\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
-Https://www.uaf.edu/acep/about/our-team/john-
  []
 
 [14
 
-] [15
+
+] [15] (./basic-book-builder.ind) [16
+
+] [17
+
+]
+Underfull \hbox (badness 3977) in paragraph at lines 1113--1115
+[]\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
+Https://www.uaf.edu/acep/about/our-team/john-
+ []
+
+
+Underfull \hbox (badness 3977) in paragraph at lines 1125--1127
+[]\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
+Https://www.uaf.edu/acep/about/our-team/john-
+ []
+
+[18
+
+] [19
 
 ] (./basic-book-builder.aux)
 
@@ -1857,12 +1887,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36087 strings out of 478775
- 746049 string characters out of 5850945
+ 36441 strings out of 478775
+ 750960 string characters out of 5850945
  1859991 words of memory out of 5000000
- 55514 multiletter control sequences out of 15000+600000
+ 55864 multiletter control sequences out of 15000+600000
  516036 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,12n,122p,1015b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,122p,1207b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on basic-book-builder.pdf (19 pages).
+Output written on basic-book-builder.pdf (23 pages).
