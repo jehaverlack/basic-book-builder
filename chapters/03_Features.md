@@ -120,6 +120,19 @@ Will render:
 
 > [!code] Markdown Example
 > ```
+> [!info] Info Box
+> Same as a blue box
+> ```
+
+Will render:
+
+> [!info] Info Box
+> Same as a blue box
+
+---
+
+> [!code] Markdown Example
+> ```
 > [!speculative] Purple Call-out Title
 > A purple box
 > ```

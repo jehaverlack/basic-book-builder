@@ -20,6 +20,8 @@ Update:
 1. `metadata.yaml`
 2. `templates/pandoc.yaml`
 
+> [!info] Suggestion
+> Create a git repository to version control your new  <PATH_TO_PROJECT> content.
 
 ## Editing Content
 

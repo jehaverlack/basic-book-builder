@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ae41ba9882c0a3d6",
+        "id": "de82543a1a4896c0",
         "type": "tabs",
         "children": [
           {
-            "id": "01161538f53367e8",
+            "id": "72de52a10ebaa6e5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "chapters/02_Usage.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "02_Usage"
+              "title": "New tab"
             }
           }
         ]
@@ -268,21 +264,21 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "01161538f53367e8",
+  "active": "72de52a10ebaa6e5",
   "lastOpenFiles": [
     "chapters/03_Features.md",
+    "chapters/Appendix.md",
+    "chapters/02_Usage.md",
     "conf/sedkKV6c0",
     "conf/sedAqcSmo",
     "conf/sedk8YBK0",
     "conf/sedzF3xOr",
     "conf/sedtZNObL",
-    "chapters/02_Usage.md",
     "chapters/AppendixB.md",
     "chapters/Bibliography.md",
     "chapters/AppendixA.md",
     "conf/sed6ZdLUq",
     "chapters/04_Design.md",
-    "chapters/Appendix.md",
     "chapters/01_Getting_Started.md",
     "conf/sedBapyXA",
     "conf/sedYZ2rBJ",
