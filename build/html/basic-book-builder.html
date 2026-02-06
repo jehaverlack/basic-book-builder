@@ -51,7 +51,7 @@
 
   <!-- Title Page -->
   <h1 class="titlepage" style="margin-top:3em; font-size:2.4em; text-align:center;">Basic Book Builder</h1>
-  <h2 style="text-align:center; font-weight:normal;">A Pandoc build process for books, docs and articles</h2>
+  <h2 style="text-align:center; font-weight:normal;">A Pandoc build process for books, docs and articles.</h2>
 
   <div style="text-align:center; margin:2em 0;">
     <img src="lib/img/UAF-ACEP.png" alt="Cover illustration" style="max-width:350px;">
@@ -64,12 +64,12 @@
   <div style="text-align:left; margin-top:5em;">
 
     <h2>Basic Book Builder</h2>
-    <i>A Pandoc build process for books, docs and articles</i>
+    <i>A Pandoc build process for books, docs and articles.</i>
 
     <table style="margin-top:2em; width:50%; border-collapse:collapse;">
       <tbody>
         <tr><td style="font-weight:bold;">Author</td><td>John Haverlack</td></tr>
-        <tr><td style="font-weight:bold;">Version</td><td>1.2.2</td></tr>
+        <tr><td style="font-weight:bold;">Version</td><td>1.2.3</td></tr>
         <tr><td style="font-weight:bold;">Date</td><td>2026-02-05</td></tr>
         <tr><td style="font-weight:bold;">Affiliation</td><td>Alaska Center for Energy and Power</td></tr>
         <tr><td style="font-weight:bold;">Institution</td><td>University of Alaska Fairbanks</td></tr>
@@ -130,31 +130,25 @@ window.MathJax = {
 <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Contents</h2>
 <ul>
-<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a>
+<ul>
+<li><a href="#workflow" id="toc-workflow">Workflow</a></li>
+</ul></li>
 <li><a href="#getting-started" id="toc-getting-started">Getting
 Started</a>
 <ul>
-<li><a href="#cloning-the-basic-book-builder"
-id="toc-cloning-the-basic-book-builder">Cloning the Basic Book
+<li><a href="#clone-the-basic-book-builder"
+id="toc-clone-the-basic-book-builder">Clone the Basic Book
 Builder</a></li>
 <li><a href="#setting-up-build-environment"
-id="toc-setting-up-build-environment">Setting Up Build
-Environment</a></li>
+id="toc-setting-up-build-environment">Setting Up Build Environment</a>
+<ul>
+<li><a href="#non-deb-systems" id="toc-non-deb-systems">Non deb
+systems</a></li>
+</ul></li>
 <li><a href="#testing" id="toc-testing">Testing</a></li>
 <li><a href="#creating-a-new-project"
-id="toc-creating-a-new-project">Creating a New Project</a>
-<ul>
-<li><a href="#zotero-configuration-optional"
-id="toc-zotero-configuration-optional">Zotero Configuration
-(Optional)</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#usage" id="toc-usage">Usage</a>
-<ul>
-<li><a href="#creating-a-project" id="toc-creating-a-project">Creating a
-Project</a></li>
-<li><a href="#editing-content" id="toc-editing-content">Editing
-Content</a></li>
+id="toc-creating-a-new-project">Creating a New Project</a></li>
 <li><a href="#building" id="toc-building">Building</a>
 <ul>
 <li><a href="#pdf" id="toc-pdf">PDF</a></li>
@@ -175,6 +169,8 @@ Page</a></li>
 Illustration</a></li>
 <li><a href="#dedication" id="toc-dedication">Dedication</a></li>
 </ul></li>
+<li><a href="#table-of-contents" id="toc-table-of-contents">Table of
+Contents</a></li>
 <li><a href="#chapters" id="toc-chapters">Chapters</a></li>
 <li><a href="#appendixes" id="toc-appendixes">Appendixes</a></li>
 <li><a href="#glossary" id="toc-glossary">Glossary</a></li>
@@ -190,7 +186,8 @@ Integration</a></li>
 <li><a href="#obsidian-citations" id="toc-obsidian-citations">Obsidian
 Citations</a></li>
 </ul></li>
-<li><a href="#mathjax-equations" id="toc-mathjax-equations">Mathjax
+<li><a href="#images" id="toc-images">Images</a></li>
+<li><a href="#latex-equations" id="toc-latex-equations"><em>LaTeX</em>
 Equations</a>
 <ul>
 <li><a href="#left-justified-inline" id="toc-left-justified-inline">Left
@@ -202,19 +199,26 @@ Markdown</a>
 <ul>
 <li><a href="#call-outs" id="toc-call-outs">Call-outs</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#appendix-a-build-environment-notes"
-id="toc-appendix-a-build-environment-notes">Appendix A: Build
-Environment Notes</a>
+<li><a href="#advanced" id="toc-advanced">Advanced</a>
 <ul>
-<li><a href="#installing-pre-requisites"
-id="toc-installing-pre-requisites">Installing Pre-Requisites</a>
-<ul>
-<li><a href="#required" id="toc-required">Required</a></li>
-<li><a href="#optional" id="toc-optional">Optional</a></li>
+<li><a href="#changing-fonts" id="toc-changing-fonts">Changing
+Fonts</a></li>
+<li><a href="#adding-filters" id="toc-adding-filters">Adding
+Filters</a></li>
 </ul></li>
-<li><a href="#editing-the-configuration"
-id="toc-editing-the-configuration">Editing the Configuration</a></li>
+</ul></li>
+<li><a href="#design" id="toc-design">Design</a>
+<ul>
+<li><a href="#directory-structure"
+id="toc-directory-structure">Directory Structure</a></li>
+<li><a href="#configuration-files"
+id="toc-configuration-files">Configuration Files</a>
+<ul>
+<li><a href="#pandoc-main-config" id="toc-pandoc-main-config">Pandoc
+Main Config</a></li>
+</ul></li>
+<li><a href="#build-workflow" id="toc-build-workflow">Build
+Workflow</a></li>
 </ul></li>
 <li><a href="#glossary-1" id="toc-glossary-1">Glossary</a></li>
 <li><a href="#bibliography-1"
@@ -222,13 +226,31 @@ id="toc-bibliography-1">Bibliography</a></li>
 </ul>
 </nav>
 <h1 id="introduction">Introduction</h1>
-<p>This is a basic book (or article / document) builder template based
-on a Pandoc<span class="citation" data-cites="PandocIndex">(<a
+<p>This is a <strong>basic book builder</strong> template is based on a
+Pandoc<span class="citation" data-cites="PandocIndex">(<a
 href="#ref-PandocIndex" role="doc-biblioref"><em>Pandoc - Index</em>,
-n.d.</a>)</span> build process in conjunction with a number of other
-tools to generate PDF, HTML, LaTex, Markdown, ODT, DOCX, and Epub book
-output formats from a single set Markdown source content , which can
-optionally be edited as an Obsidian vault.</p>
+n.d.</a>)</span> + Makefile build process in conjunction Obsidian to
+edit content and Zotero to manage citation, to generate multiple format
+of the document including:</p>
+<ul>
+<li>PDF</li>
+<li>HTML</li>
+<li><em>LaTeX</em></li>
+<li>Markdown</li>
+<li>ODT</li>
+<li>DOCX</li>
+<li>Epub</li>
+</ul>
+<h3 id="workflow">Workflow</h3>
+<ol type="1">
+<li>Create a new project</li>
+<li>Initialize <code>metadata.yaml</code> with title, copyright, author,
+etc.</li>
+<li>Customize <code>input-files:</code> in <code>pandoc.yaml</code></li>
+<li>Edit <code>chapters</code> Markdown “conent” files using
+Obidian</li>
+<li>Build your document</li>
+</ol>
 <p>This <strong>basic book builder</strong><span class="citation"
 data-cites="JehaverlackBasicbookbuilderPandoca">(<a
 href="#ref-JehaverlackBasicbookbuilderPandoca"
@@ -238,8 +260,7 @@ class="citation" data-cites="JohnHaverlackACEP">(<a
 href="#ref-JohnHaverlackACEP" role="doc-biblioref"><em>John
 <span>Haverlack</span> <span>ACEP</span></em>, n.d.</a>)</span></p>
 <h1 id="getting-started">Getting Started</h1>
-<h2 id="cloning-the-basic-book-builder">Cloning the Basic Book
-Builder</h2>
+<h2 id="clone-the-basic-book-builder">Clone the Basic Book Builder</h2>
 <div class="callout-cli">
 <p><strong>Clone the repository</strong></p>
 <pre><code>git clone https://github.com/jehaverlack/basic-book-builder.git</code></pre>
@@ -251,56 +272,56 @@ Builder</h2>
 <h2 id="setting-up-build-environment">Setting Up Build Environment</h2>
 <div class="callout-caution">
 <p><strong>~Debian Linux</strong></p>
-<p> This script only support Debian based Linux system (Debian, Ubunutu,
-Zorin, etc) This script has not been widely tested across platforms</p>
+<p> This script only support Debian based Linux system (e.g Debian,
+Ubuntu, Zorin). And this script will install several ATP packages on
+your system.</p>
 </div>
+<div class="callout-danger">
+<p><strong>Warning</strong></p>
+<p> This script <strong>has not</strong> been widely tested across many
+platforms</p>
+</div>
+<p>To initialize your systems build environment run:</p>
 <div class="callout-cli">
 <p><strong>Setup Build Environment</strong></p>
 <pre><code>./scripts/setup-linux-deb.sh</code></pre>
 </div>
+<h3 id="non-deb-systems">Non deb systems</h3>
 <p>For more information on setting up the build environment for your
-system see Appendix A.</p>
+system see: <strong>TBD: NEEDS DOCUMENTED</strong>.</p>
 <h2 id="testing">Testing</h2>
-<p>If you can build all format for the <strong>Basic Book Build</strong>
-then you have a working build environment.</p>
+<p>Once you have set up your build environment, you test by building the
+<strong>basic book builder</strong>.</p>
 <div class="callout-cli">
 <p><strong>Testing Build Environment</strong></p>
 <pre><code>make all</code></pre>
 </div>
 <h2 id="creating-a-new-project">Creating a New Project</h2>
-<h3 id="zotero-configuration-optional">Zotero Configuration
-(Optional)</h3>
-<h1 id="usage">Usage</h1>
-<h2 id="creating-a-project">Creating a Project</h2>
-<p>To create a new Project based on the Basic Book Builder template:</p>
-<ol type="1">
-<li>Run the new-project.sh script.</li>
-</ol>
-<pre><code>./scripts/new-project.sh &lt;PATH_TO_PROJECT&gt;</code></pre>
-<ul>
-<li><PATH_TO_PROJECT> should be outside of the
-<strong>basic-book-builder</strong> directory</li>
-</ul>
-<pre><code>cd &lt;PATH_TO_PROJECT&gt;</code></pre>
-<p>Update:</p>
-<ol type="1">
-<li><code>metadata.yaml</code></li>
-<li><code>templates/pandoc.yaml</code></li>
-</ol>
-<div class="callout-info">
-<p><strong>Suggestion</strong></p>
-<p> Create a git repository to version control your new
-<PATH_TO_PROJECT> content.</p>
+<div class="callout-proposed">
+<p><strong>Tip</strong></p>
+<p> You do not want to edit your new project document in the
+<code>basic-book-builder</code> directory. You will want to create a
+<strong>new project</strong> for your document based on this
+template.</p>
 </div>
-<h2 id="editing-content">Editing Content</h2>
-<p>Edit your source content Markdown under the <code>chapters</code>
-directory.</p>
-<p><strong>Optional</strong></p>
-<ul>
-<li>Open your <code>&lt;PATH_TO_PROJECT&gt;</code> directory as an
-Obsidian vault.</li>
-<li>Edit your Markdown with Obsidian</li>
-</ul>
+<div class="callout-cli">
+<p><strong>Create a new project</strong></p>
+<pre><code>./scripts/new-project.sh &lt;NEW_PROJECT_DIR&gt;</code></pre>
+</div>
+<pre><code>cd &lt;NEW_PROJECT_DIR&gt;</code></pre>
+<p>Update your project configuration:</p>
+<ol type="1">
+<li>Edit: <code>metadata.yaml</code>, for title, author, etc</li>
+<li>Edit: <code>templates/pandoc.yaml</code></li>
+<li>Open: <code>&lt;NEW_PROJECT_DIR&gt;</code> with Obsidian, and edit
+<code>chapters</code> documents.</li>
+<li>Build: <code>make pdf</code></li>
+</ol>
+<div class="callout-warning">
+<p><strong>Warning</strong></p>
+<p> <code>&lt;NEW_PROJECT_DIR&gt;</code> should be outside of the
+<strong>basic-book-builder</strong> directory</p>
+</div>
 <h2 id="building">Building</h2>
 <h3 id="pdf">PDF</h3>
 <pre><code>make pdf</code></pre>
@@ -326,31 +347,30 @@ work.</p>
 <p>To build all supported formats</p>
 <pre><code>make all</code></pre>
 <h1 id="features">Features</h1>
+<p>The basic book builder template integrates feature from many systems
+including Pandoc, MathJax, Obsidian, and Zotero. The following list
+covers these features from a functional point of view.</p>
 <h2 id="metadata">Metadata</h2>
 <p>Metadata for the project is managed in <code>metadata.yaml</code>.
-Edit this file to make global changes to variables for your document.
-Changes here will propagate to all format builds.</p>
+Edit this file to make <strong>global changes</strong> to variables for
+your document. Definitions in <code>metadata.yaml</code> will propagate
+to all format builds.</p>
 <h2 id="front-matter">Front-matter</h2>
-<p>Front matter content is manged in:</p>
+<p>Front-Matter documents control the Title Page, Metadata and other
+pages before the Title of Contents. Front matter content is manged in
+these files:</p>
 <ul>
 <li><code>templates/frontmatter.tex</code></li>
 <li><code>templates/frontmatter.html</code></li>
 <li><code>templates/frontmatter-md.html</code></li>
 </ul>
-<div class="callout-caution">
-<p><strong>Tip</strong></p>
-<p> Unfortunately when you edit one, you need to edit the respective
+<p>Unfortunately when you edit one, you need to edit the respective
 changes to the other front-matter formats. ### Title Page</p>
-</div>
 <p>Edit the <strong>Front-matter</strong> files to modify the formatting
-of the Title Page.</p>
-<div class="callout-caution">
-<p><strong>Tip</strong></p>
-<p> You’ll need to modify the HTML / LaTex.</p>
-</div>
+of the Title Page. You’ll need to modify the HTML / LaTex code.</p>
 <h3 id="meta-data-page">Meta Data Page</h3>
 <p>Edit the <strong>Front-matter</strong> files to modify the 2nd page
-Metadata format.</p>
+Metadata format and fields to display.</p>
 <h3 id="cover-illustration">Cover Illustration</h3>
 <p>Edit the <strong>Front-matter</strong> files to optionally un-comment
 the Cover Art Acknowledgement.</p>
@@ -361,13 +381,20 @@ the Cover Art Acknowledgement.</p>
 <p>Edit the <strong>Front-matter</strong> files to modify un-comment the
 Book Dedication.</p>
 <ul>
-<li>This is disabled by default ## Table of Contents</li>
+<li>This is disabled by default</li>
 </ul>
+<h2 id="table-of-contents">Table of Contents</h2>
+<p>The table of contents is auto generated. But can be disabled in
+<code>template\pandoc.yaml</code> by setting: -
+<code>toc: false</code></p>
 <h2 id="chapters">Chapters</h2>
 <p>Chapter Markdown source files are located in the
-<code>chapters</code> directory. Edit the
-<code>template\pandoc.yaml</code> file to control which chapter markdown
-files are in what order.</p>
+<code>chapters</code> directory. To edit which chapter files are
+included the document:</p>
+<ul>
+<li>Edit the <code>input-file:</code> section of the
+<code>template\pandoc.yaml</code></li>
+</ul>
 <h2 id="appendixes">Appendixes</h2>
 <p>TBD</p>
 <h2 id="glossary">Glossary</h2>
@@ -382,14 +409,38 @@ files are in what order.</p>
 <p>TBD</p>
 <h3 id="obsidian-citations">Obsidian Citations</h3>
 <p>TBD</p>
-<h2 id="mathjax-equations">Mathjax Equations</h2>
-<p>TBD</p>
+<h2 id="images">Images</h2>
+<p>You can use basic Markdown Images</p>
+<pre><code>![ACEP](lib/img/ACEPLogo.png)</code></pre>
+<figure>
+<img src="lib/img/ACEPLogo.png" alt="ACEP" />
+<figcaption aria-hidden="true">ACEP</figcaption>
+</figure>
+<h2 id="latex-equations"><em>LaTeX</em> Equations</h2>
+<p>You can embed LaTeX equations directly in your Markdown pages.</p>
 <h3 id="left-justified-inline">Left Justified / Inline</h3>
-<p>TBD</p>
+<p>To left justify <em>LaTex</em> surround the code inside single
+<code>$</code>:</p>
+<div class="callout-code">
+<p><strong>Left Justified Equation</strong></p>
+<pre><code>$x = \frac{1}{2}$</code></pre>
+</div>
+<p><span class="math inline">$x = \frac{1}{2}$</span></p>
+<div class="callout-code">
+<p><strong>Inline</strong></p>
+<pre><code>Or inline, $x = \frac{1}{2}$, in a sentence.</code></pre>
+</div>
+<p>Or inline, <span class="math inline">$x = \frac{1}{2}$</span>, in a
+sentence.</p>
 <h3 id="centered">Centered</h3>
-<p>TBD</p>
+<p>To center justify <em>LaTex</em> surround the code inside double
+<code>$$</code>:</p>
+<div class="callout-code">
+<p><strong>Centered Equation</strong></p>
+<pre><code>$$x = \frac{1}{2}$$</code></pre>
+</div>
+<p><span class="math display">$$x = \frac{1}{2}$$</span></p>
 <h2 id="custom-markdown">Custom Markdown</h2>
-<p>TBD</p>
 <h3 id="call-outs">Call-outs</h3>
 <p>A few call-out box styles have been custom added to easily highlight
 certain types of content.</p>
@@ -413,17 +464,6 @@ A blue box</code></pre>
 <div class="callout-proposed">
 <p><strong>Blue Call-out Title</strong></p>
 <p> A blue box</p>
-</div>
-<hr />
-<div class="callout-code">
-<p><strong>Markdown Example</strong></p>
-<pre><code>[!info] Info Box
-Same as a blue box</code></pre>
-</div>
-<p>Will render:</p>
-<div class="callout-info">
-<p><strong>Info Box</strong></p>
-<p> Same as a blue box</p>
 </div>
 <hr />
 <div class="callout-code">
@@ -493,7 +533,8 @@ fi</code></pre>
 A command line example
 &#39;&#39;&#39;
 $ ls
-build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  &gt;README.md  scripts  templates
+build  chapters  conf  filters  lib  LICENSE.md  Makefile
+metadata.yaml  &gt;README.md  scripts  templates
 &#39;&#39;&#39;</code></pre>
 </div>
 <p>Will render:</p>
@@ -501,118 +542,126 @@ build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  &gt;RE
 <p><strong>Command line</strong></p>
 <p> A command line example</p>
 <pre><code>$ ls
-build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  README.md  scripts  templates</code></pre>
+build  chapters  conf  filters  lib  LICENSE.md  Makefile
+metadata.yaml  README.md  scripts  templates</code></pre>
 </div>
-<p>Appendix A</p>
-<h1 id="appendix-a-build-environment-notes">Appendix A: Build
-Environment Notes</h1>
-<h2 id="installing-pre-requisites">Installing Pre-Requisites</h2>
+<h2 id="advanced">Advanced</h2>
+<h3 id="changing-fonts">Changing Fonts</h3>
+<p>It is possible to change fonts by editing
+<code>templates/pandoc.yaml</code>, and
+<code>templates\styles.css</code>, but you will have to make sure you
+have the proper font’s installed on your system first.</p>
+<h3 id="adding-filters">Adding Filters</h3>
+<p>Custom filters can be created. This is complicated and typically
+needs done in 3 places for:</p>
+<ul>
+<li>obsidian</li>
+<li><em>LaTeX</em></li>
+<li>HTML</li>
+</ul>
+<h1 id="design">Design</h1>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>The <strong>basic-book-builder</strong> directory tree.</p>
+<pre><code>basic-book-builder
+├── build
+│   ├── docx
+│   ├── html
+│   │   ├── conf
+│   │   └── lib
+│   │       ├── diag
+│   │       ├── img
+│   │       └── mathjax
+│   ├── latex
+│   ├── odt
+│   └── pdf
+├── chapters
+├── conf
+├── filters
+├── lib
+│   ├── citations
+│   ├── diag
+│   ├── img
+│   └── mathjax
+├── scripts
+│   └── tmp
+└── templates</code></pre>
+<h2 id="configuration-files">Configuration Files</h2>
+<p>The <strong>basic-book-builder</strong> configuration files, scripts,
+and build files.</p>
+<pre><code>../basic-book-builder
+├── chapters
+├── conf
+├── filters
+│   ├── callouts-html.lua
+│   └── callouts.lua
+├── lib
+│   ├── diag
+│   ├── img
+│   └── zotero.bib
+├── Makefile
+├── metadata.yaml
+├── scripts
+│   ├── new-project.sh
+│   ├── replace-metadata.sh
+│   ├── setup-linux-deb.sh
+│   └── tmp
+└── templates
+    ├── docx.yaml
+    ├── epub_template.html
+    ├── epub.yaml
+    ├── frontmatter-docx.md
+    ├── frontmatter.html
+    ├── frontmatter-md.html
+    ├── frontmatter.tex
+    ├── header.tex
+    ├── html.yaml
+    ├── latex.yaml
+    ├── markdown.yaml
+    ├── odt.yaml
+    ├── pandoc.yaml
+    ├── pdf.yaml
+    ├── style.css
+    └── style_epub.css
+</code></pre>
 <div class="callout-caution">
-<p><strong>Not Cross-platform Tested</strong></p>
-<p> For Debian / ZorinOS and likely Ubuntu based systems.</p>
+<p><strong>About conf</strong></p>
+<p> NEVER: edit file directly in <code>conf</code>. They will be
+overwritten by the build process. ### Metadata</p>
 </div>
-<h3 id="required">Required</h3>
-<h4 id="pandoc">Pandoc</h4>
-<ul>
-<li>https://pandoc.org/</li>
-<li><a
-href="https://github.com/jgm/pandoc/releases/tag/3.8.2.1">Download</a></li>
-</ul>
-<blockquote>
-<p><code>sudo apt install https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb</code></p>
-</blockquote>
-<h4 id="code-editor">Code Editor</h4>
-<div class="callout-established">
-<p><strong>Code Editor</strong></p>
-<p> <a href="https://vscodium.com/">VSCodium</a> is recommend for
-privacy (telemetry/tracking) reasons - https://vscodium.com/</p>
-</div>
-<p>But any text editor will work. #### make</p>
-<pre><code>sudo apt install make</code></pre>
-<h4 id="jq-and-yq">jq and yq</h4>
-<pre><code>sudo apt install jq yq</code></pre>
-<h4 id="texlive">texlive</h4>
-<blockquote>
-<p><code>sudo apt install texlive texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra</code></p>
-</blockquote>
-<h4 id="mathjax">MathJax</h4>
-<ul>
-<li>https://www.mathjax.org/</li>
-</ul>
-<pre><code>wget https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz
-tar xzf mathjax-3.2.2.tgz
-mv package/es5/* lib/mathjax
-rm -rf package mathjax-3.2.2.tgz</code></pre>
-<div class="callout-caution">
-<p><strong>TODO</strong></p>
-<p> This need to be rolled into a setup script.</p>
-</div>
-<h3 id="optional">Optional</h3>
-<p>The following are not strictly requires to use this book builder
-template.</p>
-<h4 id="obsidian">Obsidian</h4>
-<div class="callout-established">
-<p><strong>Highly Recommended</strong></p>
-<p> Editing book chapter content in Obsidian is a very productive means
-for editing Markdown source content.</p>
-</div>
-<ul>
-<li>https://obsidian.md/</li>
-<li><a
-href="https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb">Deb
-Package</a></li>
-</ul>
-<pre><code>sudo apt install https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb</code></pre>
-<h4 id="zotero">Zotero</h4>
-<div class="callout-established">
-<p><strong>Highly Recommended</strong></p>
-<p> If you need to managed citations and references, Zotero integration
-is highly recommended.</p>
-</div>
-<ul>
-<li>https://www.zotero.org/</li>
-</ul>
-<pre><code>sudo cp ./scripts/deps/zotero.list /etc/apt/sources.list.d/</code></pre>
-<pre><code>sudo apt update</code></pre>
-<pre><code>sudo apt install zotero</code></pre>
-<h5 id="better-bibtex-for-zotero">Better BibTex for Zotero</h5>
-<p>Install the Better BibTex Plugin for Zotero - Zotero &gt; Tool &gt;
-Plugins</p>
-<h5 id="export-citations.bib">Export citations.bib</h5>
-<ul>
-<li>Zotero &gt; File &gt; Export Library &gt; Format: Better BibTeX</li>
-<li><label><input type="checkbox" />Keep Updated</label></li>
-<li><label><input type="checkbox" />Save to:
-~/Documents/Lib/zotero.bib</label></li>
-<li><label><input type="checkbox" />Symlink your
-~/Documents/Lib/Citations.bib to
-basic-book-builder/lib/zotero.bib</label></li>
-</ul>
-<h5 id="zotero-connector-browser-plugin">Zotero Connector Browser
-Plugin</h5>
-<ul>
-<li>https://chromewebstore.google.com/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc</li>
-</ul>
-<p>Provides you the ability to auto add Web resources to your Zotero
-citation database.</p>
-<h4 id="lmodern">lmodern</h4>
-<pre><code>sudo apt install lmodern</code></pre>
-<h4 id="epubcheck">epubcheck</h4>
-<pre><code>sudo apt install epubcheck</code></pre>
-<h4 id="foliate">foliate</h4>
-<p>An EPub Reader</p>
-<ul>
-<li>https://johnfactotum.github.io/foliate/</li>
-</ul>
-<pre><code>sudo apt install https://github.com/johnfactotum/foliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb</code></pre>
-<h4 id="calibre">calibre</h4>
-<p>An EPub Reader</p>
-<ul>
-<li>https://calibre-ebook.com</li>
-</ul>
-<pre><code>sudo apt install calibre</code></pre>
-<h2 id="editing-the-configuration">Editing the Configuration</h2>
-
+<p>Update the <code>metadata.yaml</code> file to globally configure your
+document title and other metadata. Edit this file to control your
+document title, author, etc.</p>
+<h3 id="pandoc-main-config">Pandoc Main Config</h3>
+<p>Update the <code>input-files:</code> section of
+<code>templates/pandoc.yaml</code> to control what chapter source files
+are in which order in your document.</p>
+<pre><code># pandoc.yaml
+input-files:
+  # - chapters/Preface.md
+  - chapters/00_Introduction.md
+  - chapters/01_Getting_Started.md
+  - chapters/02_Usage.md
+  - chapters/03_Features.md
+  - chapters/Appendix.md
+  - chapters/AppendixA.md
+  # - chapters/AppendixB.md
+  - chapters/Glossary.md
+  - chapters/Index.md
+  - chapters/Bibliography.md</code></pre>
+<h2 id="build-workflow">Build Workflow</h2>
+<p>For a PDF Build:</p>
+<pre><code>make pdf</code></pre>
+<p>will build dependencies on these file:</p>
+<ol type="1">
+<li>Makefile</li>
+<li>conf/pandoc.yaml</li>
+<li>conf/pdf.yaml</li>
+<li>lib/zotero.bib</li>
+<li>chapters/*.md</li>
+</ol>
+<p>NOTE: the <code>Makefile</code> will copy
+<code>templates/*.yaml</code> to <code>conf/*.yaml</code>.
+<strong>Never</strong> edit <code>conf/*</code>directly.</p>
 <h1 class="unnumbered" id="glossary-1">Glossary</h1>
 <table>
 <colgroup>

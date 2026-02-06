@@ -1,11 +1,11 @@
 # Title
 title: "Basic Book Builder"
-subtitle: "A Pandoc build process for books, docs and articles"
+subtitle: "A Pandoc build process for books, docs and articles."
 name: "basic-book-builder"
 logo: "lib/img/UAF-ACEP.png"
 
 # Version / Repo
-version: "1.2.2"
+version: "1.2.3"
 date: "2026-02-05"
 state: "BETA"
 source: "https://github.com/jehaverlack/basic-book-builder"

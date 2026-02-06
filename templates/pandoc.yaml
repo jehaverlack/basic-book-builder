@@ -3,10 +3,11 @@ input-files:
   # - chapters/Preface.md
   - chapters/00_Introduction.md
   - chapters/01_Getting_Started.md
-  - chapters/02_Usage.md
+  # - chapters/02_Usage.md
   - chapters/03_Features.md
-  - chapters/Appendix.md
-  - chapters/AppendixA.md
+  - chapters/04_Design.md
+  # - chapters/Appendix.md
+  # - chapters/AppendixA.md
   # - chapters/AppendixB.md
   - chapters/Glossary.md
   - chapters/Index.md
@@ -27,8 +28,8 @@ metadata:
   link-citations: true
 
 variables:
-  documentclass: book     # options: report, book, article
-  fontsize: 12pt
+  documentclass: extbook     # options: report, book, article
+  fontsize: 9pt
   geometry:
     - margin=1in
   toc: true                  # ✅ Pandoc-recognized variable

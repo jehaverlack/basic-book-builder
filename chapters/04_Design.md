@@ -2,6 +2,8 @@
 
 ## Directory Structure
 
+The **basic-book-builder** directory tree.
+
 ```
 basic-book-builder
 ├── build
@@ -30,6 +32,7 @@ basic-book-builder
 
 ## Configuration Files
 
+The **basic-book-builder**  configuration files, scripts, and build files.
 
 ```
 ../basic-book-builder
@@ -70,9 +73,11 @@ basic-book-builder
 ```
 
 
+> [!caution] About conf
+> NEVER: edit file directly in `conf`.  They will be overwritten by the build process.
 ### Metadata
 
-Update the `metadata.yaml` file to globally configure your document title and other metadata.
+Update the `metadata.yaml` file to globally configure your document title and other metadata.  Edit this file to control your document title, author, etc.
 
 ### Pandoc Main Config
 
@@ -92,46 +97,22 @@ input-files:
   - chapters/Glossary.md
   - chapters/Index.md
   - chapters/Bibliography.md
-
-from: markdown+yaml_metadata_block+raw_tex
-standalone: true
-
-
-metadata:
-  mainfont: "Noto Serif"
-  sansfont: "Noto Sans"
-  monofont: "Noto Sans Mono"
-  # mainfont: "Libertinus Serif"
-  # sansfont: "Libertinus Sans"
-  # monofont: "DejaVu Sans Mono"
-  date: ""            # <-- forces maketitle to exist, but blank
-  link-citations: true
-
-variables:
-  documentclass: book     # options: report, book, article
-  fontsize: 12pt
-  geometry:
-    - margin=1in
-  toc: true                  # ✅ Pandoc-recognized variable
-  toc-depth: 3               # ✅ nested inside variables
-  toc-title: "Contents"      # ✅ controls TOC heading
-  numbersections: true       # ✅ correct key (not number-sections)
-  colorlinks: true           # nice PDF hyperlinks
-  linkcolor: blue
-  graphics: true
-  float: false
-  figure-latex-placement: H
-  # suppress-chapter: true
-
-resource-path:
-  - .
-  - lib/img
-  - lib/diag
-
-citeproc: true
-bibliography: lib/zotero.bi
 ```
 
 ## Build Workflow
 
-TBD
+For a PDF Build:
+
+```
+make pdf
+```
+
+will build dependencies on these file:
+
+1. Makefile
+2. conf/pandoc.yaml
+3. conf/pdf.yaml
+4. lib/zotero.bib
+5. chapters/*.md
+
+NOTE:  the `Makefile` will copy `templates/*.yaml` to `conf/*.yaml`.  **Never** edit `conf/*`directly.

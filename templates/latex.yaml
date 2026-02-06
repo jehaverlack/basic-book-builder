@@ -45,4 +45,3 @@ resource-path:
   - lib/img
   - lib/diag
 
-citeproc: true

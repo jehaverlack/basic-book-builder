@@ -4,5 +4,3 @@
 
 # Bibliography {-}
 
-::: {#refs .references}
-:::

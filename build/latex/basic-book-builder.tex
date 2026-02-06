@@ -274,7 +274,7 @@
 \fancypagestyle{plain}{%
   \fancyhf{}%
   \fancyhead[C]{\leftmark}      % Chapter title
-  \cfoot{Basic Book Builder: A Pandoc build process for books, docs and articles}   % Book title
+  \cfoot{Basic Book Builder: A Pandoc build process for books, docs and articles.}   % Book title
   \rfoot{\thepage}              % Page number
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
@@ -288,7 +288,7 @@
 \fancyhead[C]{\leftmark}        % Chapter title (centered)
 
 % Footer
-\cfoot{Basic Book Builder: A Pandoc build process for books, docs and articles}     % Book title
+\cfoot{Basic Book Builder: A Pandoc build process for books, docs and articles.}     % Book title
 \rfoot{\thepage}                % Page number
 
 % Line rules
@@ -321,7 +321,7 @@
 
 {\Huge\bfseries Basic Book Builder \par}
 \vspace{0.4cm}
-{\Large A Pandoc build process for books, docs and articles \par}
+{\Large A Pandoc build process for books, docs and articles. \par}
 
 \vspace{1.2cm}
 \includegraphics[width=0.5\textwidth]{lib/img/UAF-ACEP.png}
@@ -338,14 +338,14 @@
 
 {\Large\bfseries Basic Book Builder \par}
 \vspace{0.2cm}
-{\normalsize\textit{A Pandoc build process for books, docs and articles}\par}
+{\normalsize\textit{A Pandoc build process for books, docs and articles.}\par}
 \vspace{0.4cm}
 
 \renewcommand{\arraystretch}{1.3} % row spacing
 \setlength{\tabcolsep}{8pt}       % column padding
 \begin{tabular}{@{}p{0.28\textwidth}p{0.65\textwidth}@{}}
 \textbf{Author:}       & John Haverlack \\
-\textbf{Version:}      & 1.2.2 \\
+\textbf{Version:}      & 1.2.3 \\
 \textbf{Date:}         & 2026-02-05 \\
 \textbf{Affiliation:}  & Alaska Center for Energy and Power \\
 \textbf{Institution:}  & University of Alaska Fairbanks \\
@@ -428,12 +428,46 @@ Licensed under the Creative Commons Attribution-NoDerivatives 4.0 International 
 \mainmatter
 \chapter{Introduction}\label{introduction}
 
-This is a basic book (or article / document) builder template based on a
+This is a \textbf{basic book builder} template is based on a
 Pandoc(\citeproc{ref-PandocIndex}{\emph{Pandoc - Index},
-n.d.})\index{Pandoc} build process in conjunction with a number of other
-tools to generate PDF, HTML, LaTex, Markdown, ODT, DOCX, and Epub book
-output formats from a single set Markdown source content , which can
-optionally be edited as an Obsidian vault.
+n.d.})\index{Pandoc} + Makefile build process in conjunction Obsidian to
+edit content and Zotero to manage citation, to generate multiple format
+of the document including:
+
+\begin{itemize}
+\tightlist
+\item
+  PDF
+\item
+  HTML
+\item
+  \emph{LaTeX}
+\item
+  Markdown
+\item
+  ODT
+\item
+  DOCX
+\item
+  Epub
+\end{itemize}
+
+\subsection{Workflow}\label{workflow}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a new project
+\item
+  Initialize \texttt{metadata.yaml} with title, copyright, author, etc.
+\item
+  Customize \texttt{input-files:} in \texttt{pandoc.yaml}
+\item
+  Edit \texttt{chapters} Markdown ``conent'' files using Obidian
+\item
+  Build your document
+\end{enumerate}
 
 This \textbf{basic book
 builder}(\citeproc{ref-JehaverlackBasicbookbuilderPandoca}{\emph{Jehaverlack/Basic-Book-Builder},
@@ -443,8 +477,8 @@ Haverlack.(\citeproc{ref-JohnHaverlackACEP}{\emph{John {Haverlack}
 
 \chapter{Getting Started}\label{getting-started}
 
-\section{Cloning the Basic Book
-Builder}\label{cloning-the-basic-book-builder}
+\section{Clone the Basic Book
+Builder}\label{clone-the-basic-book-builder}
 
 \begin{clibox}[Clone the repository]
 \begin{verbatim}
@@ -464,9 +498,16 @@ cd basic-book-builder
 Environment}\label{setting-up-build-environment}
 
 \begin{cautionbox}[~Debian Linux]
-This script only support Debian based Linux system (Debian, Ubunutu,
-Zorin, etc) This script has not been widely tested across platforms
+This script only support Debian based Linux system (e.g Debian, Ubuntu,
+Zorin). And this script will install several ATP packages on your
+system.
 \end{cautionbox}
+
+\begin{dangerbox}[Warning]
+This script \textbf{has not} been widely tested across many platforms
+\end{dangerbox}
+
+To initialize your systems build environment run:
 
 \begin{clibox}[Setup Build Environment]
 \begin{verbatim}
@@ -475,13 +516,15 @@ Zorin, etc) This script has not been widely tested across platforms
 
 \end{clibox}
 
+\subsection{Non deb systems}\label{non-deb-systems}
+
 For more information on setting up the build environment for your system
-see Appendix A.
+see: \textbf{TBD: NEEDS DOCUMENTED}.
 
 \section{Testing}\label{testing}
 
-If you can build all format for the \textbf{Basic Book Build} then you
-have a working build environment.
+Once you have set up your build environment, you test by building the
+\textbf{basic book builder}.
 
 \begin{clibox}[Testing Build Environment]
 \begin{verbatim}
@@ -492,66 +535,43 @@ make all
 
 \section{Creating a New Project}\label{creating-a-new-project}
 
-\subsection{Zotero Configuration
-(Optional)}\label{zotero-configuration-optional}
+\begin{proposedbox}[Tip]
+You do not want to edit your new project document in the
+\texttt{basic-book-builder} directory. You will want to create a
+\textbf{new project} for your document based on this template.
+\end{proposedbox}
 
-\chapter{Usage}\label{usage}
+\begin{clibox}[Create a new project]
+\begin{verbatim}
+./scripts/new-project.sh <NEW_PROJECT_DIR>
+\end{verbatim}
 
-\section{Creating a Project}\label{creating-a-project}
+\end{clibox}
 
-To create a new Project based on the Basic Book Builder template:
+\begin{verbatim}
+cd <NEW_PROJECT_DIR>
+\end{verbatim}
+
+Update your project configuration:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Run the new-project.sh script.
+  Edit: \texttt{metadata.yaml}, for title, author, etc
+\item
+  Edit: \texttt{templates/pandoc.yaml}
+\item
+  Open: \texttt{\textless{}NEW\_PROJECT\_DIR\textgreater{}} with
+  Obsidian, and edit \texttt{chapters} documents.
+\item
+  Build: \texttt{make\ pdf}
 \end{enumerate}
 
-\begin{verbatim}
-./scripts/new-project.sh <PATH_TO_PROJECT>
-\end{verbatim}
-
-\begin{itemize}
-\tightlist
-\item
-  should be outside of the \textbf{basic-book-builder} directory
-\end{itemize}
-
-\begin{verbatim}
-cd <PATH_TO_PROJECT>
-\end{verbatim}
-
-Update:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \texttt{metadata.yaml}
-\item
-  \texttt{templates/pandoc.yaml}
-\end{enumerate}
-
-\begin{quote}
-{[}!info{]} Suggestion Create a git repository to version control your
-new content.
-\end{quote}
-
-\section{Editing Content}\label{editing-content}
-
-Edit your source content Markdown under the \texttt{chapters} directory.
-
-\textbf{Optional}
-
-\begin{itemize}
-\tightlist
-\item
-  Open your \texttt{\textless{}PATH\_TO\_PROJECT\textgreater{}}
-  directory as an Obsidian vault.
-\item
-  Edit your Markdown with Obsidian
-\end{itemize}
+\begin{warningbox}[Warning]
+\texttt{\textless{}NEW\_PROJECT\_DIR\textgreater{}} should be outside of
+the \textbf{basic-book-builder} directory
+\end{warningbox}
 
 \section{Building}\label{building}
 
@@ -602,15 +622,22 @@ make all
 
 \chapter{Features}\label{features}
 
+The basic book builder template integrates feature from many systems
+including Pandoc, MathJax, Obsidian, and Zotero. The following list
+covers these features from a functional point of view.
+
 \section{Metadata}\label{metadata}
 
 Metadata for the project is managed in \texttt{metadata.yaml}. Edit this
-file to make global changes to variables for your document. Changes here
-will propagate to all format builds.
+file to make \textbf{global changes} to variables for your document.
+Definitions in \texttt{metadata.yaml} will propagate to all format
+builds.
 
 \section{Front-matter}\label{front-matter}
 
-Front matter content is manged in:
+Front-Matter documents control the Title Page, Metadata and other pages
+before the Title of Contents. Front matter content is manged in these
+files:
 
 \begin{itemize}
 \tightlist
@@ -622,22 +649,16 @@ Front matter content is manged in:
   \texttt{templates/frontmatter-md.html}
 \end{itemize}
 
-\begin{cautionbox}[Tip]
 Unfortunately when you edit one, you need to edit the respective changes
 to the other front-matter formats. \#\#\# Title Page
-\end{cautionbox}
 
 Edit the \textbf{Front-matter} files to modify the formatting of the
-Title Page.
-
-\begin{cautionbox}[Tip]
-You'll need to modify the HTML / LaTex.
-\end{cautionbox}
+Title Page. You'll need to modify the HTML / LaTex code.
 
 \subsection{Meta Data Page}\label{meta-data-page}
 
 Edit the \textbf{Front-matter} files to modify the 2nd page Metadata
-format.
+format and fields to display.
 
 \subsection{Cover Illustration}\label{cover-illustration}
 
@@ -658,14 +679,26 @@ Dedication.
 \begin{itemize}
 \tightlist
 \item
-  This is disabled by default \#\# Table of Contents
+  This is disabled by default
 \end{itemize}
+
+\section{Table of Contents}\label{table-of-contents}
+
+The table of contents is auto generated. But can be disabled in
+\texttt{template\textbackslash{}pandoc.yaml} by setting: -
+\texttt{toc:\ false}
 
 \section{Chapters}\label{chapters}
 
 Chapter Markdown source files are located in the \texttt{chapters}
-directory. Edit the \texttt{template\textbackslash{}pandoc.yaml} file to
-control which chapter markdown files are in what order.
+directory. To edit which chapter files are included the document:
+
+\begin{itemize}
+\tightlist
+\item
+  Edit the \texttt{input-file:} section of the
+  \texttt{template\textbackslash{}pandoc.yaml}
+\end{itemize}
 
 \section{Appendixes}\label{appendixes}
 
@@ -695,21 +728,63 @@ TBD
 
 TBD
 
-\section{Mathjax Equations}\label{mathjax-equations}
+\section{Images}\label{images}
 
-TBD
+You can use basic Markdown Images
+
+\begin{verbatim}
+![ACEP](lib/img/ACEPLogo.png)
+\end{verbatim}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={ACEP}]{lib/img/ACEPLogo.png}}
+\caption{ACEP}
+\end{figure}
+
+\section{\texorpdfstring{\emph{LaTeX}
+Equations}{LaTeX Equations}}\label{latex-equations}
+
+You can embed LaTeX equations directly in your Markdown pages.
 
 \subsection{Left Justified / Inline}\label{left-justified-inline}
 
-TBD
+To left justify \emph{LaTex} surround the code inside single
+\texttt{\$}:
+
+\begin{codebox}[Left Justified Equation]
+\begin{verbatim}
+$x = \frac{1}{2}$
+\end{verbatim}
+
+\end{codebox}
+
+\(x = \frac{1}{2}\)
+
+\begin{codebox}[Inline]
+\begin{verbatim}
+Or inline, $x = \frac{1}{2}$, in a sentence.
+\end{verbatim}
+
+\end{codebox}
+
+Or inline, \(x = \frac{1}{2}\), in a sentence.
 
 \subsection{Centered}\label{centered}
 
-TBD
+To center justify \emph{LaTex} surround the code inside double
+\texttt{\$\$}:
+
+\begin{codebox}[Centered Equation]
+\begin{verbatim}
+$$x = \frac{1}{2}$$
+\end{verbatim}
+
+\end{codebox}
+
+\[x = \frac{1}{2}\]
 
 \section{Custom Markdown}\label{custom-markdown}
-
-TBD
 
 \subsection{Call-outs}\label{call-outs}
 
@@ -745,22 +820,6 @@ Will render:
 \begin{proposedbox}[Blue Call-out Title]
 A blue box
 \end{proposedbox}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{codebox}[Markdown Example]
-\begin{verbatim}
-[!info] Info Box
-Same as a blue box
-\end{verbatim}
-
-\end{codebox}
-
-Will render:
-
-\begin{quote}
-{[}!info{]} Info Box Same as a blue box
-\end{quote}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -859,7 +918,8 @@ fi
 A command line example
 '''
 $ ls
-build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  >README.md  scripts  templates
+build  chapters  conf  filters  lib  LICENSE.md  Makefile
+metadata.yaml  >README.md  scripts  templates
 '''
 \end{verbatim}
 
@@ -872,208 +932,168 @@ A command line example
 
 \begin{verbatim}
 $ ls
-build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  README.md  scripts  templates
+build  chapters  conf  filters  lib  LICENSE.md  Makefile
+metadata.yaml  README.md  scripts  templates
 \end{verbatim}
 
 \end{clibox}
 
-\appendix
+\section{Advanced}\label{advanced}
 
-Appendix A
+\subsection{Changing Fonts}\label{changing-fonts}
 
-\chapter{Appendix A: Build Environment
-Notes}\label{appendix-a-build-environment-notes}
+It is possible to change fonts by editing
+\texttt{templates/pandoc.yaml}, and
+\texttt{templates\textbackslash{}styles.css}, but you will have to make
+sure you have the proper font's installed on your system first.
 
-\section{Installing Pre-Requisites}\label{installing-pre-requisites}
+\subsection{Adding Filters}\label{adding-filters}
 
-\begin{cautionbox}[Not Cross-platform Tested]
-For Debian / ZorinOS and likely Ubuntu based systems.
+Custom filters can be created. This is complicated and typically needs
+done in 3 places for:
+
+\begin{itemize}
+\tightlist
+\item
+  obsidian
+\item
+  \emph{LaTeX}
+\item
+  HTML
+\end{itemize}
+
+\chapter{Design}\label{design}
+
+\section{Directory Structure}\label{directory-structure}
+
+The \textbf{basic-book-builder} directory tree.
+
+\begin{verbatim}
+basic-book-builder
+├── build
+│   ├── docx
+│   ├── html
+│   │   ├── conf
+│   │   └── lib
+│   │       ├── diag
+│   │       ├── img
+│   │       └── mathjax
+│   ├── latex
+│   ├── odt
+│   └── pdf
+├── chapters
+├── conf
+├── filters
+├── lib
+│   ├── citations
+│   ├── diag
+│   ├── img
+│   └── mathjax
+├── scripts
+│   └── tmp
+└── templates
+\end{verbatim}
+
+\section{Configuration Files}\label{configuration-files}
+
+The \textbf{basic-book-builder} configuration files, scripts, and build
+files.
+
+\begin{verbatim}
+../basic-book-builder
+├── chapters
+├── conf
+├── filters
+│   ├── callouts-html.lua
+│   └── callouts.lua
+├── lib
+│   ├── diag
+│   ├── img
+│   └── zotero.bib
+├── Makefile
+├── metadata.yaml
+├── scripts
+│   ├── new-project.sh
+│   ├── replace-metadata.sh
+│   ├── setup-linux-deb.sh
+│   └── tmp
+└── templates
+    ├── docx.yaml
+    ├── epub_template.html
+    ├── epub.yaml
+    ├── frontmatter-docx.md
+    ├── frontmatter.html
+    ├── frontmatter-md.html
+    ├── frontmatter.tex
+    ├── header.tex
+    ├── html.yaml
+    ├── latex.yaml
+    ├── markdown.yaml
+    ├── odt.yaml
+    ├── pandoc.yaml
+    ├── pdf.yaml
+    ├── style.css
+    └── style_epub.css
+\end{verbatim}
+
+\begin{cautionbox}[About conf]
+NEVER: edit file directly in \texttt{conf}. They will be overwritten by
+the build process. \#\#\# Metadata
 \end{cautionbox}
 
-\subsection{Required}\label{required}
+Update the \texttt{metadata.yaml} file to globally configure your
+document title and other metadata. Edit this file to control your
+document title, author, etc.
 
-\subsubsection{Pandoc}\label{pandoc}
+\subsection{Pandoc Main Config}\label{pandoc-main-config}
 
-\begin{itemize}
+Update the \texttt{input-files:} section of
+\texttt{templates/pandoc.yaml} to control what chapter source files are
+in which order in your document.
+
+\begin{verbatim}
+# pandoc.yaml
+input-files:
+  # - chapters/Preface.md
+  - chapters/00_Introduction.md
+  - chapters/01_Getting_Started.md
+  - chapters/02_Usage.md
+  - chapters/03_Features.md
+  - chapters/Appendix.md
+  - chapters/AppendixA.md
+  # - chapters/AppendixB.md
+  - chapters/Glossary.md
+  - chapters/Index.md
+  - chapters/Bibliography.md
+\end{verbatim}
+
+\section{Build Workflow}\label{build-workflow}
+
+For a PDF Build:
+
+\begin{verbatim}
+make pdf
+\end{verbatim}
+
+will build dependencies on these file:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  https://pandoc.org/
+  Makefile
 \item
-  \href{https://github.com/jgm/pandoc/releases/tag/3.8.2.1}{Download}
-\end{itemize}
-
-\begin{quote}
-\texttt{sudo\ apt\ install\ https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb}
-\end{quote}
-
-\subsubsection{Code Editor}\label{code-editor}
-
-\begin{establishedbox}[Code Editor]
-\href{https://vscodium.com/}{VSCodium} is recommend for privacy
-(telemetry/tracking) reasons - https://vscodium.com/
-\end{establishedbox}
-
-But any text editor will work. \#\#\#\# make
-
-\begin{verbatim}
-sudo apt install make
-\end{verbatim}
-
-\subsubsection{jq and yq}\label{jq-and-yq}
-
-\begin{verbatim}
-sudo apt install jq yq
-\end{verbatim}
-
-\subsubsection{texlive}\label{texlive}
-
-\begin{quote}
-\texttt{sudo\ apt\ install\ texlive\ texlive-xetex\ texlive-latex-extra\ texlive-fonts-recommended\ texlive-fonts-extra}
-\end{quote}
-
-\subsubsection{MathJax}\label{mathjax}
-
-\begin{itemize}
-\tightlist
+  conf/pandoc.yaml
 \item
-  https://www.mathjax.org/
-\end{itemize}
-
-\begin{verbatim}
-wget https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz
-tar xzf mathjax-3.2.2.tgz
-mv package/es5/* lib/mathjax
-rm -rf package mathjax-3.2.2.tgz
-\end{verbatim}
-
-\begin{cautionbox}[TODO]
-This need to be rolled into a setup script.
-\end{cautionbox}
-
-\subsection{Optional}\label{optional}
-
-The following are not strictly requires to use this book builder
-template.
-
-\subsubsection{Obsidian}\label{obsidian}
-
-\begin{establishedbox}[Highly Recommended]
-Editing book chapter content in Obsidian is a very productive means for
-editing Markdown source content.
-\end{establishedbox}
-
-\begin{itemize}
-\tightlist
+  conf/pdf.yaml
 \item
-  https://obsidian.md/
+  lib/zotero.bib
 \item
-  \href{https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb}{Deb
-  Package}
-\end{itemize}
+  chapters/*.md
+\end{enumerate}
 
-\begin{verbatim}
-sudo apt install https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb
-\end{verbatim}
-
-\subsubsection{Zotero}\label{zotero}
-
-\begin{establishedbox}[Highly Recommended]
-If you need to managed citations and references, Zotero integration is
-highly recommended.
-\end{establishedbox}
-
-\begin{itemize}
-\tightlist
-\item
-  https://www.zotero.org/
-\end{itemize}
-
-\begin{verbatim}
-sudo cp ./scripts/deps/zotero.list /etc/apt/sources.list.d/
-\end{verbatim}
-
-\begin{verbatim}
-sudo apt update
-\end{verbatim}
-
-\begin{verbatim}
-sudo apt install zotero
-\end{verbatim}
-
-\paragraph{Better BibTex for Zotero}\label{better-bibtex-for-zotero}
-
-Install the Better BibTex Plugin for Zotero - Zotero \textgreater{} Tool
-\textgreater{} Plugins
-
-\paragraph{Export citations.bib}\label{export-citations.bib}
-
-\begin{itemize}
-\tightlist
-\item
-  Zotero \textgreater{} File \textgreater{} Export Library
-  \textgreater{} Format: Better BibTeX
-\item[$\square$]
-  Keep Updated
-\item[$\square$]
-  Save to: \textasciitilde/Documents/Lib/zotero.bib
-\item[$\square$]
-  Symlink your \textasciitilde/Documents/Lib/Citations.bib to
-  basic-book-builder/lib/zotero.bib
-\end{itemize}
-
-\paragraph{Zotero Connector Browser
-Plugin}\label{zotero-connector-browser-plugin}
-
-\begin{itemize}
-\tightlist
-\item
-  https://chromewebstore.google.com/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc
-\end{itemize}
-
-Provides you the ability to auto add Web resources to your Zotero
-citation database.
-
-\subsubsection{lmodern}\label{lmodern}
-
-\begin{verbatim}
-sudo apt install lmodern
-\end{verbatim}
-
-\subsubsection{epubcheck}\label{epubcheck}
-
-\begin{verbatim}
-sudo apt install epubcheck
-\end{verbatim}
-
-\subsubsection{foliate}\label{foliate}
-
-An EPub Reader
-
-\begin{itemize}
-\tightlist
-\item
-  https://johnfactotum.github.io/foliate/
-\end{itemize}
-
-\begin{verbatim}
-sudo apt install https://github.com/johnfactotum/foliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb
-\end{verbatim}
-
-\subsubsection{calibre}\label{calibre}
-
-An EPub Reader
-
-\begin{itemize}
-\tightlist
-\item
-  https://calibre-ebook.com
-\end{itemize}
-
-\begin{verbatim}
-sudo apt install calibre
-\end{verbatim}
-
-\section{Editing the Configuration}\label{editing-the-configuration}
+NOTE: the \texttt{Makefile} will copy \texttt{templates/*.yaml} to
+\texttt{conf/*.yaml}. \textbf{Never} edit \texttt{conf/*}directly.
 
 \backmatter
 
@@ -1174,18 +1194,6 @@ for citation processing with Pandoc. \\
 
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{1}
-\bibitem[\citeproctext]{ref-JehaverlackBasicbookbuilderPandoca}
-\emph{Jehaverlack/Basic-Book-Builder: {A Pandoc} Workflow for Building
-{PDF}, {HTML}, {EPUB}, and {LaTeX} Book Format.} n.d.
-Https://github.com/jehaverlack/basic-book-builder.
-
-\bibitem[\citeproctext]{ref-JohnHaverlackACEP}
-\emph{John {Haverlack} \textbar{} {ACEP}}. n.d.
-Https://www.uaf.edu/acep/about/our-team/john-haverlack.php.
-
-\bibitem[\citeproctext]{ref-PandocIndex}
-\emph{Pandoc - Index}. n.d. Https://pandoc.org/.
-
 \bibitem[\citeproctext]{ref-JehaverlackBasicbookbuilderPandoca}
 \emph{Jehaverlack/Basic-Book-Builder: {A Pandoc} Workflow for Building
 {PDF}, {HTML}, {EPUB}, and {LaTeX} Book Format.} n.d.

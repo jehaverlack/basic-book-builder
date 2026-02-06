@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 15:41
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 17:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1347,18 +1347,7 @@ File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 306.
 
-(./basic-book-builder.aux
-
-LaTeX Warning: Label `ref-JehaverlackBasicbookbuilderPandoca' multiply defined.
-
-
-
-LaTeX Warning: Label `ref-JohnHaverlackACEP' multiply defined.
-
-
-LaTeX Warning: Label `ref-PandocIndex' multiply defined.
-
-)
+(./basic-book-builder.aux)
 \openout1 = `basic-book-builder.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 311.
@@ -1757,104 +1746,77 @@ LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
 
  [2]
 Chapter 1.
+LaTeX Font Info:    Font shape `TU/NotoSansMono(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 463.
 [1
 
 
 ]
 Chapter 2.
-LaTeX Font Info:    Font shape `TU/NotoSansMono(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 450.
 
-Overfull \hbox (10.34296pt too wide) in paragraph at lines 451--451
+Overfull \hbox (10.34296pt too wide) in paragraph at lines 485--485
 []\TU/NotoSansMono(0)/m/n/12 git clone https://github.com/jehaverlack/basic-boo
 k-builder.git[] 
  []
 
-[2
 
-] [3]
-Chapter 3.
-[4
+Underfull \vbox (badness 2644) has occurred while \output is active []
 
-] [5]
-Chapter 4.
-[6
+ [2
 
-] [7] [8] [9] [10]
-Overfull \hbox (262.34303pt too wide) in paragraph at lines 862--862
-[]\TU/NotoSansMono(0)/m/n/12 build  chapters  conf  filters  lib  LICENSE.md  M
-akefile  metadata.yaml  >README.md  scripts  templates[] 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 539--542
+[]\TU/NotoSerif(0)/m/n/12 You do not want to edit your new project document in 
+the
  []
 
+[3] [4]
+Chapter 3.
+[5
 
-Overfull \hbox (255.14304pt too wide) in paragraph at lines 875--875
-[]\TU/NotoSansMono(0)/m/n/12 build  chapters  conf  filters  lib  LICENSE.md  M
-akefile  metadata.yaml  README.md  scripts  templates[] 
+]
+Overfull \hbox (19.09433pt too wide) in paragraph at lines 687--690
+\TU/NotoSerif(0)/m/n/12 The table of contents is auto generated. But can be dis
+abled in \TU/NotoSansMono(0)/m/n/12 template\pandoc.yaml
+ []
+
+[6]
+File: lib/img/ACEPLogo.png Graphic file (type bmp)
+<lib/img/ACEPLogo.png>
+LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/it' will be
+(Font)              scaled to size 17.28pt on input line 746.
+ [7] [8] [9] [10]
+Overfull \hbox (71.729pt too wide) in paragraph at lines 945--949
+\TU/NotoSerif(0)/m/n/12 It is possible to change fonts by editing \TU/NotoSansM
+ono(0)/m/n/12 templates/pandoc.yaml\TU/NotoSerif(0)/m/n/12 , and \TU/NotoSansMo
+no(0)/m/n/12 templates\styles.css\TU/NotoSerif(0)/m/n/12 ,
  []
 
 [11]
-Appendix A.
-
-Overfull \hbox (12.85075pt too wide) in paragraph at lines 885--885
-|\TU/NotoSerif(0)/b/n/24.88 Appendix A: Build Environment Notes| 
- []
-
-
-Overfull \hbox (295.84503pt too wide) in paragraph at lines 906--907
-[]\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/jgm/pandoc/rel
-eases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 912--914
-[][][]\TU/NotoSerif(0)/m/n/12 VSCodium[][] is recommend for privacy (telemetry/
-tracking) reasons -
- []
-
+Chapter 4.
 [12
 
 ]
-Overfull \hbox (358.24503pt too wide) in paragraph at lines 975--975
-[]\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/obsidianmd/obs
-idian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb[] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[13]
-Overfull \hbox (12.02498pt too wide) in paragraph at lines 1020--1022
-[]\TU/NotoSerif(0)/m/n/12 Symlink your ~/Documents/Lib/Citations.bib to basic-b
-ook-builder/lib/zotero.bib 
- []
-
-
-Overfull \hbox (107.64897pt too wide) in paragraph at lines 1030--1031
-[]\TU/NotoSerif(0)/m/n/12 https://chromewebstore.google.com/detail/zotero-conne
-ctor/ekhagklcjbdpajgpjgmbionohlpdbjgc 
- []
-
-
-Overfull \hbox (430.245pt too wide) in paragraph at lines 1059--1059
-[]\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/johnfactotum/f
-oliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb[] 
-
- []
-
+ [13]
 [14]
-Underfull \hbox (badness 10000) in alignment at lines 1086--1094
+Underfull \hbox (badness 10000) in alignment at lines 1106--1114
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1094--1096
+Underfull \hbox (badness 10000) in alignment at lines 1114--1116
 [] []
  []
 
 
-Overfull \hbox (1.68248pt too wide) in paragraph at lines 1100--1100
+Overfull \hbox (1.68248pt too wide) in paragraph at lines 1120--1120
 []|\TU/NotoSerif(0)/b/n/12 Bibliography|  
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1096--1148
+Underfull \hbox (badness 10000) in alignment at lines 1116--1168
 [] []
  []
 
@@ -1866,13 +1828,7 @@ Underfull \hbox (badness 10000) in alignment at lines 1096--1148
 ] [18
 
 ]
-Underfull \hbox (badness 3977) in paragraph at lines 1183--1185
-[]\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
-Https://www.uaf.edu/acep/about/our-team/john-
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 1195--1197
+Underfull \hbox (badness 3977) in paragraph at lines 1203--1205
 []\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
 Https://www.uaf.edu/acep/about/our-team/john-
  []
@@ -1881,18 +1837,14 @@ Https://www.uaf.edu/acep/about/our-team/john-
 
 ] [20
 
-] (./basic-book-builder.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./basic-book-builder.aux) ) 
 Here is how much of TeX's memory you used:
- 36437 strings out of 478775
- 750795 string characters out of 5850945
+ 36434 strings out of 478775
+ 751025 string characters out of 5850945
  1859991 words of memory out of 5000000
- 55860 multiletter control sequences out of 15000+600000
- 516036 words of font info for 92 fonts, out of 8000000 for 9000
+ 55855 multiletter control sequences out of 15000+600000
+ 516044 words of font info for 93 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,11n,122p,1207b,959s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,122p,1207b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on basic-book-builder.pdf (24 pages).
