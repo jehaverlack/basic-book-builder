@@ -51,8 +51,8 @@ make odt
 ## Getting Started
 
 Download PDF or HTML version of the b3 book.  Which self documents how to use this template:
-- [basic-book-builder.pdf ](build/basic-book-builder.pdf)
-- [basic-book-builder.html](build/basic-book-builder.html)
+- [basic-book-builder.pdf ](build/pdf/basic-book-builder.pdf)
+- [basic-book-builder.html](build/html/basic-book-builder.html)
 
 ### Setup Build Environment
 
