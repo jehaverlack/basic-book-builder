@@ -5,7 +5,7 @@
 | **Author** | John Haverlack |
 | **Copyright** | 2026 John Haverlack |
 | **License** | CC BY-ND 4.0 |
-| **Version** | 1.1.0 |
+| **Version** | 1.2.2 |
 | **Date** | 2026-02-05 |
 
 This is a basic book (article) builder template based on a Pandoc build process in conjunction with a number of other tools to generate PDF, DOCX, ODT, HTML, LaTeX, Markdown, and Epub book formats all from a single set of Markdown source content in an Obsidian vault.
