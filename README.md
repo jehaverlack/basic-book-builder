@@ -54,6 +54,16 @@ Download PDF or HTML version of the b3 book.  Which self documents how to use th
 - [basic-book-builder.pdf ](build/pdf/basic-book-builder.pdf)
 - [basic-book-builder.html](build/html/basic-book-builder.html)
 
+### Clone Repo
+
+```
+git clone https://github.com/jehaverlack/basic-book-builder.git
+```
+
+```
+cd basic-book-builder
+```
+
 ### Setup Build Environment
 
 > NOTE: For Debian based systems.
