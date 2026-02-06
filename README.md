@@ -63,3 +63,29 @@ scripts/setup-linux-deb.sh
 ```
 
 
+### Testing Build Environment
+
+```
+make all
+```
+
+If this succeeds you have a build environment.
+
+## Create a New Project
+
+```
+./scripts/new-project.sh <PATH_TO_PROJECT>
+```
+
+```
+cd <PATH_TO_PROJECT>
+```
+
+**Update Config Files**:
+
+1. `metadata.yaml`
+2. `templates/pandoc.yaml`
+3. Edit Chapter Content
+4. Build your book
+
+

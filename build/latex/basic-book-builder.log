@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 14:53
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 15:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1776,110 +1776,110 @@ k-builder.git[]
 Chapter 3.
 [4
 
-]
+] [5]
 Chapter 4.
-[5
+[6
 
-] [6] [7] [8]
-Overfull \hbox (262.34303pt too wide) in paragraph at lines 792--792
+] [7] [8] [9] [10]
+Overfull \hbox (262.34303pt too wide) in paragraph at lines 862--862
 []\TU/NotoSansMono(0)/m/n/12 build  chapters  conf  filters  lib  LICENSE.md  M
 akefile  metadata.yaml  >README.md  scripts  templates[] 
  []
 
-[9]
-Overfull \hbox (255.14304pt too wide) in paragraph at lines 805--805
+
+Overfull \hbox (255.14304pt too wide) in paragraph at lines 875--875
 []\TU/NotoSansMono(0)/m/n/12 build  chapters  conf  filters  lib  LICENSE.md  M
 akefile  metadata.yaml  README.md  scripts  templates[] 
  []
 
-[10]
+[11]
 Appendix A.
 
-Overfull \hbox (12.85075pt too wide) in paragraph at lines 815--815
+Overfull \hbox (12.85075pt too wide) in paragraph at lines 885--885
 |\TU/NotoSerif(0)/b/n/24.88 Appendix A: Build Environment Notes| 
  []
 
 
-Overfull \hbox (295.84503pt too wide) in paragraph at lines 836--837
+Overfull \hbox (295.84503pt too wide) in paragraph at lines 906--907
 []\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/jgm/pandoc/rel
 eases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 842--844
+Underfull \hbox (badness 10000) in paragraph at lines 912--914
 [][][]\TU/NotoSerif(0)/m/n/12 VSCodium[][] is recommend for privacy (telemetry/
 tracking) reasons -
  []
 
-[11
+[12
 
 ]
-Overfull \hbox (358.24503pt too wide) in paragraph at lines 905--905
+Overfull \hbox (358.24503pt too wide) in paragraph at lines 975--975
 []\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/obsidianmd/obs
 idian-releases/releases/download/v1.9.14/obsidian_1.9.14_amd64.deb[] 
  []
 
-[12]
-Overfull \hbox (12.02498pt too wide) in paragraph at lines 950--952
+[13]
+Overfull \hbox (12.02498pt too wide) in paragraph at lines 1020--1022
 []\TU/NotoSerif(0)/m/n/12 Symlink your ~/Documents/Lib/Citations.bib to basic-b
 ook-builder/lib/zotero.bib 
  []
 
 
-Overfull \hbox (107.64897pt too wide) in paragraph at lines 960--961
+Overfull \hbox (107.64897pt too wide) in paragraph at lines 1030--1031
 []\TU/NotoSerif(0)/m/n/12 https://chromewebstore.google.com/detail/zotero-conne
 ctor/ekhagklcjbdpajgpjgmbionohlpdbjgc 
  []
 
 
-Overfull \hbox (430.245pt too wide) in paragraph at lines 989--989
+Overfull \hbox (430.245pt too wide) in paragraph at lines 1059--1059
 []\TU/NotoSansMono(0)/m/n/12 sudo apt install https://github.com/johnfactotum/f
 oliate/releases/download/2.6.4/com.github.johnfactotum.foliate_2.6.4_all.deb[] 
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in alignment at lines 1016--1024
+[14]
+Underfull \hbox (badness 10000) in alignment at lines 1086--1094
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1024--1026
+Underfull \hbox (badness 10000) in alignment at lines 1094--1096
 [] []
  []
 
 
-Overfull \hbox (1.68248pt too wide) in paragraph at lines 1030--1030
+Overfull \hbox (1.68248pt too wide) in paragraph at lines 1100--1100
 []|\TU/NotoSerif(0)/b/n/12 Bibliography|  
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1026--1078
+Underfull \hbox (badness 10000) in alignment at lines 1096--1148
 [] []
  []
 
-[14
+[15
 
 
-] [15] (./basic-book-builder.ind) [16
+] [16] (./basic-book-builder.ind) [17
 
-] [17
+] [18
 
 ]
-Underfull \hbox (badness 3977) in paragraph at lines 1113--1115
+Underfull \hbox (badness 3977) in paragraph at lines 1183--1185
 []\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
 Https://www.uaf.edu/acep/about/our-team/john-
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 1125--1127
+Underfull \hbox (badness 3977) in paragraph at lines 1195--1197
 []\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
 Https://www.uaf.edu/acep/about/our-team/john-
  []
 
-[18
+[19
 
-] [19
+] [20
 
 ] (./basic-book-builder.aux)
 
@@ -1887,12 +1887,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36441 strings out of 478775
- 750960 string characters out of 5850945
+ 36437 strings out of 478775
+ 750795 string characters out of 5850945
  1859991 words of memory out of 5000000
- 55864 multiletter control sequences out of 15000+600000
+ 55860 multiletter control sequences out of 15000+600000
  516036 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,12n,122p,1207b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,122p,1207b,959s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on basic-book-builder.pdf (23 pages).
+Output written on basic-book-builder.pdf (24 pages).

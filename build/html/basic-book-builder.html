@@ -51,7 +51,7 @@
 
   <!-- Title Page -->
   <h1 class="titlepage" style="margin-top:3em; font-size:2.4em; text-align:center;">Basic Book Builder</h1>
-  <h2 style="text-align:center; font-weight:normal;">A Pandoc template for building books, documents and articles</h2>
+  <h2 style="text-align:center; font-weight:normal;">A Pandoc build process for books, docs and articles</h2>
 
   <div style="text-align:center; margin:2em 0;">
     <img src="lib/img/UAF-ACEP.png" alt="Cover illustration" style="max-width:350px;">
@@ -64,7 +64,7 @@
   <div style="text-align:left; margin-top:5em;">
 
     <h2>Basic Book Builder</h2>
-    <i>A Pandoc template for building books, documents and articles</i>
+    <i>A Pandoc build process for books, docs and articles</i>
 
     <table style="margin-top:2em; width:50%; border-collapse:collapse;">
       <tbody>
@@ -151,6 +151,8 @@ id="toc-zotero-configuration-optional">Zotero Configuration
 </ul></li>
 <li><a href="#usage" id="toc-usage">Usage</a>
 <ul>
+<li><a href="#creating-a-project" id="toc-creating-a-project">Creating a
+Project</a></li>
 <li><a href="#editing-content" id="toc-editing-content">Editing
 Content</a></li>
 <li><a href="#building" id="toc-building">Building</a>
@@ -169,6 +171,9 @@ Content</a></li>
 <ul>
 <li><a href="#meta-data-page" id="toc-meta-data-page">Meta Data
 Page</a></li>
+<li><a href="#cover-illustration" id="toc-cover-illustration">Cover
+Illustration</a></li>
+<li><a href="#dedication" id="toc-dedication">Dedication</a></li>
 </ul></li>
 <li><a href="#chapters" id="toc-chapters">Chapters</a></li>
 <li><a href="#appendixes" id="toc-appendixes">Appendixes</a></li>
@@ -266,7 +271,36 @@ then you have a working build environment.</p>
 <h3 id="zotero-configuration-optional">Zotero Configuration
 (Optional)</h3>
 <h1 id="usage">Usage</h1>
+<h2 id="creating-a-project">Creating a Project</h2>
+<p>To create a new Project based on the Basic Book Builder template:</p>
+<ol type="1">
+<li>Run the new-project.sh script.</li>
+</ol>
+<pre><code>./scripts/new-project.sh &lt;PATH_TO_PROJECT&gt;</code></pre>
+<ul>
+<li><PATH_TO_PROJECT> should be outside of the
+<strong>basic-book-builder</strong> directory</li>
+</ul>
+<pre><code>cd &lt;PATH_TO_PROJECT&gt;</code></pre>
+<p>Update:</p>
+<ol type="1">
+<li><code>metadata.yaml</code></li>
+<li><code>templates/pandoc.yaml</code></li>
+</ol>
+<div class="callout-info">
+<p><strong>Suggestion</strong></p>
+<p> Create a git repository to version control your new
+<PATH_TO_PROJECT> content.</p>
+</div>
 <h2 id="editing-content">Editing Content</h2>
+<p>Edit your source content Markdown under the <code>chapters</code>
+directory.</p>
+<p><strong>Optional</strong></p>
+<ul>
+<li>Open your <code>&lt;PATH_TO_PROJECT&gt;</code> directory as an
+Obsidian vault.</li>
+<li>Edit your Markdown with Obsidian</li>
+</ul>
 <h2 id="building">Building</h2>
 <h3 id="pdf">PDF</h3>
 <pre><code>make pdf</code></pre>
@@ -297,10 +331,12 @@ work.</p>
 Edit this file to make global changes to variables for your document.
 Changes here will propagate to all format builds.</p>
 <h2 id="front-matter">Front-matter</h2>
-<p>Front matter content is manged in: -
-<code>templates/frontmatter.tex</code> -
-<code>templates/frontmatter.html</code> -
-<code>templates/frontmatter-md.html</code></p>
+<p>Front matter content is manged in:</p>
+<ul>
+<li><code>templates/frontmatter.tex</code></li>
+<li><code>templates/frontmatter.html</code></li>
+<li><code>templates/frontmatter-md.html</code></li>
+</ul>
 <div class="callout-caution">
 <p><strong>Tip</strong></p>
 <p> Unfortunately when you edit one, you need to edit the respective
@@ -314,12 +350,19 @@ of the Title Page.</p>
 </div>
 <h3 id="meta-data-page">Meta Data Page</h3>
 <p>Edit the <strong>Front-matter</strong> files to modify the 2nd page
-Metadata format. ### Cover Illustration</p>
+Metadata format.</p>
+<h3 id="cover-illustration">Cover Illustration</h3>
 <p>Edit the <strong>Front-matter</strong> files to optionally un-comment
-the Cover Art Acknowledgement. - This is disabled by default ###
-Dedication</p>
+the Cover Art Acknowledgement.</p>
+<ul>
+<li>This is disabled by default</li>
+</ul>
+<h3 id="dedication">Dedication</h3>
 <p>Edit the <strong>Front-matter</strong> files to modify un-comment the
-Book Dedication. - This is disabled by default ## Table of Contents</p>
+Book Dedication.</p>
+<ul>
+<li>This is disabled by default ## Table of Contents</li>
+</ul>
 <h2 id="chapters">Chapters</h2>
 <p>Chapter Markdown source files are located in the
 <code>chapters</code> directory. Edit the
@@ -351,67 +394,84 @@ files are in what order.</p>
 <p>A few call-out box styles have been custom added to easily highlight
 certain types of content.</p>
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!established] Green Call-out Title
 A green box</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-established">
 <p><strong>Green Call-out Title</strong></p>
 <p> A green box</p>
 </div>
 <hr />
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!proposed] Blue Call-out Title
 A blue box</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-proposed">
 <p><strong>Blue Call-out Title</strong></p>
 <p> A blue box</p>
 </div>
 <hr />
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
+<pre><code>[!info] Info Box
+Same as a blue box</code></pre>
+</div>
+<p>Will render:</p>
+<div class="callout-info">
+<p><strong>Info Box</strong></p>
+<p> Same as a blue box</p>
+</div>
+<hr />
+<div class="callout-code">
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!speculative] Purple Call-out Title
 A purple box</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-speculative">
 <p><strong>Purple Call-out Title</strong></p>
 <p> A purple box</p>
 </div>
 <hr />
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!caution] Caution Note
 Beware of this section.  AKA a orange box.</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-caution">
 <p><strong>Caution Note</strong></p>
 <p> Beware of this section. AKA a orange box.</p>
 </div>
 <hr />
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!warning] Warning Note
 Same as the Caution Box</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-warning">
 <p><strong>Warning Note</strong></p>
 <p> Same as the Caution Box</p>
 </div>
 <hr />
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!danger] Alert
 A slightly stronger warning.  AKA a red box.</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-danger">
 <p><strong>Alert</strong></p>
 <p> A slightly stronger warning. AKA a red box.</p>
 </div>
 <hr />
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!code] Code Block
 &#39;&#39;&#39;
 if [ true ]; do
@@ -419,6 +479,7 @@ if [ true ]; do
 fi
 &#39;&#39;&#39;</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-code">
 <p><strong>Code Block</strong></p>
 <pre><code>if [ true ]; do
@@ -427,7 +488,7 @@ fi</code></pre>
 </div>
 <hr />
 <div class="callout-code">
-<p><strong>Markdown Code</strong></p>
+<p><strong>Markdown Example</strong></p>
 <pre><code>[!cli] Command line
 A command line example
 &#39;&#39;&#39;
@@ -435,6 +496,7 @@ $ ls
 build  chapters  conf  filters  lib  LICENSE.md  Makefile  metadata.yaml  &gt;README.md  scripts  templates
 &#39;&#39;&#39;</code></pre>
 </div>
+<p>Will render:</p>
 <div class="callout-cli">
 <p><strong>Command line</strong></p>
 <p> A command line example</p>

@@ -497,7 +497,61 @@ make all
 
 \chapter{Usage}\label{usage}
 
+\section{Creating a Project}\label{creating-a-project}
+
+To create a new Project based on the Basic Book Builder template:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Run the new-project.sh script.
+\end{enumerate}
+
+\begin{verbatim}
+./scripts/new-project.sh <PATH_TO_PROJECT>
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  should be outside of the \textbf{basic-book-builder} directory
+\end{itemize}
+
+\begin{verbatim}
+cd <PATH_TO_PROJECT>
+\end{verbatim}
+
+Update:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{metadata.yaml}
+\item
+  \texttt{templates/pandoc.yaml}
+\end{enumerate}
+
+\begin{quote}
+{[}!info{]} Suggestion Create a git repository to version control your
+new content.
+\end{quote}
+
 \section{Editing Content}\label{editing-content}
+
+Edit your source content Markdown under the \texttt{chapters} directory.
+
+\textbf{Optional}
+
+\begin{itemize}
+\tightlist
+\item
+  Open your \texttt{\textless{}PATH\_TO\_PROJECT\textgreater{}}
+  directory as an Obsidian vault.
+\item
+  Edit your Markdown with Obsidian
+\end{itemize}
 
 \section{Building}\label{building}
 
@@ -691,6 +745,22 @@ Will render:
 \begin{proposedbox}[Blue Call-out Title]
 A blue box
 \end{proposedbox}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{codebox}[Markdown Example]
+\begin{verbatim}
+[!info] Info Box
+Same as a blue box
+\end{verbatim}
+
+\end{codebox}
+
+Will render:
+
+\begin{quote}
+{[}!info{]} Info Box Same as a blue box
+\end{quote}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
