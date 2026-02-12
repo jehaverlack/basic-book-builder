@@ -18,9 +18,18 @@ standalone: true
 
 
 metadata:
-  mainfont: "Noto Serif"
-  sansfont: "Noto Sans"
-  monofont: "Noto Sans Mono"
+  mainfont: "TeX Gyre Termes"
+  sansfont: "TeX Gyre Heros"
+  monofont: "TeX Gyre Cursor"
+  # mainfont: "Libertinus Serif"
+  # sansfont: "Libertinus Sans"
+  # monofont: "Libertinus Mono"
+  # mainfont: "Times New Roman"
+  # sansfont: "Arial"
+  # monofont: "Consolas"
+  # mainfont: "Noto Serif"
+  # sansfont: "Noto Sans"
+  # monofont: "Noto Sans Mono"
   # mainfont: "Libertinus Serif"
   # sansfont: "Libertinus Sans"
   # monofont: "DejaVu Sans Mono"

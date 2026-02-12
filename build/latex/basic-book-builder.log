@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  5 FEB 2026 17:35
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.11.6)  12 FEB 2026 08:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -258,287 +258,299 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
 
-Package fontspec Info: Noto Serif scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes scale = 0.9577756114101639.
 
 
-Package fontspec Info: Noto Serif scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes scale = 0.9577756114101639.
 
 
-Package fontspec Info: Noto Serif scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes scale = 0.9577756114101639.
 
 
-Package fontspec Info: Noto Serif/B scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes/B scale = 0.9349213617030666.
 
 
-Package fontspec Info: Noto Serif/B scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes/B scale = 0.9349213617030666.
 
 
-Package fontspec Info: Noto Serif/I scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes/I scale = 0.9976805792664979.
 
 
-Package fontspec Info: Noto Serif/I scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes/I scale = 0.9976805792664979.
 
 
-Package fontspec Info: Noto Serif/BI scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes/BI scale = 0.9599075639533403.
 
 
-Package fontspec Info: Noto Serif/BI scale = 0.8041012599370388.
+Package fontspec Info: TeX Gyre Termes/BI scale = 0.9599075639533403.
 
 
-Package fontspec Info: Font family 'NotoSerif(0)' created for font 'Noto
-(fontspec)             Serif' with options
+Package fontspec Info: Font family 'TeXGyreTermes(0)' created for font 'TeX
+(fontspec)             Gyre Termes' with options
 (fontspec)             [Scale=MatchLowercase,Ligatures=TeX,Scale=1].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1]"Noto
-(fontspec)             Serif/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->s*[1]"Noto
-(fontspec)             Serif/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
-t;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1]"Noto
-(fontspec)             Serif/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1]"TeX Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->s*[1]"TeX
+(fontspec)             Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;+smcp;mapping=tex-te
+xt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1]"TeX Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;mapping=tex-text;"
+
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"Noto
-(fontspec)             Serif/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
-ext;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1]"Noto
-(fontspec)             Serif/I/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"Noto
-(fontspec)             Serif/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
-ext;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1]"Noto
-(fontspec)             Serif/BI/OT:script=latn;language=dflt;mapping=tex-text;"
-
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"Noto
-(fontspec)             Serif/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+(fontspec)             <->s*[1]"TeX Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;+smcp;mapping=tex-
 text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1]"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;mapping=tex-text;"
 
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1]"TeX
+(fontspec)             Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"TeX Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;+smcp;mapping=tex
+-text;"
+
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 26.
 
-Package fontspec Info: Noto Serif scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes scale = 0.9999971743031124.
 
 
-Package fontspec Info: Noto Serif scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes scale = 0.9999971743031124.
 
 
-Package fontspec Info: Noto Serif scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes scale = 0.9999971743031124.
 
 
-Package fontspec Info: Noto Serif/B scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes/B scale = 0.9761354421232064.
 
 
-Package fontspec Info: Noto Serif/B scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes/B scale = 0.9761354421232064.
 
 
-Package fontspec Info: Noto Serif/I scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes/I scale = 1.041661270383234.
 
 
-Package fontspec Info: Noto Serif/I scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes/I scale = 1.041661270383234.
 
 
-Package fontspec Info: Noto Serif/BI scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes/BI scale = 1.002223109578062.
 
 
-Package fontspec Info: Noto Serif/BI scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Termes/BI scale = 1.002223109578062.
 
 
-Package fontspec Info: Font family 'NotoSerif(1)' created for font 'Noto
-(fontspec)             Serif' with options [Scale=MatchLowercase].
+Package fontspec Info: Font family 'TeXGyreTermes(1)' created for font 'TeX
+(fontspec)             Gyre Termes' with options [Scale=MatchLowercase].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.9999971743031124]"TeX Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[0.9999971743031124]"TeX Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/B/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.9761354421232064]"TeX Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[0.9761354421232064]"TeX Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/I/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.041661270383234]"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.041661270383234]"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/BI/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.002223109578062]"TeX Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Serif/BI/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.002223109578062]"TeX Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/NotoSerif(1)/m/n on input line 26.
+(Font)                  OT1/lmr/m/n --> TU/TeXGyreTermes(1)/m/n on input line 2
+6.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/NotoSerif(1)/m/it on input line 26.
-
+(Font)                  OT1/lmr/m/it --> TU/TeXGyreTermes(1)/m/it on input line
+ 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/NotoSerif(1)/b/n on input line 26.
+(Font)                  OT1/lmr/bx/n --> TU/TeXGyreTermes(1)/b/n on input line 
+26.
 
-Package fontspec Info: Noto Sans scale = 0.9999976276839791.
-
-
-Package fontspec Info: Noto Sans scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros/B scale = 0.8333309785859271.
 
 
-Package fontspec Info: Noto Sans/I scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros/B scale = 0.8333309785859271.
 
 
-Package fontspec Info: Noto Sans/I scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros/I scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros/I scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros/BI scale = 0.8333309785859271.
 
 
-Package fontspec Info: Font family 'NotoSans(0)' created for font 'Noto Sans'
-(fontspec)             with options [Scale=MatchLowercase,Ligatures=TeX].
+Package fontspec Info: TeX Gyre Heros/BI scale = 0.8333309785859271.
+
+
+Package fontspec Info: Font family 'TeXGyreHeros(0)' created for font 'TeX
+(fontspec)             Gyre Heros' with options
+(fontspec)             [Scale=MatchLowercase,Ligatures=TeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/OT:script=latn;language=dflt;+smcp;mapping=tex-text
-;"
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/B/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/B/OT:script=latn;language=dflt;+smcp;mapping=tex-te
-xt;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/I/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/I/OT:script=latn;language=dflt;+smcp;mapping=tex-te
-xt;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/BI/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
 ext;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
 
 
-Package fontspec Info: Noto Sans scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros/B scale = 0.8333309785859271.
 
 
-Package fontspec Info: Noto Sans/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros/B scale = 0.8333309785859271.
 
 
-Package fontspec Info: Noto Sans/I scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros/I scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans/I scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Heros/I scale = 0.8587763382359721.
 
 
-Package fontspec Info: Noto Sans/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros/BI scale = 0.8333309785859271.
 
 
-Package fontspec Info: Noto Sans/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Heros/BI scale = 0.8333309785859271.
 
 
-Package fontspec Info: Font family 'NotoSans(1)' created for font 'Noto Sans'
-(fontspec)             with options [Scale=MatchLowercase].
+Package fontspec Info: Font family 'TeXGyreHeros(1)' created for font 'TeX
+(fontspec)             Gyre Heros' with options [Scale=MatchLowercase].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/OT:script=latn;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/B/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/B/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/B/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/I/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/I/OT:script=latn;language=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto
-(fontspec)             Sans/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[0.8587763382359721]"TeX Gyre
+(fontspec)             Heros/I/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/BI/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/BI/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto
-(fontspec)             Sans/BI/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[0.8333309785859271]"TeX Gyre
+(fontspec)             Heros/BI/OT:script=latn;language=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/NotoSans(1)/m/n on input line 27.
+(Font)                  OT1/lmss/m/n --> TU/TeXGyreHeros(1)/m/n on input line 2
+7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/NotoSans(1)/b/n on input line 27.
+(Font)                  OT1/lmss/bx/n --> TU/TeXGyreHeros(1)/b/n on input line 
+27.
 
-Package fontspec Info: Noto Sans Mono scale = 0.9999976276839791.
-
-
-Package fontspec Info: Could not resolve font "Noto Sans Mono/I" (it probably
-(fontspec)             doesn't exist).
+Package fontspec Info: TeX Gyre Cursor scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Cursor scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Cursor scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/B scale = 1.029743476337904.
 
 
-Package fontspec Info: Noto Sans Mono/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/B scale = 1.029743476337904.
 
 
-Package fontspec Info: Noto Sans Mono/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/I scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/I scale = 1.079132654150264.
 
 
-Package fontspec Info: Font family 'NotoSansMono(0)' created for font 'Noto
-(fontspec)             Sans Mono' with options
+Package fontspec Info: TeX Gyre Cursor/BI scale = 1.029743476337904.
+
+
+Package fontspec Info: TeX Gyre Cursor/BI scale = 1.029743476337904.
+
+
+Package fontspec Info: Font family 'TeXGyreCursor(0)' created for font 'TeX
+(fontspec)             Gyre Cursor' with options
 (fontspec)             [Scale=MatchLowercase,WordSpace={1,0,0},HyphenChar=None,
 PunctuationSpace=WordSpace].
 (fontspec)              
@@ -546,33 +558,44 @@ PunctuationSpace=WordSpace].
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto Sans
-(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/OT:script=latn;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto Sans
-(fontspec)             Mono/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/B/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/B/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/I/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/BI/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/BI/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/BI/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
@@ -580,62 +603,70 @@ PunctuationSpace=WordSpace].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-Package fontspec Info: Noto Sans Mono scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Cursor scale = 1.079132654150264.
 
 
-Package fontspec Info: Could not resolve font "Noto Sans Mono/I" (it probably
-(fontspec)             doesn't exist).
+Package fontspec Info: TeX Gyre Cursor scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Cursor scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono scale = 0.9999976276839791.
+Package fontspec Info: TeX Gyre Cursor/B scale = 1.029743476337904.
 
 
-Package fontspec Info: Noto Sans Mono/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/B scale = 1.029743476337904.
 
 
-Package fontspec Info: Noto Sans Mono/B scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/I scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/I scale = 1.079132654150264.
 
 
-Package fontspec Info: Noto Sans Mono/BI scale = 0.9763197391094888.
+Package fontspec Info: TeX Gyre Cursor/BI scale = 1.029743476337904.
 
 
-Package fontspec Info: Font family 'NotoSansMono(1)' created for font 'Noto
-(fontspec)             Sans Mono' with options [Scale=MatchLowercase].
+Package fontspec Info: TeX Gyre Cursor/BI scale = 1.029743476337904.
+
+
+Package fontspec Info: Font family 'TeXGyreCursor(1)' created for font 'TeX
+(fontspec)             Gyre Cursor' with options [Scale=MatchLowercase].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto Sans
-(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/OT:script=latn;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999976276839791]"Noto Sans
-(fontspec)             Mono/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/B/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/B/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.079132654150264]"TeX Gyre
+(fontspec)             Cursor/I/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/BI/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9763197391094888]"Noto Sans
-(fontspec)             Mono/BI/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->s*[1.029743476337904]"TeX Gyre
+(fontspec)             Cursor/BI/OT:script=latn;language=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/NotoSansMono(1)/m/n on input line 2
-8.
+(Font)                  OT1/lmtt/m/n --> TU/TeXGyreCursor(1)/m/n on input line 
+28.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/NotoSansMono(1)/b/n on input line 2
-8.
+(Font)                  OT1/lmtt/m/n --> TU/TeXGyreCursor(1)/b/n on input line 
+28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -1406,13 +1437,13 @@ LaTeX Font Info:    ... okay on input line 311.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
@@ -1424,30 +1455,30 @@ allCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1.243617846722112]"[latinmodern-math.otf]/OT:scrip
+(fontspec)             <->s*[1.044079857679383]"[latinmodern-math.otf]/OT:scrip
 t=math;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.243617846722112]"[latinmodern-math.otf]/OT:scrip
+(fontspec)             <->s*[1.044079857679383]"[latinmodern-math.otf]/OT:scrip
 t=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 14.92346pt on input line 311.
+(Font)              scaled to size 12.52899pt on input line 311.
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
-
-
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
+
+
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
@@ -1461,18 +1492,18 @@ thScriptScript}},BoldFont={latinmodern-math.otf}].
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.2->s*[1.243617846722112]"[latinmodern-math.otf]/OT:s
-cript=math;language=dflt;"<7.2-10.2>s*[1.243617846722112]"[latinmodern-math.otf
-]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.243617846722112]"[latinmoder
+(fontspec)             <10.2->s*[1.044079857679383]"[latinmodern-math.otf]/OT:s
+cript=math;language=dflt;"<7.2-10.2>s*[1.044079857679383]"[latinmodern-math.otf
+]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.044079857679383]"[latinmoder
 n-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.243617846722112]"[latinmodern-math.otf]/OT:scrip
+(fontspec)             <->s*[1.044079857679383]"[latinmodern-math.otf]/OT:scrip
 t=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.92346pt on input line 311.
+(Font)              scaled to size 12.52899pt on input line 311.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 311.
 
@@ -1485,34 +1516,34 @@ LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
 t line 311.
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243742208506784.
+Package fontspec Info: latinmodern-math scale = 1.044184265665151.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243742208506784.
+Package fontspec Info: latinmodern-math scale = 1.044184265665151.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243742208506784.
+Package fontspec Info: latinmodern-math scale = 1.044184265665151.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243742208506784.
+Package fontspec Info: latinmodern-math scale = 1.044184265665151.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243742208506784.
+Package fontspec Info: latinmodern-math scale = 1.044184265665151.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
@@ -1522,51 +1553,51 @@ allCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latin
 modern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=Ma
 thScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustme
 nt={\fontdimen
-(fontspec)             8\font =10.10318pt\relax \fontdimen 9\font
-(fontspec)             =5.87984pt\relax \fontdimen 10\font =6.62602pt\relax
-(fontspec)             \fontdimen 11\font =10.2375pt\relax \fontdimen 12\font
-(fontspec)             =5.14859pt\relax \fontdimen 13\font =5.41722pt\relax
-(fontspec)             \fontdimen 14\font =5.41722pt\relax \fontdimen 15\font
-(fontspec)             =4.31288pt\relax \fontdimen 16\font =3.6861pt\relax
-(fontspec)             \fontdimen 17\font =3.6861pt\relax \fontdimen 18\font
-(fontspec)             =3.73087pt\relax \fontdimen 19\font =2.9847pt\relax
-(fontspec)             \fontdimen 22\font =3.73087pt\relax \fontdimen 20\font
+(fontspec)             8\font =8.48213pt\relax \fontdimen 9\font
+(fontspec)             =4.93642pt\relax \fontdimen 10\font =5.56287pt\relax
+(fontspec)             \fontdimen 11\font =8.5949pt\relax \fontdimen 12\font
+(fontspec)             =4.32251pt\relax \fontdimen 13\font =4.54802pt\relax
+(fontspec)             \fontdimen 14\font =4.54802pt\relax \fontdimen 15\font
+(fontspec)             =3.62088pt\relax \fontdimen 16\font =3.09467pt\relax
+(fontspec)             \fontdimen 17\font =3.09467pt\relax \fontdimen 18\font
+(fontspec)             =3.13225pt\relax \fontdimen 19\font =2.5058pt\relax
+(fontspec)             \fontdimen 22\font =3.13225pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.2->s*[1.243742208506784]"[latinmodern-math.otf]/OT:s
-cript=math;language=dflt;"<7.2-10.2>s*[1.243742208506784]"[latinmodern-math.otf
-]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.243742208506784]"[latinmoder
+(fontspec)             <10.2->s*[1.044184265665151]"[latinmodern-math.otf]/OT:s
+cript=math;language=dflt;"<7.2-10.2>s*[1.044184265665151]"[latinmodern-math.otf
+]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.044184265665151]"[latinmoder
 n-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =10.10318pt\relax \fontdimen 9\font
-(fontspec)             =5.87984pt\relax \fontdimen 10\font =6.62602pt\relax
-(fontspec)             \fontdimen 11\font =10.2375pt\relax \fontdimen 12\font
-(fontspec)             =5.14859pt\relax \fontdimen 13\font =5.41722pt\relax
-(fontspec)             \fontdimen 14\font =5.41722pt\relax \fontdimen 15\font
-(fontspec)             =4.31288pt\relax \fontdimen 16\font =3.6861pt\relax
-(fontspec)             \fontdimen 17\font =3.6861pt\relax \fontdimen 18\font
-(fontspec)             =3.73087pt\relax \fontdimen 19\font =2.9847pt\relax
-(fontspec)             \fontdimen 22\font =3.73087pt\relax \fontdimen 20\font
+(fontspec)             \fontdimen 8\font =8.48213pt\relax \fontdimen 9\font
+(fontspec)             =4.93642pt\relax \fontdimen 10\font =5.56287pt\relax
+(fontspec)             \fontdimen 11\font =8.5949pt\relax \fontdimen 12\font
+(fontspec)             =4.32251pt\relax \fontdimen 13\font =4.54802pt\relax
+(fontspec)             \fontdimen 14\font =4.54802pt\relax \fontdimen 15\font
+(fontspec)             =3.62088pt\relax \fontdimen 16\font =3.09467pt\relax
+(fontspec)             \fontdimen 17\font =3.09467pt\relax \fontdimen 18\font
+(fontspec)             =3.13225pt\relax \fontdimen 19\font =2.5058pt\relax
+(fontspec)             \fontdimen 22\font =3.13225pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.243742208506784]"[latinmodern-math.otf]/OT:scrip
+(fontspec)             <->s*[1.044184265665151]"[latinmodern-math.otf]/OT:scrip
 t=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =10.10318pt\relax \fontdimen 9\font
-(fontspec)             =5.87984pt\relax \fontdimen 10\font =6.62602pt\relax
-(fontspec)             \fontdimen 11\font =10.2375pt\relax \fontdimen 12\font
-(fontspec)             =5.14859pt\relax \fontdimen 13\font =5.41722pt\relax
-(fontspec)             \fontdimen 14\font =5.41722pt\relax \fontdimen 15\font
-(fontspec)             =4.31288pt\relax \fontdimen 16\font =3.6861pt\relax
-(fontspec)             \fontdimen 17\font =3.6861pt\relax \fontdimen 18\font
-(fontspec)             =3.73087pt\relax \fontdimen 19\font =2.9847pt\relax
-(fontspec)             \fontdimen 22\font =3.73087pt\relax \fontdimen 20\font
+(fontspec)             \fontdimen 8\font =8.48213pt\relax \fontdimen 9\font
+(fontspec)             =4.93642pt\relax \fontdimen 10\font =5.56287pt\relax
+(fontspec)             \fontdimen 11\font =8.5949pt\relax \fontdimen 12\font
+(fontspec)             =4.32251pt\relax \fontdimen 13\font =4.54802pt\relax
+(fontspec)             \fontdimen 14\font =4.54802pt\relax \fontdimen 15\font
+(fontspec)             =3.62088pt\relax \fontdimen 16\font =3.09467pt\relax
+(fontspec)             \fontdimen 17\font =3.09467pt\relax \fontdimen 18\font
+(fontspec)             =3.13225pt\relax \fontdimen 19\font =2.5058pt\relax
+(fontspec)             \fontdimen 22\font =3.13225pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
@@ -1580,34 +1611,34 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
 t line 311.
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.24349348493744.
+Package fontspec Info: latinmodern-math scale = 1.043975449693615.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.24349348493744.
+Package fontspec Info: latinmodern-math scale = 1.043975449693615.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.24349348493744.
+Package fontspec Info: latinmodern-math scale = 1.043975449693615.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.24349348493744.
+Package fontspec Info: latinmodern-math scale = 1.043975449693615.
 
 
-Package fontspec Info: latinmodern-math scale = 1.243617846722112.
+Package fontspec Info: latinmodern-math scale = 1.044079857679383.
 
 
-Package fontspec Info: latinmodern-math scale = 1.24349348493744.
+Package fontspec Info: latinmodern-math scale = 1.043975449693615.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
@@ -1617,34 +1648,34 @@ allCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latin
 modern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=Ma
 thScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustme
 nt={\fontdimen
-(fontspec)             8\font =0.59694pt\relax \fontdimen 9\font
-(fontspec)             =2.9847pt\relax \fontdimen 10\font =2.49222pt\relax
-(fontspec)             \fontdimen 11\font =1.65651pt\relax \fontdimen 12\font
-(fontspec)             =8.95407pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)             8\font =0.50116pt\relax \fontdimen 9\font
+(fontspec)             =2.5058pt\relax \fontdimen 10\font =2.09235pt\relax
+(fontspec)             \fontdimen 11\font =1.39072pt\relax \fontdimen 12\font
+(fontspec)             =7.5174pt\relax \fontdimen 13\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.2->s*[1.24349348493744]"[latinmodern-math.otf]/OT:sc
-ript=math;language=dflt;"<7.2-10.2>s*[1.24349348493744]"[latinmodern-math.otf]/
-OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.24349348493744]"[latinmodern-m
-ath.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <10.2->s*[1.043975449693615]"[latinmodern-math.otf]/OT:s
+cript=math;language=dflt;"<7.2-10.2>s*[1.043975449693615]"[latinmodern-math.otf
+]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.043975449693615]"[latinmoder
+n-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.59694pt\relax \fontdimen 9\font
-(fontspec)             =2.9847pt\relax \fontdimen 10\font =2.49222pt\relax
-(fontspec)             \fontdimen 11\font =1.65651pt\relax \fontdimen 12\font
-(fontspec)             =8.95407pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             \fontdimen 8\font =0.50116pt\relax \fontdimen 9\font
+(fontspec)             =2.5058pt\relax \fontdimen 10\font =2.09235pt\relax
+(fontspec)             \fontdimen 11\font =1.39072pt\relax \fontdimen 12\font
+(fontspec)             =7.5174pt\relax \fontdimen 13\font =0pt\relax 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.24349348493744]"[latinmodern-math.otf]/OT:script
-=math;language=dflt;"
+(fontspec)             <->s*[1.043975449693615]"[latinmodern-math.otf]/OT:scrip
+t=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.59694pt\relax \fontdimen 9\font
-(fontspec)             =2.9847pt\relax \fontdimen 10\font =2.49222pt\relax
-(fontspec)             \fontdimen 11\font =1.65651pt\relax \fontdimen 12\font
-(fontspec)             =8.95407pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             \fontdimen 8\font =0.50116pt\relax \fontdimen 9\font
+(fontspec)             =2.5058pt\relax \fontdimen 10\font =2.09235pt\relax
+(fontspec)             \fontdimen 11\font =1.39072pt\relax \fontdimen 12\font
+(fontspec)             =7.5174pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 3
@@ -1669,16 +1700,16 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `NotoSerif' (encoding: TU).
+(microtype)             `TeXGyreTermes' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \c@lstlisting=\count359
 Package hyperref Info: Link coloring ON on input line 311.
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
 (Font)              scaled to size 24.88pt on input line 322.
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
 (Font)              scaled to size 24.88pt on input line 322.
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
 (Font)              scaled to size 17.28pt on input line 324.
 File: lib/img/UAF-ACEP.png Graphic file (type bmp)
 <lib/img/UAF-ACEP.png>
@@ -1687,31 +1718,31 @@ File: lib/img/UAF-ACEP.png Graphic file (type bmp)
 
 
 ]
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 339.
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/it' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/it' will be
 (Font)              scaled to size 12.0pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.44641pt on input line 346.
+(Font)              scaled to size 8.77028pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.46173pt on input line 346.
+(Font)              scaled to size 6.2645pt on input line 346.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
 46.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.92493pt on input line 346.
+(Font)              scaled to size 12.53027pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.44743pt on input line 346.
+(Font)              scaled to size 8.77118pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.46246pt on input line 346.
+(Font)              scaled to size 6.26514pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.922pt on input line 346.
+(Font)              scaled to size 12.52771pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.44539pt on input line 346.
+(Font)              scaled to size 8.76938pt on input line 346.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.461pt on input line 346.
+(Font)              scaled to size 6.26385pt on input line 346.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 346
 .
 
@@ -1730,11 +1761,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 347.
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
 (Font)              scaled to size 14.4pt on input line 366.
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 366.
  [2]
 (./basic-book-builder.toc [1
@@ -1746,61 +1777,651 @@ LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/n' will be
 
  [2]
 Chapter 1.
-LaTeX Font Info:    Font shape `TU/NotoSansMono(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 463.
+LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
+(Font)              scaled to size 12.94958pt on input line 463.
 [1
 
 
 ]
 Chapter 2.
 
-Overfull \hbox (10.34296pt too wide) in paragraph at lines 485--485
-[]\TU/NotoSansMono(0)/m/n/12 git clone https://github.com/jehaverlack/basic-boo
-k-builder.git[] 
+Overfull \hbox (45.8574pt too wide) in paragraph at lines 485--485
+[]\TU/TeXGyreCursor(0)/m/n/12 git clone https://github.com/jehaverlack/basic-bo
+ok-builder.git[] 
  []
 
+[2
 
-Underfull \vbox (badness 2644) has occurred while \output is active []
-
- [2
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 539--542
-[]\TU/NotoSerif(0)/m/n/12 You do not want to edit your new project document in 
-the
- []
-
-[3] [4]
+] [3] [4]
 Chapter 3.
 [5
 
-]
-Overfull \hbox (19.09433pt too wide) in paragraph at lines 687--690
-\TU/NotoSerif(0)/m/n/12 The table of contents is auto generated. But can be dis
-abled in \TU/NotoSansMono(0)/m/n/12 template\pandoc.yaml
- []
-
-[6]
+] [6]
 File: lib/img/ACEPLogo.png Graphic file (type bmp)
 <lib/img/ACEPLogo.png>
-LaTeX Font Info:    Font shape `TU/NotoSerif(0)/b/it' will be
+LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/it' will be
 (Font)              scaled to size 17.28pt on input line 746.
- [7] [8] [9] [10]
-Overfull \hbox (71.729pt too wide) in paragraph at lines 945--949
-\TU/NotoSerif(0)/m/n/12 It is possible to change fonts by editing \TU/NotoSansM
-ono(0)/m/n/12 templates/pandoc.yaml\TU/NotoSerif(0)/m/n/12 , and \TU/NotoSansMo
-no(0)/m/n/12 templates\styles.css\TU/NotoSerif(0)/m/n/12 ,
+ [7] [8] [9]
+Overfull \hbox (56.84077pt too wide) in paragraph at lines 945--949
+\TU/TeXGyreTermes(0)/m/n/12 It is possible to change fonts by editing \TU/TeXGy
+reCursor(0)/m/n/12 templates/pandoc.yaml\TU/TeXGyreTermes(0)/m/n/12 , and \TU/T
+eXGyreCursor(0)/m/n/12 templates\styles.css\TU/TeXGyreTermes(0)/m/n/12 ,
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
 [11]
 Chapter 4.
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
 [12
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-[14]
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no │ (U+2502) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ├ (U+251C) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no └ (U+2514) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+Missing character: There is no ─ (U+2500) in font TeX Gyre Cursor/OT:script=lat
+n;language=dflt;!
+[13] [14]
 Underfull \hbox (badness 10000) in alignment at lines 1106--1114
 [] []
  []
@@ -1808,11 +2429,6 @@ Underfull \hbox (badness 10000) in alignment at lines 1106--1114
 
 Underfull \hbox (badness 10000) in alignment at lines 1114--1116
 [] []
- []
-
-
-Overfull \hbox (1.68248pt too wide) in paragraph at lines 1120--1120
-[]|\TU/NotoSerif(0)/b/n/12 Bibliography|  
  []
 
 
@@ -1827,24 +2443,19 @@ Underfull \hbox (badness 10000) in alignment at lines 1116--1168
 
 ] [18
 
-]
-Underfull \hbox (badness 3977) in paragraph at lines 1203--1205
-[]\TU/NotoSerif(0)/m/it/12 John Haverlack | ACEP\TU/NotoSerif(0)/m/n/12 . n.d. 
-Https://www.uaf.edu/acep/about/our-team/john-
- []
-
-[19
+] [19
 
 ] [20
 
-] (./basic-book-builder.aux) ) 
+]
+(./basic-book-builder.aux) ) 
 Here is how much of TeX's memory you used:
- 36434 strings out of 478775
- 751025 string characters out of 5850945
+ 36441 strings out of 478775
+ 752078 string characters out of 5850945
  1859991 words of memory out of 5000000
- 55855 multiletter control sequences out of 15000+600000
- 516044 words of font info for 93 fonts, out of 8000000 for 9000
+ 55858 multiletter control sequences out of 15000+600000
+ 516076 words of font info for 97 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,12n,122p,1207b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,122p,1207b,959s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on basic-book-builder.pdf (24 pages).

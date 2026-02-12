@@ -3,11 +3,11 @@
 \contentsline {chapter}{\numberline {2}Getting Started}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Clone the Basic Book Builder}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Setting Up Build Environment}{2}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Non deb systems}{3}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Non deb systems}{2}{subsection.2.2.1}%
 \contentsline {section}{\numberline {2.3}Testing}{3}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Creating a New Project}{3}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Building}{4}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}PDF}{4}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.5}Building}{3}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}PDF}{3}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}HTML}{4}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}DocX}{4}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}ODT}{4}{subsection.2.5.4}%
@@ -17,20 +17,20 @@
 \contentsline {section}{\numberline {3.2}Front-matter}{5}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Meta Data Page}{5}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Cover Illustration}{5}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Dedication}{6}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Dedication}{5}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Table of Contents}{6}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Chapters}{6}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Appendixes}{6}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Glossary}{6}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Index}{6}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Markdown Indexes}{6}{subsection.3.7.1}%
-\contentsline {section}{\numberline {3.8}Bibliography}{7}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Zotero Integration}{7}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Obsidian Citations}{7}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.8}Bibliography}{6}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Zotero Integration}{6}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Obsidian Citations}{6}{subsection.3.8.2}%
 \contentsline {section}{\numberline {3.9}Images}{7}{section.3.9}%
 \contentsline {section}{\numberline {3.10}\emph {LaTeX} Equations}{7}{section.3.10}%
 \contentsline {subsection}{\numberline {3.10.1}Left Justified / Inline}{7}{subsection.3.10.1}%
-\contentsline {subsection}{\numberline {3.10.2}Centered}{8}{subsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.10.2}Centered}{7}{subsection.3.10.2}%
 \contentsline {section}{\numberline {3.11}Custom Markdown}{8}{section.3.11}%
 \contentsline {subsection}{\numberline {3.11.1}Call-outs}{8}{subsection.3.11.1}%
 \contentsline {section}{\numberline {3.12}Advanced}{11}{section.3.12}%
@@ -39,7 +39,7 @@
 \contentsline {chapter}{\numberline {4}Design}{12}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Directory Structure}{12}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Configuration Files}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Pandoc Main Config}{14}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Pandoc Main Config}{13}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}Build Workflow}{14}{section.4.3}%
 \contentsline {chapter}{Glossary}{15}{chapter*.2}%
 \contentsline {chapter}{Index}{17}{chapter*.3}%

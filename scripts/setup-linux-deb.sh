@@ -23,7 +23,7 @@ sudo apt update
 
 # 2. Install Core Utilities
 echo "📦 Installing core utilities (make, jq, yq, etc.)..."
-sudo apt install -y make jq yq wget curl tar git rsync
+sudo apt install -y make jq yq wget curl tar git rsync ttf-mscorefonts-installer fonts-noto-core fonts-noto-ui-core fonts-noto-mono
 
 # 3. Install TeX Live Stack
 echo "📑 Installing TeX Live stack (this may take a while)..."
