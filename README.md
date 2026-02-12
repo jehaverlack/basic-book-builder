@@ -4,9 +4,9 @@
 | --- | --- |
 | **Author** | John Haverlack |
 | **Copyright** | 2026 John Haverlack |
-| **License** | CC BY-ND 4.0 |
-| **Version** | v1.2.3 |
-| **Date** | 2026-02-05 |
+| **License** | MIT |
+| **Version** | v1.2.4 |
+| **Date** | 2026-02-12 |
 
 This is a basic book (article) builder template based on a Pandoc build process in conjunction with a number of other tools to generate PDF, DOCX, ODT, HTML, LaTeX, Markdown, and Epub book formats all from a single set of Markdown source content in an Obsidian vault.
 
@@ -66,7 +66,7 @@ cd basic-book-builder
 
 ### Setup Build Environment
 
-> NOTE: For Debian based systems.
+> NOTE: b3 has only been tested on Debian based systems.
 
 ```
 scripts/setup-linux-deb.sh
@@ -98,4 +98,18 @@ cd <PATH_TO_PROJECT>
 3. Edit Chapter Content
 4. Build your book
 
+
+# Roadmap
+
+## Documentation
+- [ ] Zotero Integration
+
+## Bugs
+- [ ] TBD
+
+## Features
+- [ ] Windows Build Environment Support
+- [ ] Build Workflow Scripts
+- [ ] DocX Formatting
+- [ ] ODT Formatting
 
